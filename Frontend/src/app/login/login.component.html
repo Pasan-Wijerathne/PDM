@@ -1,12 +1,7 @@
-<p>
-  login works!
-</p>
-
 
   <style>
-
     body {font-family: Arial, Helvetica, sans-serif;}
-    form {align-content: center; border: 3px solid #f1f1f1; width: 30%;}
+    form {align-content: center; border: 3px solid #f1f1f1; width: 25%;}
     
     input[type=text], input[type=password] {
         width: 100%;
@@ -73,7 +68,7 @@
       
     <h2>Login Form</h2>
     
-    <form action="/action_page.php">
+    <form action="">
 
       <div class="imgcontainer">
         <img src="assets/Images/img_avatar2.png" alt="Avatar" class="avatar">
@@ -85,8 +80,10 @@
     
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
-            
-        <button type="submit">Login</button>
+        <a href="home">  </a>
+
+        <button type="submit" onclick= "home"> <a href="home"> Login </a></button>
+        
         <label>
           <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
@@ -98,6 +95,5 @@
       </div>
 
     </form>
-  
 
 </body>
