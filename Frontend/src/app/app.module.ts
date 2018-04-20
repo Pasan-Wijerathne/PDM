@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-
+import {BrowserModule} from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -9,6 +9,7 @@ import { BillmanagerComponent } from './billmanager/billmanager.component';
 import { AddEditBillsComponent } from './add-edit-bills/add-edit-bills.component';
 import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
+import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 
 
 @NgModule({
