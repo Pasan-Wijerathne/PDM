@@ -9,6 +9,7 @@ import { AddEditBillsComponent } from './add-edit-bills/add-edit-bills.component
 import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
+import { GasComponent } from './gas/gas.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/t
     BillmanagerComponent,
     AddEditBillsComponent,
     TestComponent,
-    Test2Component
+    Test2Component,
+    GasComponent
   ],
   imports: [
     BrowserModule,
