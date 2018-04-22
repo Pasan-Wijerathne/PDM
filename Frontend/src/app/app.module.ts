@@ -9,7 +9,16 @@ import { AddEditBillsComponent } from './add-edit-bills/add-edit-bills.component
 import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
+<<<<<<< HEAD
 import { OtherbillsComponent } from './otherbills/otherbills.component';
+=======
+import { GasComponent } from './gas/gas.component';
+import { ItempredictionComponent } from './itemprediction/itemprediction.component';
+import { PredictionComponent } from './prediction/prediction.component';
+import { Solar1Component } from './solar1/solar1.component';
+import { Solar2Component } from './solar2/solar2.component';
+import { PredictEachItemComponent } from './predict-each-item/predict-each-item.component';
+>>>>>>> 65566d321b8ec0942152303509786d42aec7d5da
 
 
 @NgModule({
@@ -21,7 +30,16 @@ import { OtherbillsComponent } from './otherbills/otherbills.component';
     AddEditBillsComponent,
     TestComponent,
     Test2Component,
+<<<<<<< HEAD
     OtherbillsComponent
+=======
+    GasComponent,
+    ItempredictionComponent,
+    PredictionComponent,
+    Solar1Component,
+    Solar2Component,
+    PredictEachItemComponent
+>>>>>>> 65566d321b8ec0942152303509786d42aec7d5da
   ],
   imports: [
     BrowserModule,

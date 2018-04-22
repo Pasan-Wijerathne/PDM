@@ -6,6 +6,11 @@ import { BillmanagerComponent } from './billmanager/billmanager.component';
 import { AddEditBillsComponent } from './add-edit-bills/add-edit-bills.component';
 import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
+import { GasComponent } from './gas/gas.component';
+import { ItempredictionComponent } from './itemprediction/itemprediction.component';
+import { PredictionComponent } from './prediction/prediction.component';
+import { Solar1Component } from './solar1/solar1.component';
+import { Solar2Component } from './solar2/solar2.component';
 
 const routes: Routes = [
   {path : "login", component : LoginComponent},
@@ -14,6 +19,11 @@ const routes: Routes = [
   {path : "add-edit-bills", component : AddEditBillsComponent} ,  
   {path : "test", component : TestComponent},
   {path : "test2", component :Test2Component},
+  {path : "gas", component : GasComponent},
+  {path : "itemprediction", component : ItempredictionComponent},
+  {path :"prediction", component : PredictionComponent},
+  {path : "solar1", component : Solar1Component},
+  {path : "solar2", component : Solar2Component}
   ];
 
 
