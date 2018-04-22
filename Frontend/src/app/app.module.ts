@@ -14,6 +14,7 @@ import { ItempredictionComponent } from './itemprediction/itemprediction.compone
 import { PredictionComponent } from './prediction/prediction.component';
 import { Solar1Component } from './solar1/solar1.component';
 import { Solar2Component } from './solar2/solar2.component';
+import { PredictEachItemComponent } from './predict-each-item/predict-each-item.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { Solar2Component } from './solar2/solar2.component';
     ItempredictionComponent,
     PredictionComponent,
     Solar1Component,
-    Solar2Component
+    Solar2Component,
+    PredictEachItemComponent
   ],
   imports: [
     BrowserModule,
