@@ -10,6 +10,10 @@ import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 import { GasComponent } from './gas/gas.component';
+import { ItempredictionComponent } from './itemprediction/itemprediction.component';
+import { PredictionComponent } from './prediction/prediction.component';
+import { Solar1Component } from './solar1/solar1.component';
+import { Solar2Component } from './solar2/solar2.component';
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { GasComponent } from './gas/gas.component';
     AddEditBillsComponent,
     TestComponent,
     Test2Component,
-    GasComponent
+    GasComponent,
+    ItempredictionComponent,
+    PredictionComponent,
+    Solar1Component,
+    Solar2Component
   ],
   imports: [
     BrowserModule,

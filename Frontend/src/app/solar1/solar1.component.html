@@ -1,3 +1,4 @@
+
 <style>
   body {
       font-family:  Arial, Helvetica, sans-serif;
@@ -131,9 +132,21 @@ li a {
 li a:hover {
     background-color: #111;
 }
+/* styles of solar1*/
+.space{
+    padding-left: 230px;
+  } 
 
+    form {align-content: center; border: 3px solid #f1f1f1; width: 25%; }
+            
+            .btn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: lightblue;
+            }
+            .x{width: 200px;}
 
-    
+  
 </style>
 
 <body>
@@ -147,10 +160,7 @@ li a:hover {
            <li><a href="#contact">Contact</a></li>
            <li><a href="#about">About</a></li>
    </ul>
-   
-   
-    
-<div class="navbar"> </div>
+
 
     <div class="sidenav">
             <a class="active" href="home">Home</a>
@@ -163,4 +173,29 @@ li a:hover {
             <a href="">Solar Energy</a>
             <a href="billmanager"> Bill Manager</a>
         </div>
+
+<!--solar1 component code -->
+<div class="space">
+  <h2>Solar panels for monthly power need</h2>
+<form >
+
+<div Class="panels">
+<label for="usg"><b>Average power usage</b></label> <br>
+<input type="text" name="avg" class="x"><br><br>
+
+<label for="pnel"><b>Power from a solar panel</b></label><br>
+<input type="text"  name="pSolar" class="x"><br><br>
+<button type="button" Class="btn">Calculate</button><br><br>
+
+<label for="wtts"><b>No of solar panels for monthly power need</b></label> <br>
+<input type="text"  name="MPN" class="x"><br><br>
+
+      
+</div>
+
+</form>
+</div>
+
+
+
 </body>
