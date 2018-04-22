@@ -1,10 +1,11 @@
 
   <style>
     body {font-family: Arial, Helvetica, sans-serif;}
-    form {align-content: center; border: 3px solid #f1f1f1; width: 25%;}
+    form {align-content: center; border: 3px solid #f1f1f1; width: 50%;}
     
     input[type=text], input[type=password] {
-        width: 100%;
+        width: 350px;
+        position: relative;
         padding: 10px;
         margin: 8px;
         display: inline-block;
@@ -19,7 +20,8 @@
         margin: 8px 0;
         border: none;
         cursor: pointer;
-        width: 100%;
+        width: 350px;
+        
     }
     
     button:hover {
@@ -44,6 +46,7 @@
     
     .container {
         padding: 16px;
+        width: 100%;
     }
     
     span.psw {
@@ -77,13 +80,14 @@
       <div class="container">
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required>
-    
+        <br>
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
 
+        <br>
 
         <button type="submit" > <a href="home"> </a> Login</button>
-        
+        <br>
         <label>
           <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
