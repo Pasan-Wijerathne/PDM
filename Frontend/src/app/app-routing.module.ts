@@ -11,6 +11,9 @@ import { ItempredictionComponent } from './itemprediction/itemprediction.compone
 import { PredictionComponent } from './prediction/prediction.component';
 import { Solar1Component } from './solar1/solar1.component';
 import { Solar2Component } from './solar2/solar2.component';
+import { PredictEachItemComponent } from './predict-each-item/predict-each-item.component';
+import { TelevisionComponent } from './television/television.component';
+import { WaterComponent } from './water/water.component';
 
 const routes: Routes = [
   {path : "login", component : LoginComponent},
@@ -23,7 +26,11 @@ const routes: Routes = [
   {path : "itemprediction", component : ItempredictionComponent},
   {path :"prediction", component : PredictionComponent},
   {path : "solar1", component : Solar1Component},
-  {path : "solar2", component : Solar2Component}
+  {path : "solar2", component : Solar2Component},
+  {path : "predict-each-item", component : PredictEachItemComponent},
+  {path : "television", component : TelevisionComponent},
+  {path : "water", component : WaterComponent}
+  
   ];
 
 
