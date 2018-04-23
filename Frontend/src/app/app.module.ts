@@ -19,6 +19,11 @@ import { TelevisionComponent } from './television/television.component';
 import { WaterComponent } from './water/water.component';
 import { InstallmentComponent } from './installment/installment.component';
 import { InsuranceComponent } from './insurance/insurance.component';
+import { BroadbandComponent } from './broadband/broadband.component';
+import { TelephoneComponent } from './telephone/telephone.component';
+import { MysimComponent } from './mysim/mysim.component';
+import { TelecomparisonComponent } from './telecomparison/telecomparison.component';
+import { ComparisonboardComponent } from './comparisonboard/comparisonboard.component';
 
 
 @NgModule({
@@ -39,7 +44,12 @@ import { InsuranceComponent } from './insurance/insurance.component';
     TelevisionComponent,
     WaterComponent,
     InstallmentComponent,
-    InsuranceComponent
+    InsuranceComponent,
+    BroadbandComponent,
+    TelephoneComponent,
+    MysimComponent,
+    TelecomparisonComponent,
+    ComparisonboardComponent
   ],
   imports: [
     BrowserModule,

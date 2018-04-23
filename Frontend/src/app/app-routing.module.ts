@@ -16,6 +16,11 @@ import { TelevisionComponent } from './television/television.component';
 import { WaterComponent } from './water/water.component';
 import { InsuranceComponent } from './insurance/insurance.component';
 import { InstallmentComponent } from './installment/installment.component';
+import { BroadbandComponent } from './broadband/broadband.component';
+import { TelephoneComponent } from './telephone/telephone.component';
+import { MysimComponent } from './mysim/mysim.component';
+import { TelecomparisonComponent } from './telecomparison/telecomparison.component';
+import { ComparisonboardComponent } from './comparisonboard/comparisonboard.component';
 
 const routes: Routes = [
   {path : "login", component : LoginComponent},
@@ -33,8 +38,12 @@ const routes: Routes = [
   {path : "television", component : TelevisionComponent},
   {path : "water", component : WaterComponent},
   {path : "insurance", component : InsuranceComponent},
-  {path : "installment", component : InstallmentComponent }
-
+  {path : "installment", component : InstallmentComponent },
+  {path : "broadband", component : BroadbandComponent},
+  {path : "telephone", component : TelephoneComponent},
+  {path : "mysim", component : MysimComponent},
+  {path : "telecomparison", component : TelecomparisonComponent},
+  {path : "comparisonbroad", component : ComparisonboardComponent },
   ];
 
 
