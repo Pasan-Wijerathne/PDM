@@ -1,236 +1,200 @@
-<style>
+
+  <style>
+  
     body {
-        font-family:  Arial, Helvetica, sans-serif;
-  
-    }
-        /*this is for top banner 4to  */
-     .header{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 190%;
-      height: 104px;
-      position: fixed;
-      /* height: 100px; */
-      width: 100%;
-      margin-top: -40px;
-      /* margin-top: -20px; */
-      margin-left: 0px;
-      font-style: oblique;
-      background-image: url("assets/Images/banner.jpg");
-    } 
-  
-     .header h1 
-      {
-      font-size: 40px;
+          font-family:  Arial, Helvetica, sans-serif;
+    
+      }
+          /*this is for top banner 4to  */
+       .header{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 190%;
+        height: 104px;
+        position: fixed;
+        /* height: 100px; */
+        width: 100%;
+        margin-top: -40px;
+        /* margin-top: -20px; */
+        margin-left: 0px;
+        font-style: oblique;
+        background-image: url("assets/Images/banner.jpg");
+      } 
+    
+       .header h1 
+        {
+        font-size: 40px;
+        }
+      
+      .sidenav {
+          height: 100%;
+          width: 180px;
+          /* width: 220px; */
+          position: fixed;
+          z-index: 1;
+          top: 104px;
+          left: 0;
+          background-color: #d1d1d4;
+          overflow-x: hidden;
+          padding-top: 0px;
+      }
+      
+      .sidenav a {
+          /* padding: 6px 6px 13px 30px; */
+          padding: 6px 6px 5px 10px;
+          text-decoration: none;
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+           /* font-family: Arial, Helvetica, sans-serif; */
+          font-size: 16px;
+          color: #000000;
+          display: block;
+      }
+      
+      .sidenav a:hover {
+          background-color: rgb(163, 172, 164);
+          color: #ffffff;
       }
     
-    .sidenav {
-        height: 100%;
-        width: 180px;
-        /* width: 220px; */
-        position: fixed;
-        z-index: 1;
-        top: 104px;
-        left: 0;
-        background-color: #d1d1d4;
-        overflow-x: hidden;
-        padding-top: 0px;
-    }
-    
-    .sidenav a {
-        /* padding: 6px 6px 13px 30px; */
-        padding: 6px 6px 5px 10px;
-        text-decoration: none;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-         /* font-family: Arial, Helvetica, sans-serif; */
-        font-size: 16px;
-        color: #000000;
-        display: block;
-    }
-    
-    .sidenav a:hover {
-        background-color: rgb(163, 172, 164);
-        color: #ffffff;
-    }
-  
-    .sidenav a.active {
-      background-color: rgb(3, 192, 34);
-      color: white;
-    }
-    
-    .main {
-        margin-left: 230px; /* Same as the width of the sidenav */
-        margin-top: 30px; 
-       
-    }
-    
-    @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-    }
-  
-  input[type=text],input[type="date"],input[type="number"], select, textarea {
-      width: 100%; /* Full width */
-      padding: 12px; /* Some padding */  
-      border: 1px solid #ccc; /* Gray border */
-      border-radius: 1px; /* Rounded borders */
-      box-sizing: border-box; /* Make sure that padding and width stays in place */
-      margin-top: 6px; /* Add a top margin */
-      margin-bottom: 16px; /* Bottom margin */
-      /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  input[type=submit] {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-      background-color: #45a049;
-  }
-  
-  .container {
-      border-radius: 5px;    
-      margin-left: 300px;
-      margin-top: 10px;
-      width: 40%;
-      background-color: #f2f2f2;
-      padding: 20px;
-  }
-  
-  label{
-    display: block;
-  }
-  
-  button:hover {
-      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  }
-  button{
-    background-color:rgb(3, 192, 34);
-    
-  }
-  
-  ul {
-      list-style-type: none;
-      margin-top:64px;
-      margin-left:0px;
-      position: fixed;
-      width: 100%;
-      /* margin-left:180px; */
-      overflow: hidden;
-      background-color: #333;
-  }
-  
-  li {
-      float: right;
-  }
-  
-  li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 7px 16px;
-      /* padding: 14px 16px; */
-      text-decoration: none;
-  }
-  
-  li a:hover {
-      background-color: rgb(247, 0, 0);
-      /* background-color: #111; */
-  }
-
-  /* for the footer @kodi */
-  .footer {
-        left: 0;
-        height:30px;
-        bottom: 0;
-        width: 100%;
-
-        background-color: rgb(185, 179, 179);
-       
-        color: rgb(255, 250, 250);
-        text-align: center;
-    }
-
-  form {align-content: right;margin-top: 100px}
-  
+      .sidenav a.active {
+        background-color: rgb(3, 192, 34);
+        color: white;
+      }
       
-  </style>
+      .main {
+          margin-left: 230px; /* Same as the width of the sidenav */
+          margin-top: 30px; 
+         
+      }
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+    
+    input[type=text],input[type="date"],input[type="number"], select, textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */  
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 1px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
+    }
+    
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+    
+    .container {
+        border-radius: 5px;    
+        margin-left: 300px;
+        margin-top: 10px;
+        width: 40%;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    
+    label{
+      display: block;
+    }
+    
+    button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+    button{
+      background-color:rgb(3, 192, 34);
+      
+    }
+    
+    ul {
+        list-style-type: none;
+        margin-top:64px;
+        margin-left:0px;
+        position: fixed;
+        width: 100%;
+        /* margin-left:180px; */
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    li {
+        float: right;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 7px 16px;
+        /* padding: 14px 16px; */
+        text-decoration: none;
+    }
+    
+    li a:hover {
+        background-color: rgb(247, 0, 0);
+        /* background-color: #111; */
+    }
   
-  <body >
-
-      <div class="header"> </div>
+    /* for the footer @kodi */
+    .footer {
+          left: 0;
+          height:30px;
+          bottom: 0;
+          width: 100%;
   
+          background-color: rgb(185, 179, 179);
+         
+          color: rgb(255, 250, 250);
+          text-align: center;
+      }
   
-      <ul>
-             <li><a class="active" href="#home">Home</a></li>
-             <li><a href="#news">News</a></li>
-             <li><a href="#contact">Contact</a></li>
-             <li><a href="#about">About</a></li>
-     </ul>
-
-     <!-- <div>
-            <img src="assets/Images/bg.jpg">
-      </div> -->
-
-  
-      <div class="sidenav">
-              <a  href="home">Home</a>
-              <a href="predict-each-item">Electricity Bill</a>
-              <a class="active" href="water">Water Bill</a>
-              <a href="">Telephone Bill</a>
-              <a href="">Data Bill</a>
-              <a href="">Insurance Bill </a>
-              <a href="">Solar Energy</a>
-              <a href="">Other Bills</a>
-              <a href="billmanager"> Bill Manager</a>
-          </div>
-
-          <!-- television code body -->
-          <form method="post" action="">
-              <table>
-                  <tr>
-                    <td>Account Number</td>
-                    <td><input type="text" name="account_no"></td>
-                  </tr>
-                  <tr>
-                    <td>Date</td>
-                    <td><input type="text" name="date"></td>
-                  </tr> 
-                  <tr>
-                      <td>Start Meter Reading</td>
-                      <td><input type="text" name="start"></td>
-                  </tr>
-                  <tr>
-                      <td>End Meter Reading</td>
-                      <td><input type="text" name="end"></td>
-                  </tr>
-                  <tr>
-                      <td>Units Consumed</td>
-                      <td><input type="text" name="amt"></td>
-                  </tr>
-                  <tr>
-                      <td>Amount</td>
-                      <td><input type="text" name="amt"></td>
-                  </tr>
-                  <br><br><br>
-                  <tr>
-                      <td><input type="submit" value="Submit"></td>
-                  <td><button class="btn"></button></td>
-                  <td></td>
-                  <td><button class="btn btn-primary" type="reset" value="Reset"></button></td>
-                  </tr>
-              </table>
-          </form>
-
-
-          
+    
         
-        <div class="footer">
-                <p>Copyright ©SLIIT-PDM-2018-WD-19. All Rights Reserved.</p>
+  
+    </style>
+    <body >
+  
+        <div class="header"> </div>
+    
+    
+        <ul>
+               <li><a class="active" href="#home">Home</a></li>
+               <li><a href="#news">News</a></li>
+               <li><a href="#contact">Contact</a></li>
+               <li><a href="#about">About</a></li>
+       </ul>
+  
+       <!-- <div>
+              <img src="assets/Images/bg.jpg">
+        </div> -->
+  
+    
+        <div class="sidenav">
+                <a class="active" href="home">Home</a>
+                <a href="predict-each-item">Electricity Bill</a>
+                <a href="water">Water Bill</a>
+                <a href="">Telephone Bill</a>
+                <a href="">Data Bill</a>
+                <a href="">Insurance Bill </a>
+                <a href="">Solar Energy</a>
+                <a href="">Other Bills</a>
+                <a href="billmanager"> Bill Manager</a>
             </div>
+  
+  
           
-  </body>
+          <div class="footer">
+                  <p>Copyright ©SLIIT-PDM-2018-WD-19. All Rights Reserved.</p>
+              </div>
+            
+    </body>
+  
