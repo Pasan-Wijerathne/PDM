@@ -14,6 +14,8 @@ import { Solar2Component } from './solar2/solar2.component';
 import { PredictEachItemComponent } from './predict-each-item/predict-each-item.component';
 import { TelevisionComponent } from './television/television.component';
 import { WaterComponent } from './water/water.component';
+import { InsuranceComponent } from './insurance/insurance.component';
+import { InstallmentComponent } from './installment/installment.component';
 
 const routes: Routes = [
   {path : "login", component : LoginComponent},
@@ -29,8 +31,10 @@ const routes: Routes = [
   {path : "solar2", component : Solar2Component},
   {path : "predict-each-item", component : PredictEachItemComponent},
   {path : "television", component : TelevisionComponent},
-  {path : "water", component : WaterComponent}
-  
+  {path : "water", component : WaterComponent},
+  {path : "insurance", component : InsuranceComponent},
+  {path : "installment", component : InstallmentComponent }
+
   ];
 
 
