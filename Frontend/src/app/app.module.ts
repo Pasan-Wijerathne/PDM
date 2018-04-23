@@ -17,6 +17,8 @@ import { Solar2Component } from './solar2/solar2.component';
 import { PredictEachItemComponent } from './predict-each-item/predict-each-item.component';
 import { TelevisionComponent } from './television/television.component';
 import { WaterComponent } from './water/water.component';
+import { InstallmentComponent } from './installment/installment.component';
+import { InsuranceComponent } from './insurance/insurance.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { WaterComponent } from './water/water.component';
     Solar2Component,
     PredictEachItemComponent,
     TelevisionComponent,
-    WaterComponent
+    WaterComponent,
+    InstallmentComponent,
+    InsuranceComponent
   ],
   imports: [
     BrowserModule,
