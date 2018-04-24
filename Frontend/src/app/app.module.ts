@@ -28,6 +28,7 @@ import { AddEditElectricityComponent } from './add-edit-electricity/add-edit-ele
 import { AddEditWaterComponent } from './add-edit-water/add-edit-water.component';
 import { AddEditTelephoneComponent } from './add-edit-telephone/add-edit-telephone.component';
 import { AddEditTelevitionComponent } from './add-edit-televition/add-edit-televition.component';
+import { TestimageComponent } from './testimage/testimage.component';
 
 
 
@@ -59,6 +60,7 @@ import { AddEditTelevitionComponent } from './add-edit-televition/add-edit-telev
     AddEditWaterComponent,
     AddEditTelephoneComponent,
     AddEditTelevitionComponent,
+    TestimageComponent,
   ],
   imports: [
     BrowserModule,
