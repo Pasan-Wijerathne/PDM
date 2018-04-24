@@ -222,6 +222,15 @@
     padding-left: 230px;
   } 
 
+  .container {
+  border-radius: 5px;    
+  margin-left: 300px;
+  margin-top: 150px;
+  width: 40%;
+  background-color: #696868;
+  padding: 20px;
+  }
+
   
       
   </style>
@@ -258,51 +267,41 @@
               <a href="add-edit-bills"> Bill Manager</a>
           </div>
 
-         <!-- predict-each-item -->
-
-         <!-- <br>
-         <br>
-         <br>
-         <br> -->
-
-         <div class="space">
-
-            <h2 >Predict each item cost</h2>
+          <!-- code here -->
+          <div class="container"> 
+            <form action="/action_page.php">
           
-          <form action="">
-              
-          <div Class="eachitem">
-              <label for="id"><b>Item ID</b></label><br>
-              <input type="text" placeholder="Enter Item id" name="id" id="txt"><br><br>
-              <label for="name"><b>Item name </b></label><br>
-              <input type="text" placeholder="Enter Item name" name="name" id="txt"><br><br>
+              <label for="country">Bill Type</label>
+              <select id="type" name="type">
+                <option value="electricity">Electricity</option>
+                <option value="water">Water</option>
+                <option value="telwphone">Telephone</option>
+              </select>
           
-              <label for="wts"><b>No of Watts</b></label> <br>
-              <input type="text" placeholder="Enter No of watts" name="watts" id="txt" >
-              <button type="button" Class="btn">Auto</button><br><br>
+              <label for="acountnum">Account Number</label>
+              <input type="text" id="acountnum" name="acountnum" placeholder="Account Number" required>
           
-              <label for="hrs"><b>Hours per day</b></label><br>
-              <input type="text" placeholder="Enter Hours per day" name="hours" id="txt" >
-              <button type="button" Class="btn" >Auto</button><br><br>
+              <label for="Date">Date</label>
+              <input type="date" id="date" name="date" required>
           
-          </div>
+              <label for="unitConsume">Number of Units Consumed</label>
+              <input type="text" id="unitConsume" name="unitConsume" placeholder="Enter the number of units" required>
           
-          <label for="uname"><b>Period </b></label><br>
-          <div class="dropdown">
-                  
-            <select class="dropbtn">
-              <option class="dropdown-content">Daily</option>
-              <option class="dropdown-content">Monthly</option>
-              <option class="dropdown-content">Yearly</option>
-            </select>
+              <label for="unitsCharge">Charge for consumed units(Rs:)</label>
+              <input type="number" id="unitsCharge" name="unitsCharge" placeholder="Enter the charge (Rs:)" required>
           
-          </div>
-          <br><br>
+              <label for="image">Add Image</label>
+              <input type="image" id="image" name="name" >
           
-          <button type="button" Class="btn" button type="button" >Calculate</button><br><br>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
           
-          </form>
-          </div>
+              <input type="submit" value="Add Bill">
+            </form>
+        
+          
+        </div>
+         
          
         
         <div class="footer">
