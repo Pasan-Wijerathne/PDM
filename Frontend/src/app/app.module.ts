@@ -24,6 +24,11 @@ import { TelephoneComponent } from './telephone/telephone.component';
 import { MysimComponent } from './mysim/mysim.component';
 import { TelecomparisonComponent } from './telecomparison/telecomparison.component';
 import { ComparisonboardComponent } from './comparisonboard/comparisonboard.component';
+import { AddEditElectricityComponent } from './add-edit-electricity/add-edit-electricity.component';
+import { AddEditWaterComponent } from './add-edit-water/add-edit-water.component';
+import { AddEditTelephoneComponent } from './add-edit-telephone/add-edit-telephone.component';
+import { AddEditTelevitionComponent } from './add-edit-televition/add-edit-televition.component';
+
 
 
 @NgModule({
@@ -49,7 +54,11 @@ import { ComparisonboardComponent } from './comparisonboard/comparisonboard.comp
     TelephoneComponent,
     MysimComponent,
     TelecomparisonComponent,
-    ComparisonboardComponent
+    ComparisonboardComponent,
+    AddEditElectricityComponent,
+    AddEditWaterComponent,
+    AddEditTelephoneComponent,
+    AddEditTelevitionComponent,
   ],
   imports: [
     BrowserModule,

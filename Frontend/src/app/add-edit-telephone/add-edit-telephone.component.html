@@ -150,9 +150,7 @@
         height:30px;
         bottom: 0;
         width: 100%;
-
         background-color: rgb(185, 179, 179);
-       
         color: rgb(255, 250, 250);
         text-align: center;
     }
@@ -184,9 +182,9 @@ input[type=submit]:hover {
 
 .container {
   border-radius: 5px;    
-  margin-left: 300px;
-  margin-top: 150px;
-  width: 40%;
+  margin-left: 250px;
+  margin-top: 30px;
+  width: 30%;
   background-color: #949090;
   padding: 20px;
 }
@@ -203,10 +201,11 @@ display: block;
 /* Table css */
 table {
     border-collapse: collapse;
-    width: 80%;
-    margin-left: 250px;
-    margin-top: 100px;
+    width: 40%;
+    margin-left: 800px;
+    margin-top: -650px;
     margin-bottom: 80px;
+    /* position: left; */
 }
 
 th, td {
@@ -221,6 +220,20 @@ th{
 }
 
 tr:hover {background-color:#f5f5f5;}
+
+  /* form title */
+  title{
+      /* text-align: center; */
+     
+      position: relative;
+
+  }
+   h2{
+      /* margin-left:450px; */
+      margin-top:150px;
+      margin-bottom: 10px;
+
+   }
 
 </style>
 
@@ -237,7 +250,6 @@ tr:hover {background-color:#f5f5f5;}
        <li><a href="#about">About</a></li>
 </ul>
 
-
 <div class="sidenav">
         <a href="home">Home</a>
         <a href="predict-each-item">Electricity Bill</a>
@@ -250,17 +262,15 @@ tr:hover {background-color:#f5f5f5;}
         <a class="active" href="billmanager"> Bill Manager</a>
 </div>
 
+  <div class="title">
+      <h2 align="center"> Enter Telephone Bill Details </h2>
+  </div>
 
   <div class="container"> 
     <form action="/action_page.php">
   
-      <label for="country">Bill Type</label>
-      <select id="type" name="type">
-        <option value="electricity">Electricity</option>
-        <option value="water">Water</option>
-        <option value="telwphone">Telephone</option>
-      </select>
-  
+      <label for="billID">TELEPHONE</label>
+
       <label for="acountnum">Account Number</label>
       <input type="text" id="acountnum" name="acountnum" placeholder="Account Number" required>
   
@@ -287,9 +297,11 @@ tr:hover {background-color:#f5f5f5;}
 
 <table>
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Points</th>
+      <th>Account No</th>
+      <th>Date</th>
+      <th>No.UnitConsumed</th>
+      <th>Charge(Rs)</th>
+      <th>Image</th>
     </tr>
 
     <tr>
@@ -312,10 +324,14 @@ tr:hover {background-color:#f5f5f5;}
       <td>Brown</td>
       <td>$250</td>
     </tr>
+    <tr>
+      <td>Cleveland</td>
+      <td>Brown</td>
+      <td>$250</td>
+    </tr>
   </table>
 
-<div class="footer">
-    <p>Copyright ©SLIIT-PDM-2018-WD-19. All Rights Reserved.</p>
-</div>
+
 
 </body>
+
