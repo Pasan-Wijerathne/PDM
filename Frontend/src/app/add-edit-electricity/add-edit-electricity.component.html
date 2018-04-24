@@ -1,3 +1,4 @@
+
 <style>
 
 
@@ -174,6 +175,8 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      margin-top: 10px;
+      margin: 7px;
   }
   
   input[type=submit]:hover {
@@ -203,7 +206,7 @@
       border-collapse: collapse;
       width: 40%;
       margin-left: 800px;
-      margin-top: -650px;
+      margin-top: -500px;
       margin-bottom: 80px;
       /* position: left; */
   }
@@ -226,15 +229,15 @@
         /* text-align: center; */
        
         position: relative;
-
+  
     }
      h2{
         /* margin-left:450px; */
         margin-top:150px;
         margin-bottom: 10px;
-
+  
      }
-
+  
   </style>
   
   <body>
@@ -249,7 +252,7 @@
          <li><a href="#about">About</a></li>
          <li><a href="#about">About</a></li>
   </ul>
-
+  
   <div class="sidenav">
           <a href="home">Home</a>
           <a href="predict-each-item">Electricity Bill</a>
@@ -265,12 +268,12 @@
     <div class="title">
         <h2 align="center"> Enter Electricity Bill Details </h2>
     </div>
-
+  
     <div class="container"> 
       <form action="/action_page.php">
     
         <label for="billID">ELECTRICITY</label>
-
+  
         <label for="acountnum">Account Number</label>
         <input type="text" id="acountnum" name="acountnum" placeholder="Account Number" required>
     
@@ -284,12 +287,11 @@
         <input type="number" id="unitsCharge" name="unitsCharge" placeholder="Enter the charge (Rs:)" required>
     
         <label for="image">Add Image</label>
-        <input type="image" id="image" name="name" >
-    
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+        <input type="file" name="pic" accept="image/*">
     
         <input type="submit" value="Add Bill">
+        <input type="submit" value="Edit Bill">
+        <input type="submit" value="Clear">
       </form>
   
     
@@ -331,7 +333,8 @@
       </tr>
     </table>
   
-
-
+  
+  
   </body>
-
+  
+  

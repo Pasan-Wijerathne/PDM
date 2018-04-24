@@ -174,6 +174,7 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin: 7px;
 }
 
 input[type=submit]:hover {
@@ -203,7 +204,7 @@ table {
     border-collapse: collapse;
     width: 40%;
     margin-left: 800px;
-    margin-top: -650px;
+    margin-top: -500px;
     margin-bottom: 80px;
     /* position: left; */
 }
@@ -268,28 +269,27 @@ tr:hover {background-color:#f5f5f5;}
 
   <div class="container"> 
     <form action="/action_page.php">
-  
-      <label for="billID">TELEPHONE</label>
 
-      <label for="acountnum">Account Number</label>
-      <input type="text" id="acountnum" name="acountnum" placeholder="Account Number" required>
+        <label>TELEPHONE</label>
   
-      <label for="Date">Date</label>
-      <input type="date" id="date" name="date" required>
-  
-      <label for="unitConsume">Number of Units Consumed</label>
-      <input type="text" id="unitConsume" name="unitConsume" placeholder="Enter the number of units" required>
-  
-      <label for="unitsCharge">Charge for consumed units(Rs:)</label>
-      <input type="number" id="unitsCharge" name="unitsCharge" placeholder="Enter the charge (Rs:)" required>
-  
-      <label for="image">Add Image</label>
-      <input type="image" id="image" name="name" >
-  
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
-  
-      <input type="submit" value="Add Bill">
+        <label for="acountnum">Account Number</label>
+        <input type="text" id="acountnum" name="acountnum" placeholder="Account Number" required>
+    
+        <label for="Date">Date</label>
+        <input type="date" id="date" name="date" required>
+    
+        <label for="unitConsume">Number of Units Consumed</label>
+        <input type="text" id="unitConsume" name="unitConsume" placeholder="Enter the number of units" required>
+    
+        <label for="unitsCharge">Charge for consumed units(Rs:)</label>
+        <input type="number" id="unitsCharge" name="unitsCharge" placeholder="Enter the charge (Rs:)" required>
+    
+        <label for="image">Add Image</label>
+        <input type="file" name="pic" accept="image/*">
+    
+        <input type="submit" value="Add Bill">
+        <input type="submit" value="Edit Bill">
+        <input type="submit" value="Clear">
     </form>
 
   
@@ -319,16 +319,8 @@ tr:hover {background-color:#f5f5f5;}
       <td>Swanson</td>
       <td>$300</td>
     </tr>
-    <tr>
-      <td>Cleveland</td>
-      <td>Brown</td>
-      <td>$250</td>
-    </tr>
-    <tr>
-      <td>Cleveland</td>
-      <td>Brown</td>
-      <td>$250</td>
-    </tr>
+
+
   </table>
 
 
