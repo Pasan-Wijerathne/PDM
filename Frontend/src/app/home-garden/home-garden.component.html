@@ -239,21 +239,21 @@ tr:hover {background-color:#f5f5f5;}
       
       
 <ul>
-         
-          <li><a href="prediction">Final Prediction</a></li>
-          <li><a class="act" href="predict-each-item">Predict Each Item</a></li>
+    <li><a href="vehicle">Vehicle</a></li>
+    <li><a class="act" href="home-garden">Home & Garden</a></li>
+    <li><a href="medicine">Medicine</a></li>
 </ul>
 
 <div class="sidenav">
               <a href="home">Home</a>
-              <a class="active" href="predict-each-item">Electricity Bill</a>
+              <a href="predict-each-item">Electricity Bill</a>
               <a href="">Water Bill</a>
               <a href="">Telephone Bill</a>
               <a href="">Data Bill</a>
               <a href="">Insurance Bill </a>
               <a href="solar1">Solar Energy</a>
               <a href="gas"> Gas</a>
-              <a href="medicine">Other Bills</a>
+              <a class="active" href="medicine">Other Bills</a>
               <a href="add-edit-bills"> Bill Manager</a>
           </div>
 
@@ -262,35 +262,26 @@ tr:hover {background-color:#f5f5f5;}
   <div class="container"> 
     <form action="/action_page.php">
   
-     
-  
-      <label for="itemname">Item name</label>
-      <input type="text" id="itemname" name="itemname" placeholder="Please enter the Item name...." required>
-  
-      <label for="noofwatts">No of Watts</label>
-      <input type="number" id="noofwatts" name="noofwatts" placeholder="Please enter the No of watts...." required>
+    
+<label for="period">Select maintenance Type</label>
+<select id="period" name="period">
+ <option value="house">house</option>
+ <option value="garden">garden</option>
+</select>
 
-      <input type="submit" value="Auto">
-      
-  
-      <label for="hoursperday">Hours per day</label>
-      <input type="number" id="hoursperday" name="hoursperday" placeholder="Please enter the No of Hours per day...." required>
+<label for="Date">Date</label>
+<input type="date" id="date" name="date" required>
 
-      <input type="submit" value="Auto">
-      
+<label for="subject">Description</label>
+<textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
 
-      <label for="period">Please select a Time period</label>
-      <select id="period" name="period">
-        <option value="daily">Daily</option>
-        <option value="monthly">Monthly</option>
-        <option value="yearly">Yearly</option>
-      </select>
-  
-      <input type="submit" value="Calculate">
 
-      <label for="itemname">Total cost</label>
-      <input type="text" id="itemname" name="itemname" required>
-  
+<label for="subject">Total Monthly cost </label>
+<input type="number" id="usage" name="usage" required>
+
+<input type="submit" value="Submit">
+
+
     </form>
 
   
@@ -304,3 +295,7 @@ tr:hover {background-color:#f5f5f5;}
 </div>
 
 </body>
+
+
+
+

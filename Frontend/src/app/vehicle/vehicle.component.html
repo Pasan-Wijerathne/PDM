@@ -239,9 +239,9 @@ tr:hover {background-color:#f5f5f5;}
       
       
 <ul>
-         
-          <li><a href="prediction">Final Prediction</a></li>
-          <li><a class="act" href="predict-each-item">Predict Each Item</a></li>
+          <li><a class="act" href="vehicle">Vehicle</a></li>
+          <li><a href="home-garden">Home & Garden</a></li>
+          <li><a href="medicine">Medicine</a></li>
 </ul>
 
 <div class="sidenav">
@@ -253,7 +253,7 @@ tr:hover {background-color:#f5f5f5;}
               <a href="">Insurance Bill </a>
               <a href="solar1">Solar Energy</a>
               <a href="gas"> Gas</a>
-              <a href="medicine">Other Bills</a>
+              <a href="">Other Bills</a>
               <a href="add-edit-bills"> Bill Manager</a>
           </div>
 
@@ -264,33 +264,26 @@ tr:hover {background-color:#f5f5f5;}
   
      
   
-      <label for="itemname">Item name</label>
-      <input type="text" id="itemname" name="itemname" placeholder="Please enter the Item name...." required>
-  
-      <label for="noofwatts">No of Watts</label>
-      <input type="number" id="noofwatts" name="noofwatts" placeholder="Please enter the No of watts...." required>
-
-      <input type="submit" value="Auto">
+      <label for="itemname">Vehicle insurance expences</label>
+      <input type="number" id="noofwatts" name="cost" placeholder="Please enter the expences...." required>
+       
+      <label for="itemname">Vehicle maintenance expences</label>
+      <input type="number" id="noofwatts" name="cost" placeholder="Please enter the expences...." required>
       
-  
-      <label for="hoursperday">Hours per day</label>
-      <input type="number" id="hoursperday" name="hoursperday" placeholder="Please enter the No of Hours per day...." required>
-
-      <input type="submit" value="Auto">
-      
-
-      <label for="period">Please select a Time period</label>
-      <select id="period" name="period">
-        <option value="daily">Daily</option>
-        <option value="monthly">Monthly</option>
-        <option value="yearly">Yearly</option>
-      </select>
-  
       <input type="submit" value="Calculate">
 
-      <label for="itemname">Total cost</label>
-      <input type="text" id="itemname" name="itemname" required>
-  
+      <label for="itemname">Total expences</label>
+      <input type="number" id="noofwatts" name="cost"  required>
+
+      <label for="Date">Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="subject">Description</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+      
+      <input type="submit" value="Submit">
+      
+
     </form>
 
   
@@ -304,3 +297,7 @@ tr:hover {background-color:#f5f5f5;}
 </div>
 
 </body>
+
+
+
+

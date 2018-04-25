@@ -25,11 +25,15 @@ import { AddEditWaterComponent} from './add-edit-water/add-edit-water.component'
 import { AddEditTelephoneComponent } from './add-edit-telephone/add-edit-telephone.component';
 import { AddEditTelevitionComponent } from './add-edit-televition/add-edit-televition.component';
 import { TestimageComponent } from './testimage/testimage.component';
+import { HomeGardenComponent } from './home-garden/home-garden.component';
+import { MedicineComponent } from './medicine/medicine.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
   {path : "login", component : LoginComponent},
-  
-  {path : "home", component : HomeComponent}, 
+
+  {path : "home", component : HomeComponent},
+
 
   {path : "gas", component : GasComponent},
   {path : "itemprediction", component : ItempredictionComponent},
@@ -51,6 +55,9 @@ const routes: Routes = [
   {path : "add-edit-telephone",component : AddEditTelephoneComponent },
   {path : "add-edit-televition",component : AddEditTelevitionComponent },
   {path : "testimage", component : TestimageComponent},
+  {path : "home-garden", component: HomeGardenComponent},
+  {path : "medicine" , component : MedicineComponent},
+  {path : "vehicle" ,component : VehicleComponent},
   ];
 
 
