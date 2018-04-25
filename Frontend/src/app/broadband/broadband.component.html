@@ -53,7 +53,7 @@
     
     .main {
         margin-left: 230px; /* Same as the width of the sidenav */
-        margin-top: 70px;
+        margin-top: 100px;
     }
     
     @media screen and (max-height: 450px) {
@@ -336,9 +336,10 @@
           color: rgb(189, 181, 181);
       }
       
-      form {
-                width:500px;
-                margin:50px auto;
+      form1{
+                width:100px;
+                height: 20px;;
+                margin:20px auto;
                
 }
 .search {
@@ -348,7 +349,7 @@
 }
 .button {
                 position:relative;
-                padding:6px 15px;
+                padding:12px 15px;
                 left:-8px;
                 border:2px solid rgb(139, 135, 135);
                 background-color:#fafafa;
@@ -358,7 +359,13 @@
                 background-color:grey;
                 color:green;
 }     
-      
+
+
+ .para
+ {
+     font-size: 20px;
+     float:left;
+ }     
   </style>
   
   <body>
@@ -387,10 +394,10 @@
   
   
       <div class="sidenav">
-              <a  href="home">Home</a>
+              <a href="home">Home</a>
               <a href="">Electricity Bill</a>
               <a href="">Water Bill</a>
-              <a href="http://localhost:4200/telephone">Telephone Bill</a>
+              <a  href="http://localhost:4200/telephone">Telephone Bill</a>
               <a href="">Data Bill</a>
               <a href="">Insurance Bill </a>
               <a href="">Other Bills</a>
@@ -403,17 +410,26 @@
 
                 <div class="button">
                         <div class="search">
-                    <form align="right">
+                            <div class="form1">
+                    
+                            <div class="para">
                             <p>Enter Your Phone  Number</p>
+                            </div>
                             <input type="text" placeholder="Search Your Usage......." required>
                             <input type="button" value="Search">
-                    </form>
+                        </div>
               </div>
                     </div>
             <h2 align="center" margin-top="50px">Enter your Broadband Usage Here</h2> 
             <Form>
       
            <table align="center" cellpadding = "7">
+                <tr>
+                        <td  align="left"></td>
+                        <td>User ID</td>
+                        <td><input id="Text1" type="text" name="fname" /></td>
+                     </tr>
+
               <tr>
                   <td  align="left"></td>
                   <td>Package Type</td>

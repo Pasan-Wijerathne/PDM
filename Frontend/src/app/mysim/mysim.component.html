@@ -338,9 +338,10 @@
   
       
 
- form {
-                width:500px;
-                margin:50px auto;
+ form1{
+                width:100px;
+                height: 20px;;
+                margin:20px auto;
                
 }
 .search {
@@ -360,6 +361,13 @@
                 background-color:grey;
                 color:green;
 }     
+
+
+.para
+ {
+     font-size: 20px;
+     float:left;
+ }    
   </style>
   
   <body>
@@ -374,7 +382,7 @@
           </button>
           <div class="dropdown-content">
           <a href="http://localhost:4200/broadband">BroadBand Details</a>
-          <a href="http://localhost:4200/comparison">Comparison</a>
+          <a href="http://localhost:4200/comparisonbroad">Comparison</a>
           </div>
           </div>
           <a href="http://localhost:4200/telecomparison">Telephone Bill Comparison</a>
@@ -399,14 +407,17 @@
   
           <div class="main">
                 <div class="button">
-                    <div class="search">
-                <form align="right">
-                        <p>Enter Your SIM Number</p>
-                        <input type="text" placeholder="Search Your SIM......." required>
-                        <input type="button" value="Search">
-                </form>
-          </div>
-                </div>
+                        <div class="search">
+                            <div class="form1">
+                    
+                            <div class="para">
+                            <p>Enter Your Phone  Number</p>
+                            </div>
+                            <input type="text" placeholder="Search Your SIM .........." required>
+                            <input type="button" value="Search">
+                        </div>
+              </div>
+                    </div>
 
   
             <h2 align="center">Enter Your SIM Details Here
@@ -416,6 +427,13 @@
             <Form>
       
                <table align="center" cellpadding = "10">
+
+                    <tr>
+                            <td  align="left"></td>
+                            <td>User ID</td>
+                            <td><input id="Text1" type="text" name="fname" /></td>
+                         </tr>
+
                 <tr>
                   <td  align="left"></td>
                   <td>Phone Number</td>
