@@ -28,6 +28,7 @@ import { TestimageComponent } from './testimage/testimage.component';
 import { HomeGardenComponent } from './home-garden/home-garden.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { ElectricEqComponent } from './electric-eq/electric-eq.component';
 
 
 
@@ -59,6 +60,7 @@ import { VehicleComponent } from './vehicle/vehicle.component';
     HomeGardenComponent,
     MedicineComponent,
     VehicleComponent,
+    ElectricEqComponent,
   ],
   imports: [
     BrowserModule,

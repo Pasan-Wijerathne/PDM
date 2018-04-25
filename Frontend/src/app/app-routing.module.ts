@@ -28,6 +28,7 @@ import { TestimageComponent } from './testimage/testimage.component';
 import { HomeGardenComponent } from './home-garden/home-garden.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { ElectricEqComponent } from './electric-eq/electric-eq.component';
 
 const routes: Routes = [
   {path : "login", component : LoginComponent},
@@ -58,6 +59,7 @@ const routes: Routes = [
   {path : "home-garden", component: HomeGardenComponent},
   {path : "medicine" , component : MedicineComponent},
   {path : "vehicle" ,component : VehicleComponent},
+  {path : "electric-eq" ,component : ElectricEqComponent}
   ];
 
 
