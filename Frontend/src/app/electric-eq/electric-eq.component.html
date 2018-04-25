@@ -193,9 +193,9 @@ input[type=submit]:hover {
 
 .container {
   border-radius: 5px;    
-  margin-left: 300px;
+  margin-left: 210px;
   margin-top: 150px;
-  width: 40%;
+  width: 30%;
   background-color: #949090;
   padding: 20px;
 }
@@ -211,11 +211,11 @@ display: block;
 
 /* Table css */
 table {
-    border-collapse: collapse;
-    width: 80%;
-    margin-left: 250px;
-    margin-top: 100px;
-    margin-bottom: 80px;
+      border-collapse: collapse;
+      width: 55%;
+      margin-left: 700px;
+      margin-top: -626px;
+      margin-bottom: 80px;
 }
 
 th, td {
@@ -241,8 +241,8 @@ tr:hover {background-color:#f5f5f5;}
 <ul>
          
           <li><a href="prediction">Final Prediction</a></li>
-          <li><a href="electric-eq">Electric Equipments</a></li>
-          <li><a class="act" href="predict-each-item">Predict Each Item</a></li>
+          <li><a class="act" href="electric-eq">Electric Equipments</a></li>
+          <li><a href="predict-each-item">Predict Each Item</a></li>
 </ul>
 
 <div class="sidenav">
@@ -265,43 +265,76 @@ tr:hover {background-color:#f5f5f5;}
   
      
   
-      <label for="itemname">Item name</label>
-      <input type="text" id="itemname" name="itemname" placeholder="Please enter the Item name...." required>
+      <label for="eqname">Equipment Name </label>
+      <input type="text" id="eqname" name="eqname" placeholder="Please enter the Equipment Name...." required>
   
-      <label for="noofwatts">No of Watts</label>
-      <input type="number" id="noofwatts" name="noofwatts" placeholder="Please enter the No of watts...." required>
+      <label for="Manufacturer">Manufacturer</label>
+      <input type="text" id="Manufacturer" name="Manufacturer" placeholder="Please enter the Manufacturer...." required>
 
-      <input type="submit" value="Auto">
-      
-  
-      <label for="hoursperday">Hours per day</label>
-      <input type="number" id="hoursperday" name="hoursperday" placeholder="Please enter the No of Hours per day...." required>
+      <label for="noofwatts">Number Of watts</label>
+      <input type="number" id="noofwatts" name="noofwatts" placeholder="Please enter the Number Of watts...." required>
 
-      <input type="submit" value="Auto">
-      
+      <label for="noofitems">Number Of Items</label>
+      <input type="number" id="noofitems" name="noofitems" placeholder="Please enter the Number Of Items...." required>
 
-      <label for="period">Please select a Time period</label>
-      <select id="period" name="period">
-        <option value="daily">Daily</option>
-        <option value="monthly">Monthly</option>
-        <option value="yearly">Yearly</option>
-      </select>
-  
-      <input type="submit" value="Calculate">
+      <label for="edate">Expire date</label>
+      <input type="date" id="edate" name="edate" placeholder="Please enter the Expire date...." required>
 
-      <label for="itemname">Total cost</label>
-      <input type="text" id="itemname" name="itemname" required>
-  
+      <label for="noofhours">Number of Hours per day</label>
+      <input type="number" id="noofhours" name="noofhours" placeholder="Please enter the Number of Hours per day...." required>
+
+      <input type="submit" value="Add     ">
+      <input type="submit" value="Update  ">
+      <input type="submit" value="Remove  ">
+      <input type="submit" value="Clear   ">
+
+
     </form>
 
   
 </div>
 <br>
 
+<table>
+  <tr>
+    <th>Account No</th>
+    <th>Date</th>
+    <th>No.UnitConsumed</th>
+    <th>Charge(Rs)</th>
+    <th>Image</th>
+  </tr>
+
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+    <td>$150</td>
+  </tr>
+  <tr>
+    <td>Joe</td>
+    <td>Swanson</td>
+    <td>$300</td>
+  </tr>
+  <tr>
+    <td>Cleveland</td>
+    <td>Brown</td>
+    <td>$250</td>
+  </tr>
+  <tr>
+    <td>Cleveland</td>
+    <td>Brown</td>
+    <td>$250</td>
+  </tr>
+</table>
 
 
-<div class="footer">
+
+<!-- <div class="footer">
     <p>Copyright ©SLIIT-PDM-2018-WD-19. All Rights Reserved.</p>
-</div>
+</div> -->
 
 </body>

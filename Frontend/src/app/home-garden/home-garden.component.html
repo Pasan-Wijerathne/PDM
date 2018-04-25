@@ -1,6 +1,6 @@
+<style>
 
-  <style>
-  
+
   body {
         font-family:  Arial, Helvetica, sans-serif;
   
@@ -13,7 +13,7 @@
       position: fixed;
       /* height: 100px; */
       width: 100%;
-      margin-top: -40px;
+      margin-top: -170px;
       /* margin-top: -20px; */
       margin-left: 0px;
       font-style: oblique;
@@ -117,7 +117,7 @@
   
   ul {
       list-style-type: none;
-      margin-top:64px;
+      margin-top:-66px;
       margin-left:0px;
       position: fixed;
       width: 100%;
@@ -138,6 +138,14 @@
       /* padding: 14px 16px; */
       text-decoration: none;
   }
+
+  li a.act
+    {
+    background-color: #000000;
+        
+     color: rgb(253, 253, 253);
+    }
+
   
   li a:hover {
       background-color: rgb(247, 0, 0);
@@ -147,7 +155,7 @@
   /* for the footer @kodi */
   .footer {
         left: 0;
-        height:35px;
+        height:30px;
         bottom: 0;
         width: 100%;
 
@@ -157,71 +165,137 @@
         text-align: center;
     }
 
-  
+    /* filling form */
+input[type=text],input[type="date"],input[type="number"],input[type="image"], select, textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 1px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 2px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10PX;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;    
+  margin-left: 300px;
+  margin-top: 150px;
+  width: 40%;
+  background-color: #949090;
+  padding: 20px;
+}
+
+label{
+display: block;
+}
+
+.space{
+    margin-top: 0px;
+  padding-left: 230px;
+  } 
+
+/* Table css */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 250px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th{
+    background-color: darkgrey;
+}
+
+tr:hover {background-color:#f5f5f5;}
+
+</style>
+
+<body>
+
+<div class="header"> </div>
       
+      
+<ul>
+    <li><a href="vehicle">Vehicle</a></li>
+    <li><a class="act" href="home-garden">Home & Garden</a></li>
+    <li><a href="medicine">Medicine</a></li>
+</ul>
 
-  </style>
-  <body >
-
-      <div class="header"> </div>
-  
-  
-      <ul>
-             <li><a class="active" href="#home">Home</a></li>
-             <li><a href="#news">News</a></li>
-             <li><a href="#contact">Contact</a></li>
-             <li><a href="#about">About</a></li>
-     </ul>
-
-     <!-- <div>
-            <img src="assets/Images/bg.jpg">
-      </div> -->
-
-  
-      <div class="sidenav">
-              <a class="active" href="home">Home</a>
+<div class="sidenav">
+              <a href="home">Home</a>
               <a href="predict-each-item">Electricity Bill</a>
-              <a href="water">Water Bill</a>
+              <a href="">Water Bill</a>
               <a href="">Telephone Bill</a>
               <a href="">Data Bill</a>
-              <a href="insurance">Insurance Bill </a>
+              <a href="">Insurance Bill </a>
               <a href="solar1">Solar Energy</a>
               <a href="gas"> Gas</a>
-              <a href="medicine">Other Bills</a>
+              <a class="active" href="medicine">Other Bills</a>
               <a href="add-edit-bills"> Bill Manager</a>
-
-              <label for="user">USER ID</label>
           </div>
 
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdiiiiiiiiiii</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1>
-          <h1>this is testhjksdfsdkfjksdfjsdhkfhsdfhksdfsdfsdf44464456j</h1> 
-          <h1>tmy namejsfhsjfhgdfgdtfdgoooooooooooooooooooooooooooooooo</h1> 
-          <h1>tmy namejsfhsjfhgdfgdtfdgoooooooooooooooooooooooooooooooo</h1> 
-          <h1>tmy namejsfhsjfhgdfgdtfdgoooooooooooooooooooooooooooooooo</h1> 
-          
-        
-        <div class="footer">
-                <p>Copyright ©SLIIT-PDM-2018-WD-19. All Rights Reserved.</p>
-            </div>
-          
-  </body>
+
+
+  <div class="container"> 
+    <form action="/action_page.php">
+  
+    
+<label for="period">Select maintenance Type</label>
+<select id="period" name="period">
+ <option value="house">house</option>
+ <option value="garden">garden</option>
+</select>
+
+<label for="Date">Date</label>
+<input type="date" id="date" name="date" required>
+
+<label for="subject">Description</label>
+<textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+
+<label for="subject">Total Monthly cost </label>
+<input type="number" id="usage" name="usage" required>
+
+<input type="submit" value="Submit">
+
+
+    </form>
+
+  
+</div>
+<br>
+
+
+
+<div class="footer">
+    <p>Copyright ©SLIIT-PDM-2018-WD-19. All Rights Reserved.</p>
+</div>
+
+</body>
+
+
+
+

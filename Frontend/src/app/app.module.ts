@@ -27,6 +27,10 @@ import { AddEditTelephoneComponent } from './add-edit-telephone/add-edit-telepho
 import { AddEditTelevitionComponent } from './add-edit-televition/add-edit-televition.component';
 import { TestimageComponent } from './testimage/testimage.component';
 import { CreateaccComponent } from './createacc/createacc.component';
+import { HomeGardenComponent } from './home-garden/home-garden.component';
+import { MedicineComponent } from './medicine/medicine.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { ElectricEqComponent } from './electric-eq/electric-eq.component';
 
 
 
@@ -58,6 +62,10 @@ import { CreateaccComponent } from './createacc/createacc.component';
     AddEditTelevitionComponent,
     TestimageComponent,
     CreateaccComponent,
+    HomeGardenComponent,
+    MedicineComponent,
+    VehicleComponent,
+    ElectricEqComponent,
   ],
   imports: [
     BrowserModule,
