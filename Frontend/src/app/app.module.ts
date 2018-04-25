@@ -4,13 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-<<<<<<< HEAD
-import { TestComponent } from './test/test.component';
-import { Test2Component } from './test2/test2.component';
-=======
-import { BillmanagerComponent } from './billmanager/billmanager.component';
-import { AddEditBillsComponent } from './add-edit-bills/add-edit-bills.component';
->>>>>>> 196031cb0c4611166b6b6ead3d56540c551546f5
+
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 import { GasComponent } from './gas/gas.component';
 import { ItempredictionComponent } from './itemprediction/itemprediction.component';
@@ -32,6 +26,7 @@ import { AddEditWaterComponent } from './add-edit-water/add-edit-water.component
 import { AddEditTelephoneComponent } from './add-edit-telephone/add-edit-telephone.component';
 import { AddEditTelevitionComponent } from './add-edit-televition/add-edit-televition.component';
 import { TestimageComponent } from './testimage/testimage.component';
+import { CreateaccComponent } from './createacc/createacc.component';
 
 
 
@@ -40,15 +35,8 @@ import { TestimageComponent } from './testimage/testimage.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-<<<<<<< HEAD
-    TestComponent,
-    Test2Component,
-=======
-    BillmanagerComponent,
-    AddEditBillsComponent,
 
 
->>>>>>> 196031cb0c4611166b6b6ead3d56540c551546f5
     GasComponent,
     ItempredictionComponent,
     PredictionComponent,
@@ -69,6 +57,7 @@ import { TestimageComponent } from './testimage/testimage.component';
     AddEditTelephoneComponent,
     AddEditTelevitionComponent,
     TestimageComponent,
+    CreateaccComponent,
   ],
   imports: [
     BrowserModule,

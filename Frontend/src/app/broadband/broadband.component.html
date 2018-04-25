@@ -1,442 +1,456 @@
 <style>
-  body {
-      font-family:  Arial, Helvetica, sans-serif;
-
-  }
-
-   .header{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 190%;
-    height: 104px;
-    width: 100%;
-    margin-top: -24px;
-    margin-left: 0px;
-    font-style: oblique;
-    background-image: url("assets/Images/banner.jpg");
-    
-  } 
-
-   .header h1 
-    {
-    font-size: 40px;
+    body {
+        font-family:  Arial, Helvetica, sans-serif;
+  
     }
   
-  .sidenav {
-      height: 100%;
-      width: 220px;
-      position:absolute;
-      z-index: 1;
-      top: 99px;
-      left: 0;
-      background-color: #d1d1d4;
-      overflow-x: hidden;
-      padding-top: 0px;
+     .header{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 190%;
+      height: 104px;
+      width: 100%;
+      margin-top: -20px;
+      margin-left: 0px;
+      font-style: oblique;
+      background-image: url("assets/Images/banner.jpg");
+    } 
+  
+     .header h1 
+      {
+      font-size: 40px;
+      }
+    
+    .sidenav {
+        height: 80%;
+        width: 220px;
+        position:absolute;
+        z-index: 1;
+        top: 103px;
+        left: 0;
+        background-color: #d1d1d4;
+        overflow-x: hidden;
+        padding-top: 0px;
+    }
+    
+    .sidenav a {
+        padding: 6px 6px 5px 10px; 
+        text-decoration: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 16px;
+        color: #000000;
+        display: block;
+    }
+    
+    .sidenav a:hover {
+        background-color: green;
+        color:white;
+    }
+  
+    .sidenav a.active {
+      background-color: rgb(3, 192, 34);
+      color: white;
+    }
+    
+    .main {
+        margin-left: 230px; /* Same as the width of the sidenav */
+        margin-top: 70px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+  
+  input[type=text],input[type="date"],input[type="number"], select, textarea {
+      width: 100%; /* Full width */
+      padding: 12px; /* Some padding */  
+      border: 1px solid #ccc; /* Gray border */
+      border-radius: 1px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding and width stays in place */
+      margin-top: 6px; /* Add a top margin */
+      margin-bottom: 16px; /* Bottom margin */
+      /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
   }
   
-  .sidenav a {
-      padding: 6px 6px 5px 10px; 
+  input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+      background-color: #d1d1d4;
+  }
+  
+  .container {
+      border-radius: 5px;    
+      margin-left: 300px;
+      margin-top: 10px;
+      width: 40%;
+      background-color: #f2f2f2;
+      padding: 20px;
+  }
+  
+  label{
+    display: block;
+  }
+  
+  button:hover {
+      box-shadow: 0 12px 16px 0 red, 0 17px 50px 0 red;
+  }
+  button{
+    background-color:rgb(3, 192, 34);
+    
+  }
+  
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      margin-top: 0px;
+      margin-left:220px;
+      overflow: hidden;
+      background-color: #333;
+  }
+  
+  li {
+      float: right;
+  }
+  
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
       text-decoration: none;
-      font-family:  Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 16px;
-      color: #000000;
+  }
+  
+  li a:hover {
+      background-color: #111;
+  }
+  
+      .footer 
+      {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color:grey;
+      color: white;
+      text-align: center;
+      margin-top:300px;
+      }
+  
+      input[type=text], select, textarea  
+      {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      }
+  
+      label 
+      {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+      }
+      
+      input[type=submit]
+      {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+      }
+  
+      input[type=submit]:hover
+      {
+      background-color:#d1d1d4;
+      }
+  
+      .container 
+      {
+      width: 50%;
+      background-color: #ddd;
+      align-self:center;
+      }
+  
+      .skills
+      {
+      text-align: right ;
+      padding-right: 20px;
+      line-height: 40px;
+      color: white;
+      }
+  
+      .DateTo {width: 90%; background-color:  #f44336;;}
+      .DateFrom {width: 80%; background-color: #2196F3;}
+      
+  
+      .col-25 
+      {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+      }
+  
+      .col-75 
+      {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+      }
+  
+      /* Clear floats after the columns */
+      .row:after
+      {
+      content: "";
+      display: table;
+      clear: both;
+      }
+      
+      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px)
+       {
+      .col-25, .col-75, input[type=submit]
+           {
+          width: 100%;
+          margin-top: 0;
+          }
+      }
+  
+  
+  
+      input[type=submit],input[type=reset]
+      {
+  
+      width:100px;
+      height:40px;	
+          
+      background-color: green;
+      color:white;
+      padding:10px;
+      border-radius:10px;
+  
+      }
+  
+  .btn 
+      {
+      background-color: DodgerBlue; /* Blue background */
+      border: none; /* Remove borders */
+      color: white; /* White text */
+      padding: 12px 16px; /* Some padding */
+      font-size: 16px; /* Set a font size */
+      cursor: pointer; /* Mouse pointer on hover */
+      }
+  
+      /* Darker background on mouse-over */
+      .btn:hover 
+      {
+          background-color: RoyalBlue;
+      }
+  
+  
+      .dropdown {
+      float: right;
+      overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+      font-size: 16px;    
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    color: rgb(163, 172, 164);;
+  }
+  
+  .dropdown-content {
+      display: none;
+      position: fixed;
+      background-color: rgb(163, 172, 164);;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+  }
+  
+  .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: right;
+  }
+  
+  .dropdown-content a:hover {
+      background-color:rgba(15, 15, 15, 0.911);
+  }
+  
+  .dropdown:hover .dropdown-content {
       display: block;
   }
   
-  .sidenav a:hover {
-      background-color: rgb(163, 172, 164);
-      color: #ffffff;
-  }
-
-  .sidenav a.active {
-    background-color: rgb(3, 192, 34);
-    color: white;
-  }
+   /* Stop navigation bar */
+   .navbar 
+      {
+          overflow: hidden;
+          background-color: rgb(15, 15, 15);
+      }
   
-  .main {
-      margin-left: 230px; /* Same as the width of the sidenav */
-      margin-top: 30px;
-  }
+      
+      /*  navigation bar links */
+      .navbar a 
+      {
+          float: right;
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 20px;
+          text-decoration: none;
+      }
+      
+      /* Right-aligned link */
+      .navbar a.right 
+      {
+          float: right;
+      }
+      
   
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
-input[type=text],input[type="date"],input[type="number"], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */  
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 1px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
+      /* Change color on hover */
+      .navbar a:hover {
+          background-color: red;
+          color: rgb(189, 181, 181);
+      }
+      
+      form {
+                width:500px;
+                margin:50px auto;
+               
 }
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.search {
+                padding:8px 15px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
 }
-
-input[type=submit]:hover {
-    background-color: #d1d1d4;
+.button {
+                position:relative;
+                padding:6px 15px;
+                left:-8px;
+                border:2px solid rgb(139, 135, 135);
+                background-color:#fafafa;
+                
 }
-
-.container {
-    border-radius: 5px;    
-    margin-left: 300px;
-    margin-top: 10px;
-    width: 40%;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
-label{
-  display: block;
-}
-
-button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-button{
-  background-color:rgb(3, 192, 34);
+.button:hover  {
+                background-color:grey;
+                color:green;
+}     
+      
+  </style>
   
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    margin-top: 0px;
-    margin-left:220px;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: right;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
-
-    .footer 
-    {
-    margin-top:450px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color:rgb(185, 179, 179);
-    color: rgb(255, 250, 250);
-    text-align: center;
-    }
-
-    input[type=text], select, textarea  
-    {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-    }
-
-    label 
-    {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-    }
-    
-    input[type=submit]
-    {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-    }
-
-    input[type=submit]:hover
-    {
-    background-color:#d1d1d4;
-    }
-
-    .container 
-    {
-    width: 50%;
-    background-color: #ddd;
-    align-self:center;
-    }
-
-    .skills
-    {
-    text-align: right ;
-    padding-right: 20px;
-    line-height: 40px;
-    color: white;
-    }
-
-    .DateTo {width: 90%; background-color:  #f44336;;}
-    .DateFrom {width: 80%; background-color: #2196F3;}
-    
-
-    .col-25 
-    {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-    }
-
-    .col-75 
-    {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-    }
-
-    /* Clear floats after the columns */
-    .row:after
-    {
-    content: "";
-    display: table;
-    clear: both;
-    }
-    
-    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px)
-     {
-    .col-25, .col-75, input[type=submit]
-         {
-        width: 100%;
-        margin-top: 0;
-        }
-    }
-
-
-
-    input[type=submit],input[type=reset]
-    {
-
-    width:100px;
-    height:40px;	
-        
-    background-color: grey;;
-    color:white;
-    padding:10px;
-    border-radius:10px;
-
-    }
-
-.btn 
-    {
-    background-color: DodgerBlue; /* Blue background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-    }
-
-    /* Darker background on mouse-over */
-    .btn:hover 
-    {
-        background-color: RoyalBlue;
-    }
-
-
-    .dropdown {
-    float: right;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  color: rgb(163, 172, 164);;
-}
-
-.dropdown-content {
-    display: none;
-    position: fixed;
-    background-color: rgb(163, 172, 164);;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 6px 6px 5px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: right;
-    
-}
-
-.dropdown-content a:hover {
-    background-color:rgba(15, 15, 15, 0.911);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
- /* Stop navigation bar */
- .navbar 
-    {
-        overflow: hidden;
-        background-color: rgb(15, 15, 15);
-        
-    }
-
-    
-    /*  navigation bar links */
-    .navbar a 
-    {
-        float: right;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 6px 6px 5px 10px;
-        text-decoration: none;
-    }
-    
-    /* Right-aligned link */
-    .navbar a.right 
-    {
-        float: right;
-    }
-    
-
-    /* Change color on hover */
-    .navbar a:hover {
-        background-color: rgb(43, 41, 41);
-        color: rgb(189, 181, 181);
-    }
-    
+  <body>
+  
+      <div class="header"> </div>
+     
+      <div class="navbar">   
+          <div class="dropdown">
+          <button class="dropbtn">Broadband Usage 
+          <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+          <a href="http://localhost:4200/broadband">BroadBand Details</a>
+          <a href="http://localhost:4200/comparisonbroad">Comparison</a>
+          </div>
+          </div>
+          <a href="http://localhost:4200/telecomparison">Telephone Bill Comparison</a>
+          <a href="http://localhost:4200/mysim">My SIM</a>
+          <a href="#home">Home</a>
+          </div>
    
-    
-</style>
-
-<body>
-
-    <div class="header"> </div>
-   
-    <div class="navbar">   
-        <div class="dropdown">
-        <button class="dropbtn">Broadband Usage 
-        <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-        <a href="http://localhost:4200/broadband">BroadBand Details</a>
-        <a href="http://localhost:4200/comparisonbroad">Comparison</a>
-        </div>
-        </div>
-        <div class="dropdown">
-                <button class="dropbtn">Telephone Bill 
-                <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                <a href="http://localhost:4200/telephone">Telephone Details</a>
-                <a href="http://localhost:4200/telecomparison">Comparison</a>
-                </div>
-
-        </div>
-        <a href="http://localhost:4200/mysim">My SIM</a>
-        <a href="#home">Home</a>
-        </div>
- 
-
-
-    
-
-
-
-    <div class="sidenav">
-            <a class="active" href="home">Home</a>
-            <a href="">Electricity Bill</a>
-            <a href="">Water Bill</a>
-            <a href="http://localhost:4200/telephone">Telephone Bill</a>
-            <a href="">Data Bill</a>
-            <a href="">Insurance Bill </a>
-            <a href="">Other Bills</a>
-            <a href="">Solar Energy</a>
-            <a href="billmanager"> Bill Manager</a>
-        </div>
-
-
-        <div class="main">
-          <h2 align="center">Enter your Broadband Usage Here</h2> 
-          <Form>
-    
-         <table align="center" cellpadding = "7">
-            <tr>
-                <td  align="left"></td>
-                <td>Package Type</td>
-                <td><input id="Text1" type="text" name="fname" /></td>
-             </tr>
-            
-            <tr>
-                <td  align="left"></td>
-                <td>Phone Number</td>
-                <td><input id="Text1" type="text" name="fname" /></td>
-             </tr>
-            
-            <tr>
-                <td  align="left"></td>  
-                <td>Charge</td>
-                <td><input id="Text1" type="text" name="fname" /></td>
-             </tr>
-    
-            
   
-             <tr>
-                     <td  align="left"></td>
-                     <td align="center"><input type="submit" value="Save"/></td>
-                     <td><input type="submit" value="Reset"/></td>
-         
-             </tr>
-        </table> 
-        </Form> 
-        </div>
-         
+  
+      
+  
+  
+  
+      <div class="sidenav">
+              <a  href="home">Home</a>
+              <a href="">Electricity Bill</a>
+              <a href="">Water Bill</a>
+              <a href="http://localhost:4200/telephone">Telephone Bill</a>
+              <a href="">Data Bill</a>
+              <a href="">Insurance Bill </a>
+              <a href="">Other Bills</a>
+              <a href="">Solar Energy</a>
+              <a href="billmanager"> Bill Manager</a>
+          </div>
+  
+  
+          <div class="main">
+
+                <div class="button">
+                        <div class="search">
+                    <form align="right">
+                            <p>Enter Your Phone  Number</p>
+                            <input type="text" placeholder="Search Your Usage......." required>
+                            <input type="button" value="Search">
+                    </form>
+              </div>
+                    </div>
+            <h2 align="center" margin-top="50px">Enter your Broadband Usage Here</h2> 
+            <Form>
+      
+           <table align="center" cellpadding = "7">
+              <tr>
+                  <td  align="left"></td>
+                  <td>Package Type</td>
+                  <td><input id="Text1" type="text" name="fname" /></td>
+               </tr>
+              
+              <tr>
+                  <td  align="left"></td>
+                  <td>Phone Number</td>
+                  <td><input id="Text1" type="text" name="fname" /></td>
+               </tr>
+              
+              <tr>
+                  <td  align="left"></td>  
+                  <td>Charge</td>
+                  <td><input id="Text1" type="text" name="fname" /></td>
+               </tr>
+      
+              
+    
+               <tr>
+                       <td  align="left"></td>
+                       <td ><input type="submit" value="Save"/></td>
+                      
+                       <td><input type="submit" value="Reset"/></td>
            
-        
-        
-         <br>
-         <br>
-         <br>
-         
-
-
-         <div class="footer">
-          <p>Copyright ©SLIIT-PDM-2018-WD-19. All Rights Reserved.</p>
-      </div>
-        
-             
-</body>
-
+               </tr>
+          </table> 
+          </Form> 
+          </div>
+                     
+          
+          
+          <div class="footer">
+            <p>Copyright ©SLIIT-PDM-2018-WD-19. All Rights Reserved.</p>
+        </div> 
+           
+               
+  </body>
+  
