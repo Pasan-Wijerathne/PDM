@@ -12,4 +12,5 @@ export class AddEditElectricityComponent implements OnInit {
   ngOnInit() {
   }
 
+
 }

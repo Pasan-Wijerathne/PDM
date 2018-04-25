@@ -4,8 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { BillmanagerComponent } from './billmanager/billmanager.component';
-import { AddEditBillsComponent } from './add-edit-bills/add-edit-bills.component';
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 import { GasComponent } from './gas/gas.component';
 import { ItempredictionComponent } from './itemprediction/itemprediction.component';
@@ -36,10 +34,6 @@ import { HomeGardenComponent } from './home-garden/home-garden.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    BillmanagerComponent,
-    AddEditBillsComponent,
-
-
     GasComponent,
     ItempredictionComponent,
     PredictionComponent,
