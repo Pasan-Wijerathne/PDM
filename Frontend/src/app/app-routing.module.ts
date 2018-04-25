@@ -2,15 +2,8 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-<<<<<<< HEAD
-import { TestComponent } from './test/test.component';
-import { Test2Component } from './test2/test2.component';
-=======
-import { BillmanagerComponent } from './billmanager/billmanager.component';
-import { AddEditBillsComponent } from './add-edit-bills/add-edit-bills.component';
 
 
->>>>>>> 196031cb0c4611166b6b6ead3d56540c551546f5
 import { GasComponent } from './gas/gas.component';
 import { ItempredictionComponent } from './itemprediction/itemprediction.component';
 import { PredictionComponent } from './prediction/prediction.component';
@@ -32,19 +25,15 @@ import { AddEditTelephoneComponent } from './add-edit-telephone/add-edit-telepho
 import { AddEditTelevitionComponent } from './add-edit-televition/add-edit-televition.component';
 import { TestimageComponent } from './testimage/testimage.component';
 import { HomeGardenComponent } from './home-garden/home-garden.component';
+import { MedicineComponent } from './medicine/medicine.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
   {path : "login", component : LoginComponent},
-<<<<<<< HEAD
-  {path : "home", component : HomeComponent}, 
-  {path : "test", component : TestComponent},
-  {path : "test2", component :Test2Component},
-=======
-  {path : "billmanager", component : BillmanagerComponent},
-  {path : "home", component : HomeComponent},
-  {path : "add-edit-bills", component : AddEditBillsComponent} ,  
 
->>>>>>> 196031cb0c4611166b6b6ead3d56540c551546f5
+  {path : "home", component : HomeComponent},
+
+
   {path : "gas", component : GasComponent},
   {path : "itemprediction", component : ItempredictionComponent},
   {path :"prediction", component : PredictionComponent},
@@ -66,6 +55,8 @@ const routes: Routes = [
   {path : "add-edit-televition",component : AddEditTelevitionComponent },
   {path : "testimage", component : TestimageComponent},
   {path : "home-garden", component: HomeGardenComponent},
+  {path : "medicine" , component : MedicineComponent},
+  {path : "vehicle" ,component : VehicleComponent},
   ];
 
 

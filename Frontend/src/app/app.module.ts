@@ -26,6 +26,8 @@ import { AddEditTelephoneComponent } from './add-edit-telephone/add-edit-telepho
 import { AddEditTelevitionComponent } from './add-edit-televition/add-edit-televition.component';
 import { TestimageComponent } from './testimage/testimage.component';
 import { HomeGardenComponent } from './home-garden/home-garden.component';
+import { MedicineComponent } from './medicine/medicine.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 
 
@@ -55,6 +57,8 @@ import { HomeGardenComponent } from './home-garden/home-garden.component';
     AddEditTelevitionComponent,
     TestimageComponent,
     HomeGardenComponent,
+    MedicineComponent,
+    VehicleComponent,
   ],
   imports: [
     BrowserModule,
