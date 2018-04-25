@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 
 
+
 import { GasComponent } from './gas/gas.component';
 import { ItempredictionComponent } from './itemprediction/itemprediction.component';
 import { PredictionComponent } from './prediction/prediction.component';
