@@ -30,6 +30,7 @@ import { MedicineComponent } from './medicine/medicine.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { ElectricEqComponent } from './electric-eq/electric-eq.component';
 import { CreateaccComponent } from './createacc/createacc.component';
+import { SearchsimComponent } from './searchsim/searchsim.component';
 
 const routes: Routes = [
   {path : "login", component : LoginComponent},
@@ -60,7 +61,8 @@ const routes: Routes = [
   {path : "home-garden", component: HomeGardenComponent},
   {path : "medicine" , component : MedicineComponent},
   {path : "vehicle" ,component : VehicleComponent},
-  {path : "electric-eq" ,component : ElectricEqComponent}
+  {path : "electric-eq" ,component : ElectricEqComponent},
+  {path : "searchsim",component : SearchsimComponent},
   ];
 
 
