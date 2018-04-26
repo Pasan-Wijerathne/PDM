@@ -216,10 +216,10 @@
       <div class="sidenav">
               <a href="home">Home</a>
               <a href="predict-each-item">Electricity Bill</a>
-              <a href="">Water Bill</a>
+              <a href="water">Water Bill</a>
               <a href="">Telephone Bill</a>
               <a href="">Data Bill</a>
-              <a href="">Insurance Bill </a>
+              <a href="insurance">Insurance Bill </a>
               <a class="active" href="">Other Bills</a>
               <a href="solar1">Solar Energy</a>
               <a href="billmanager"> Bill Manager</a>
@@ -229,14 +229,6 @@
         <div class="container"> 
           <form action="/action_page.php">
         
-      <!--
-            <label for="country">Bill Type</label>
-            <select id="type" name="type">
-              <option value="electricity">Electricity</option>
-              <option value="water">Water</option>
-              <option value="telwphone">Telephone</option>
-            </select>
-      -->
         
             <label for="object">Object Name</label>
             <input type="text" id="object" name="object" placeholder="Object Name" required>
@@ -247,10 +239,6 @@
           <label for="amount">Total Amount</label>
             <input type="number" id="amount" name="amount" placeholder="Enter the total amount of the product" required>
         
-      <!--
-            <label for="Date">Date</label>
-            <input type="date" id="date" name="date" required>
-      -->
               <label for="years">Years</label>
             <input type="number" id="year" name="year" placeholder="Enter the amount of years to divide the payment" required>
               
@@ -263,23 +251,7 @@
               <label for="amtRemaining">Amount Remaining</label>
             <input type="number" id="amtRemaining" name="amtRemaining" placeholder="" disabled>
               
-      <!--
-              <label for="unitConsume">Number of Units Consumed</label>
-            <input type="text" id="unitConsume" name="unitConsume" placeholder="Enter the number of units" required>
-        
-            <label for="unitsCharge">Charge for consumed units(Rs:)</label>
-            <input type="number" id="unitsCharge" name="unitsCharge" placeholder="Enter the charge (Rs:)" required>
-      -->
-        
-      <!--
-            <label for="image">Add Image</label>
-            <input type="image" id="image" name="name" >
-      -->
-        
-      <!--
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
-      -->
+    
         
             <input type="submit" value="Calculate">
           </form>
