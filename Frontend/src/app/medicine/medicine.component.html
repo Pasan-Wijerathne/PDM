@@ -193,9 +193,9 @@ input[type=submit]:hover {
 
 .container {
   border-radius: 5px;    
-  margin-left: 300px;
-  margin-top: 150px;
-  width: 40%;
+  margin-left: 250px; /* 300px;*/
+  margin-top: /*30px;*/ 150px;
+  width:30%;  /*40%;*/
   background-color: #949090;
   padding: 20px;
 }
@@ -209,7 +209,7 @@ display: block;
   padding-left: 230px;
   } 
 
-/* Table css */
+/* Table css
 table {
     border-collapse: collapse;
     width: 80%;
@@ -229,7 +229,30 @@ th{
     background-color: darkgrey;
 }
 
-tr:hover {background-color:#f5f5f5;}
+tr:hover {background-color:#f5f5f5;} */
+
+ /* Table css */
+ table {
+      border-collapse: collapse;
+      width: 40%;
+      margin-left: 800px;
+      margin-top: -500px;
+      margin-bottom: 80px;
+      /* position: left; */
+  }
+  
+  th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+  }
+  
+  th{
+      background-color: darkgrey;
+  }
+  
+  tr:hover {background-color:#f5f5f5;}
 
 </style>
 
@@ -291,13 +314,39 @@ tr:hover {background-color:#f5f5f5;}
 
   
 </div>
+
+<table>
+        <tr>
+          <th>Account No</th>
+          <th>Date</th>
+          <th>No.UnitConsumed</th>
+          <th>Charge(Rs)</th>
+          <th>Image</th>
+        </tr>
+    
+        <tr>
+          <td>5200036</td>
+          <td>02-05-2018</td>
+          <td>50</td>
+          <td>1200</td>
+          <td>Empty</td>
+        </tr>
+        <tr>
+          <td>58569235</td>
+          <td>03-23-2018</td>
+          <td>60</td>
+          <td>2100</td>
+          <td>Empty</td>
+        </tr>
+        
+      </table>
 <br>
 
 
 
-<div class="footer">
+<!-- <div class="footer">
     <p>Copyright ©SLIIT-PDM-2018-WD-19. All Rights Reserved.</p>
-</div>
+</div> -->
 
 </body>
 
