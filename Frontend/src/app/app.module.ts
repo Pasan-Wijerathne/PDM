@@ -33,6 +33,10 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { ElectricEqComponent } from './electric-eq/electric-eq.component';
 import { SearchsimComponent } from './searchsim/searchsim.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ViewbillsComponent } from './viewbills/viewbills.component';
+import { ConsumsService } from './consums.service';
+
 
 
 @NgModule({
@@ -68,12 +72,14 @@ import { SearchsimComponent } from './searchsim/searchsim.component';
     VehicleComponent,
     ElectricEqComponent,
     SearchsimComponent,
+    ViewbillsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ConsumsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

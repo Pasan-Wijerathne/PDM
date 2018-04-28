@@ -238,53 +238,44 @@
         margin-bottom: 10px;
   
      }
+     ul {
+      list-style-type: none;
+      margin-top:-66px;
+      margin-left:0px;
+      position: fixed;
+      width: 100%;
+      /* margin-left:180px; */
+      overflow: hidden;
+      background-color: #333;
+  }
   
+  li {
+      float: right;
+  }
+  
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 7px 16px;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+  }
 
-     .dropdown {
-    float: left;
-    overflow: hidden;
-}
+  li a.act
+    {
+    background-color: #000000;
+        
+     color: rgb(253, 253, 253);
+    }
 
-.dropdown .dropbtn {
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
+  
+  li a:hover {
+      background-color: rgb(247, 0, 0);
+      /* background-color: #111; */
+  }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 
   </style>
@@ -293,25 +284,11 @@
   
   <div class="header"> </div>
         
-        
-  <ul>
-         <li><a href="#home">Home</a></li>
-         <li><a href="#comparisons">Comparisons</a></li>
-         <li><a href="#view">View Bills</a></li>
-         <li><a class="active" href="#addeditremove">Add-Edit-Remove Bills</a></li>
-
-         <div class="dropdown">
-                <button class="dropbtn">Dropdown 
-                  <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-              </div> 
-         
-  </ul>
+  <ul>    
+    <li><a href="Bill Comparison">Bill Comparison</a></li>
+    <li><a href="View Bills">View Bills</a></li>
+    <li><a class="act" href="Add-Edit-Delete-Electricity">Add-Edit-Delete-Electricity</a></li>
+</ul>
   
   <div class="sidenav">
     <a href="home">Home</a>
@@ -361,6 +338,7 @@
     
   </div>
   
+
   <table>
       <tr>
         <th>Account No</th>
@@ -369,26 +347,31 @@
         <th>Charge(Rs)</th>
         <th>Image</th>
       </tr>
-  
-      <tr>
-        <td>5200036</td>
-        <td>02-05-2018</td>
-        <td>50</td>
-        <td>1200</td>
-        <td>Empty</td>
-      </tr>
-      <tr>
-        <td>58569235</td>
-        <td>03-23-2018</td>
-        <td>60</td>
-        <td>2100</td>
-        <td>Empty</td>
-      </tr>
+
+
+      <tr *ngFor="let item of values">
+        <td>{{item.accno}}</td>
+        <td>{{item.date}}</td>
+        <td>{{item.usedunits}}</td>
+        <td>{{item.totalamount}}</td>
+        <td>{{item.image}}</td>
+ 
+    </tr>
+
+       <!-- <tr>
+          <td>
+                (click)="loadData($event)"
+            <button >Click to Read</button>
+          </td>
+          <td><p>{{mydata}}</p></td>
+      </tr> -->
       
     </table>
 
+
+
     
-  
+    
   
   
   </body>
