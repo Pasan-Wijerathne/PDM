@@ -1,0 +1,184 @@
+
+
+    <style>
+
+        input[type=text],input[type="month"],input[type="number"], select, textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */  
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 1px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 4px; /* Add a top margin */
+        margin-bottom: 20px; /* Bottom margin */
+        /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;    
+            margin-left: 250px;
+            margin-top: 50px;
+            width: 30%;
+            background-color: #8a8a8a;
+            padding: 20px;
+        }
+
+        label{
+        display: block;
+        }
+
+        button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        button{
+        background-color:rgb(3, 192, 34);
+        }
+        title{
+        /* text-align: center; */
+       
+        position: relative;
+  
+    }
+     h2{
+        /* margin-left:450px; */
+        margin-top:150px;
+        margin-bottom: 10px;
+  
+     }
+      /* this is nav bar  */
+      ul {
+        list-style-type: none;
+        margin-top:-46px;
+        margin-left:0px;
+        position: fixed;
+        width: 100%;
+        /* margin-left:180px; */
+        overflow: hidden;
+        background-color: #333;
+  }
+  
+  li {
+      float: right;
+  }
+  
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 7px 16px;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+  }
+
+  li a.act
+    {
+    background-color: #000000;
+        
+     color: rgb(253, 253, 253);
+    }
+
+  
+  li a:hover {
+      background-color: rgb(247, 0, 0);
+      /* background-color: #111; */
+  }
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    </style>
+
+<ul>    
+        <div class="dropdown">
+                <button class="dropbtn">Dropdown 
+                  
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div> 
+    <li><a routerLink="Bill Comparison">Bill Comparison</a></li>
+    <li><a routerLink="View Bills">View Bills</a></li>
+</ul>
+
+
+         <div class="title">
+           <h2 align="center"> <u>Compare Electricity Bills</u>  </h2>
+         </div>
+               
+        <div class="container"> 
+            <form action="/action_page.php">
+        
+            <label for="billID">ELECTRICITY</label>
+        
+            <label for="acountnum">Account Number</label>
+            <input type="text" id="acountnum" name="acountnum" placeholder="Account Number" required>
+        
+            <label for="Month">Month</label>
+            <input type="month" id="month" name="month" required>
+
+            <label for="Month">Month</label>
+            <input type="month" id="month" name="month" required>
+                <br>
+            <input type="submit" value="Compare Bills">
+            <input type="submit" value="Clear">
+            </form>
+        
+        
+        </div> 

@@ -1,0 +1,62 @@
+<style>
+   .sidenav {
+        height: 100%;
+        width: 180px;
+        /* width: 220px; */
+        position: fixed;
+        z-index: 1;
+        top: 104px;
+        left: 0;
+        background-color: #d1d1d4;
+        overflow-x: hidden;
+        padding-top: 0px;
+    }
+    
+    .sidenav a {
+        /* padding: 6px 6px 13px 30px; */
+        padding: 6px 6px 5px 10px;
+        text-decoration: none;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+         /* font-family: Arial, Helvetica, sans-serif; */
+        font-size: 16px;
+        color: #000000;
+        display: block;
+    }
+    
+    .sidenav a:hover {
+        background-color: rgb(163, 172, 164);
+        color: #ffffff;
+    }
+  
+    .sidenav a.active {
+      background-color: rgb(3, 192, 34);
+      color: white;
+    }
+    
+    .main {
+        margin-left: 230px; /* Same as the width of the sidenav */
+        margin-top: 30px; 
+       
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+  
+</style>
+
+<div class="sidenav">
+  <a routerLinkActive="active" routerLink="home">Home</a>
+  <a routerLinkActive="active" routerLink="predict-each-item">Electricity Bill</a>
+  <a routerLinkActive="active" routerLink="water">Water Bill</a>
+  <a routerLinkActive="active" routerLink="telecomparison">Telephone Bill</a>
+  <a routerLinkActive="active" routerLink="data">Data Bill</a>
+  <a routerLinkActive="active" routerLink="insurance">Insurance Bill </a>
+  <a routerLinkActive="active" routerLink="solar1">Solar Energy</a>
+  <a routerLinkActive="active" routerLink="gas"> Gas</a>
+  <a routerLinkActive="active" routerLink="medicine">Other Bills</a>
+  <a routerLinkActive="active" routerLink="add-edit-electricity"> Bill Manager</a>
+
+  <label for="user">USER ID</label>
+</div>

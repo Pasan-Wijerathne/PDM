@@ -41,14 +41,14 @@ export class AddEditElectricityComponent implements OnInit {
 
   }
 
-  addData()
-  {
-    console.log('adding data');
+  // addData()
+  // {
+  //   console.log('adding data');
 
-    this.consume.add
+  //   this.consume.add
 
     
-  }
+  // }
 
 
 }

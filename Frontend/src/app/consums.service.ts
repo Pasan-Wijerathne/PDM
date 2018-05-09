@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 export class ConsumsService {
 
 public Server = 'http://localhost:8080/';
+// public database = 'http://localhost:3306/test';
     
     
 
@@ -15,11 +16,11 @@ constructor(private http : HttpClient ) { }
 
 public getAll<T>(): Observable<T> {
     return this.http.get<T>(this.Server + "billmanager/elecbillread")
-    // return this.http.get<T>(this.Server + "billmanager/waterbillread");
+
 }
 
 //   public addAll<T>(): Observable<T> {
-//         return this.http.post(this.Server + "")
+//         return this.http.post(this.database + "/electricity")
 //     }
 
 // public add<T>(): Observable<T> {

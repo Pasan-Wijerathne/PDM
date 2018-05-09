@@ -32,10 +32,13 @@ import { MedicineComponent } from './medicine/medicine.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { ElectricEqComponent } from './electric-eq/electric-eq.component';
 import { SearchsimComponent } from './searchsim/searchsim.component';
-
 import { HttpClientModule } from '@angular/common/http';
 import { ViewbillsComponent } from './viewbills/viewbills.component';
 import { ConsumsService } from './consums.service';
+import { ElectricitycomparisonComponent } from './electricitycomparison/electricitycomparison.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { BannerComponent } from './layout/banner/banner.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 
 
@@ -73,6 +76,10 @@ import { ConsumsService } from './consums.service';
     ElectricEqComponent,
     SearchsimComponent,
     ViewbillsComponent,
+    ElectricitycomparisonComponent,
+    SidebarComponent,
+    BannerComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
