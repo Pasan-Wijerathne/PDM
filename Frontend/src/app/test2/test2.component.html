@@ -1,55 +1,15 @@
 <style>
-     .dropdown {
-    float: right;
-    overflow: hidden;
-}
 
-.dropdown .dropbtn {
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  color:rgb(163, 172, 164);;
-}
-
-.dropdown-content {
-    display: none;
-    position: fixed;
-    background-color: rgb(163, 172, 164);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: right;
-}
-
-.dropdown-content a:hover {
-    background-color:rgba(15, 15, 15, 0.911);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
  /* Stop navigation bar */
  .navbar 
     {
         overflow: hidden;
         background-color: rgb(15, 15, 15);
+        z-index: 0;
+        position: fixed;
+        margin-top: 104px;
+        width: 100%
    
     }
 
@@ -64,8 +24,7 @@
         text-align: center;
         padding: 14px 20px;
         text-decoration: none;
-        z-index: 2;
-        margin-top:10px;
+        
     }
     
     /* Right-aligned link */
@@ -79,6 +38,53 @@
     .navbar a:hover {
         background-color: red;
         color: rgb(189, 181, 181);
+    }
+
+         .dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+    .dropdown .dropbtn {
+        font-size: 16px;    
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+    color:rgb(163, 172, 164);;
+    
+    }
+
+    .dropdown-content {
+        display: none;
+        position: fixed;
+        background-color: rgb(163, 172, 164);
+        min-width: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: right;
+    }
+
+    .dropdown-content a:hover {
+        background-color:rgba(15, 15, 15, 0.911);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 
     </style>
