@@ -22,13 +22,10 @@ public getAll1<T>(): Observable<T> {
     return this.http.get<T>(this.Server + "billmanager/waterbill")
 }
 
-<<<<<<< HEAD
-=======
 public getAllw<T>(): Observable<T> {
     return this.http.get<T>(this.Server + "watercompare/wcRead")
 }
 
->>>>>>> 0aff1c71e85ae42573c0848aa912e6e5b97db157
 
 //   public addAll<T>(): Observable<T> {
 //         return this.http.post(this.database + "/electricity")
