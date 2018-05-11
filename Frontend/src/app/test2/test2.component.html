@@ -94,36 +94,37 @@ title{
    z-index: 0;
    position: fixed;
    align-items:center;
+   list-style-type: none;
+   overflow: hidden;
  }
 
  ul li{
-  float:left;
-  width: 100%;
-  height: 30px;
+  float: left;
+  width:180px;
+  height: 40px;
   background-color: black;
-  line-height: 30px;
+  line-height: 40px;
   text-align: center;
-  font-size: 10px;
+  font-size: 20px
  }
 
  ul li a{
    text-decoration: none;
    color:white;
-   display: block;
+   display:block;
  }
-  
+
 ul li a:hover {
-  background-color: red;
+  background-color: yellowgreen;
 }
 
 ul li ul li {
-  display: none;
+  display:none;
 }
 
 ul li:hover ul li {
-  display:block;
+  display: block;
 }
-
 
 
 </style>
@@ -133,7 +134,7 @@ ul li:hover ul li {
         
         
   <ul>
-         <li><a class="active" href="#home">Home</a></li><br>
+         <li><a class="active" href="#home">Home</a></li>
          <li><a href="#news">News</a></li>
          <li><a href="#contact">Contact</a>
           <ul>
