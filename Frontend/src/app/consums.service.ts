@@ -19,6 +19,11 @@ public getAll<T>(): Observable<T> {
 
 }
 
+public getAllw<T>(): Observable<T> {
+    return this.http.get<T>(this.Server + "watercompare/wcRead")
+}
+
+
 //   public addAll<T>(): Observable<T> {
 //         return this.http.post(this.database + "/electricity")
 //     }
