@@ -1,7 +1,16 @@
 
 <style>
 
-
+  .container {
+    border-radius: 5px;    
+    margin-left: 250px;
+    margin-top: 50px;
+    width: 30%;
+    background-color: #8a8a8a;
+    padding: 20px;
+    z-index: -1;
+    position: absolute;
+  }
       /* filling form */
   input[type=text],input[type="date"],input[type="number"],input[type="image"], select, textarea {
       width: 100%; /* Full width */
@@ -29,15 +38,7 @@
   input[type=submit]:hover {
       background-color: #45a049;
   }
-  
-  .container {
-    border-radius: 5px;    
-    margin-left: 250px;
-    margin-top: 50px;
-    width: 30%;
-    background-color: #8a8a8a;
-    padding: 20px;
-  }
+
   
   label{
   display: block;
@@ -121,6 +122,9 @@
       background-color: rgb(247, 0, 0);
       /* background-color: #111; */
   }
+  body {
+  height: 5000px
+}
 
 
   </style>
@@ -132,7 +136,7 @@
     <li><a routerLinkActive="active" routerLink="add-edit-electricity">Add-Edit-Delete-Electricity</a></li>
 </ul>
   
-  
+
    <div class="title">
         <h2 align="center"> Enter Electricity Bill Details </h2>
     </div>
@@ -221,8 +225,7 @@
 
 
 
-    
-    
+
 
   
   

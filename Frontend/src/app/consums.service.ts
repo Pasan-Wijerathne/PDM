@@ -16,8 +16,12 @@ constructor(private http : HttpClient ) { }
 
 public getAll<T>(): Observable<T> {
     return this.http.get<T>(this.Server + "billmanager/elecbillread")
-
 }
+
+public getAll1<T>(): Observable<T> {
+    return this.http.get<T>(this.Server + "billmanager/waterbill")
+}
+
 
 //   public addAll<T>(): Observable<T> {
 //         return this.http.post(this.database + "/electricity")
