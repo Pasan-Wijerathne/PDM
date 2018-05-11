@@ -39,6 +39,7 @@ import { ElectricitycomparisonComponent } from './electricitycomparison/electric
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { BannerComponent } from './layout/banner/banner.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { Test2Component } from './test2/test2.component';
 
 
 
@@ -80,6 +81,7 @@ import { FooterComponent } from './layout/footer/footer.component';
     SidebarComponent,
     BannerComponent,
     FooterComponent,
+    Test2Component,
   ],
   imports: [
     BrowserModule,
