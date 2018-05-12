@@ -1,3 +1,104 @@
-<p>
-  viewbills works!
-</p>
+<style>
+
+        input[type=text],input[type="month"],input[type="number"], select, textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */  
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 1px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 4px; /* Add a top margin */
+        margin-bottom: 20px; /* Bottom margin */
+        /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;    
+            margin-left: 250px;
+            margin-top: 220px;
+            width: 30%;
+            background-color: #8a8a8a;
+            padding: 20px;
+            position:absolute;
+            z-index: -1;
+        }
+
+        label{
+        display: block;
+        }
+
+            /* this is nav bar  */
+    ul {
+        list-style-type: none;
+        margin-top:104px;
+        margin-left:0px;
+        position: fixed;
+        width: 100%;
+        /* margin-left:180px; */
+        overflow: hidden;
+        background-color: #333;
+        z-index: -3;
+    }
+
+    li {
+        float: right;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 7px 16px;
+        /* padding: 14px 16px; */
+        text-decoration: none;
+    }
+
+    li a.active
+    {
+    background-color: #ff0000;
+        
+    color: rgb(253, 253, 253);
+    }
+
+
+    li a:hover {
+        background-color: rgb(247, 0, 0);
+        /* background-color: #111; */
+    }
+ /* form title */
+ title{
+        text-align: center;
+        position: relative;
+  
+    }
+     h2{
+       
+        margin-top:150px;
+        margin-bottom: 10px;
+        position: fixed;
+        margin-left: 650px;
+  
+     }
+
+    </style>
+
+<ul>    
+        <li><a routerLinkActive="active" routerLink="../electricitycomparison">Bill Comparison</a></li>
+        <li><a routerLinkActive="active" routerLink="../viewbills">View Bills</a></li>
+        <li><a routerLinkActive="active" routerLink="../add-edit-telephone">Telephone</a></li>
+        <li><a routerLinkActive="active" routerLink="../add-edit-televition">Telivision</a></li>
+        <li><a routerLinkActive="active" routerLink="../add-edit-water">Water</a></li>
+        <li><a routerLinkActive="active" routerLink="../add-edit-electricity">Electricity</a></li>
+    </ul>

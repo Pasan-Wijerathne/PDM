@@ -30,6 +30,7 @@
             border-radius: 5px;    
             margin-left: 250px;
             margin-top: 220px;
+            margin-bottom : 50px;
             width: 30%;
             background-color: #8a8a8a;
             padding: 20px;
@@ -67,9 +68,9 @@
         text-decoration: none;
     }
 
-    li a.act
+    li a.active
     {
-    background-color: #000000;
+    background-color: #ff0000;
         
     color: rgb(253, 253, 253);
     }
@@ -95,13 +96,15 @@
      }
 
     </style>
-<body>
 
-<ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
+
+    <ul>    
+            <li><a routerLinkActive="active" routerLink="../electricitycomparison">Bill Comparison</a></li>
+            <li><a routerLinkActive="active" routerLink="../viewbills">View Bills</a></li>
+            <li><a routerLinkActive="active" routerLink="../add-edit-telephone">Telephone</a></li>
+            <li><a routerLinkActive="active" routerLink="../add-edit-televition">Telivision</a></li>
+            <li><a routerLinkActive="active" routerLink="../add-edit-water">Water</a></li>
+            <li><a routerLinkActive="active" routerLink="../add-edit-electricity">Electricity</a></li>
     </ul>
 
     <div class="title">
@@ -129,4 +132,3 @@
         
         
         </div> 
-    </body>
