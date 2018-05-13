@@ -31,13 +31,18 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { ElectricEqComponent } from './electric-eq/electric-eq.component';
 import { CreateaccComponent } from './createacc/createacc.component';
 import { SearchsimComponent } from './searchsim/searchsim.component';
+import { ElectricitycomparisonComponent } from './electricitycomparison/electricitycomparison.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { BannerComponent } from './layout/banner/banner.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { Test2Component } from './test2/test2.component';
+import { ViewbillsComponent } from './viewbills/viewbills.component';
+
 
 const routes: Routes = [
   {path : "login", component : LoginComponent},
-
+  {path : "sidebar",component : SidebarComponent},
   {path : "home", component : HomeComponent},
-
-
   {path : "gas", component : GasComponent},
   {path : "itemprediction", component : ItempredictionComponent},
   {path :"prediction", component : PredictionComponent},
@@ -63,6 +68,12 @@ const routes: Routes = [
   {path : "vehicle" ,component : VehicleComponent},
   {path : "electric-eq" ,component : ElectricEqComponent},
   {path : "searchsim",component : SearchsimComponent},
+  {path : "electricitycomparison",component : ElectricitycomparisonComponent},
+  {path : "sidebar",component : SidebarComponent},
+  {path : "banner",component : BannerComponent},
+  {path : "footer",component : FooterComponent},
+  {path : "test2",component : Test2Component},
+  {path : "viewbills",component : ViewbillsComponent}
   ];
 
 

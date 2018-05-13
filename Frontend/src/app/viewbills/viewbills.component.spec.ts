@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { AddEditElectricityComponent } from './add-edit-electricity.component';
 
+import { ViewbillsComponent } from './viewbills.component';
 
-describe('AddEditElectricityComponent', () => {
-  let component: AddEditElectricityComponent;
-  let fixture: ComponentFixture<AddEditElectricityComponent>;
+describe('ViewbillsComponent', () => {
+  let component: ViewbillsComponent;
+  let fixture: ComponentFixture<ViewbillsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddEditElectricityComponent ]
+      declarations: [ ViewbillsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddEditElectricityComponent);
+    fixture = TestBed.createComponent(ViewbillsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

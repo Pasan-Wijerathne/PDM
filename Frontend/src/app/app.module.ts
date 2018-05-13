@@ -32,6 +32,14 @@ import { MedicineComponent } from './medicine/medicine.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { ElectricEqComponent } from './electric-eq/electric-eq.component';
 import { SearchsimComponent } from './searchsim/searchsim.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ViewbillsComponent } from './viewbills/viewbills.component';
+import { ConsumsService } from './consums.service';
+import { ElectricitycomparisonComponent } from './electricitycomparison/electricitycomparison.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { BannerComponent } from './layout/banner/banner.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { Test2Component } from './test2/test2.component';
 
 
 
@@ -68,12 +76,19 @@ import { SearchsimComponent } from './searchsim/searchsim.component';
     VehicleComponent,
     ElectricEqComponent,
     SearchsimComponent,
+    ViewbillsComponent,
+    ElectricitycomparisonComponent,
+    SidebarComponent,
+    BannerComponent,
+    FooterComponent,
+    Test2Component,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ConsumsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
