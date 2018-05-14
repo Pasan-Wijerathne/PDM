@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 import { GasComponent } from './gas/gas.component';
@@ -39,6 +40,8 @@ import { ElectricitycomparisonComponent } from './electricitycomparison/electric
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { BannerComponent } from './layout/banner/banner.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { Test2Component } from './test2/test2.component';
+import { ElectService } from './elect-service';
 
 
 
@@ -80,13 +83,16 @@ import { FooterComponent } from './layout/footer/footer.component';
     SidebarComponent,
     BannerComponent,
     FooterComponent,
+    Test2Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [ConsumsService],
+
+  providers: [[ElectService],[ConsumsService]],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

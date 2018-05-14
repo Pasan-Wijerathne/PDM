@@ -13,7 +13,7 @@
         /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
         }
 
-        input[type=submit] {
+        input[type=submit],[type=reset] {
             background-color: #4CAF50;
             color: white;
             padding: 12px 20px;
@@ -29,143 +29,101 @@
         .container {
             border-radius: 5px;    
             margin-left: 250px;
-            margin-top: 50px;
+            margin-top: 220px;
+            margin-bottom : 50px;
             width: 30%;
             background-color: #8a8a8a;
             padding: 20px;
+            position:absolute;
+            z-index: -1;
         }
 
         label{
         display: block;
         }
 
-        button:hover {
-            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-        }
-        button{
-        background-color:rgb(3, 192, 34);
-        }
-        title{
-        /* text-align: center; */
-       
-        position: relative;
-  
-    }
-     h2{
-        /* margin-left:450px; */
-        margin-top:150px;
-        margin-bottom: 10px;
-  
-     }
-      /* this is nav bar  */
-      ul {
+            /* this is nav bar  */
+    ul {
         list-style-type: none;
-        margin-top:-46px;
+        margin-top:104px;
         margin-left:0px;
         position: fixed;
         width: 100%;
         /* margin-left:180px; */
         overflow: hidden;
         background-color: #333;
-  }
-  
-  li {
-      float: right;
-  }
-  
-  li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 7px 16px;
-      /* padding: 14px 16px; */
-      text-decoration: none;
-  }
-
-  li a.act
-    {
-    background-color: #000000;
-        
-     color: rgb(253, 253, 253);
+        z-index: -3;
     }
 
+    li {
+        float: right;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 7px 16px;
+        /* padding: 14px 16px; */
+        text-decoration: none;
+    }
+
+    li a.active
+    {
+    background-color: #ff0000;
+        
+    color: rgb(253, 253, 253);
+    }
+
+
+    li a:hover {
+        background-color: rgb(247, 0, 0);
+        /* background-color: #111; */
+    }
+ /* form title */
+ title{
+        text-align: center;
+        position: relative;
   
-  li a:hover {
-      background-color: rgb(247, 0, 0);
-      /* background-color: #111; */
-  }
+    }
+     h2{
+       
+        margin-top:150px;
+        margin-bottom: 10px;
+        position: fixed;
+        margin-left: 650px;
+  
+     }
 
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
     </style>
 
-<ul>    
-        <div class="dropdown">
-                <button class="dropbtn">Dropdown 
-                  
-                </button>
-                <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-              </div> 
-    <li><a routerLink="Bill Comparison">Bill Comparison</a></li>
-    <li><a routerLink="View Bills">View Bills</a></li>
-</ul>
 
+    <ul>    
+            <li><a routerLinkActive="active" routerLink="../electricitycomparison">Bill Comparison</a></li>
+            <li><a routerLinkActive="active" routerLink="../viewbills">View Bills</a></li>
+            <li><a routerLinkActive="active" routerLink="../add-edit-telephone">Telephone</a></li>
+            <li><a routerLinkActive="active" routerLink="../add-edit-televition">Telivision</a></li>
+            <li><a routerLinkActive="active" routerLink="../add-edit-water">Water</a></li>
+            <li><a routerLinkActive="active" routerLink="../add-edit-electricity">Electricity</a></li>
+    </ul>
 
-         <div class="title">
-           <h2 align="center"> <u>Compare Electricity Bills</u>  </h2>
-         </div>
+    <div class="title">
+            <h2 align="center"> <u>Compare Bills</u>  </h2>
+          </div>
                
         <div class="container"> 
+                
             <form action="/action_page.php">
         
-            <label for="billID">ELECTRICITY</label>
+            <label for="billID">Bill Comparison</label>
+
+            <label for="billtype">Choose Bill Type</label>
+            <select name="Choose" id="Choose">
+                <option value="Electricity">Electricity</option>
+                <option value="Water">Water</option>
+                <option value="Telephone">Telephone</option>
+                <option value="Telivision">Telivision</option>
+            </select>
         
             <label for="acountnum">Account Number</label>
             <input type="text" id="acountnum" name="acountnum" placeholder="Account Number" required>
@@ -177,7 +135,7 @@
             <input type="month" id="month" name="month" required>
                 <br>
             <input type="submit" value="Compare Bills">
-            <input type="submit" value="Clear">
+            <input type="reset" value="Clear">
             </form>
         
         

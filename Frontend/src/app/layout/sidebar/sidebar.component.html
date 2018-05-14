@@ -10,6 +10,7 @@
         background-color: #d1d1d4;
         overflow-x: hidden;
         padding-top: 0px;
+        z-index: 0;
     }
     
     .sidenav a {
@@ -46,7 +47,11 @@
   
 </style>
 
+
+   
+
 <div class="sidenav">
+    
   <a routerLinkActive="active" routerLink="home">Home</a>
   <a routerLinkActive="active" routerLink="predict-each-item">Electricity Bill</a>
   <a routerLinkActive="active" routerLink="water">Water Bill</a>
@@ -56,7 +61,7 @@
   <a routerLinkActive="active" routerLink="solar1">Solar Energy</a>
   <a routerLinkActive="active" routerLink="gas"> Gas</a>
   <a routerLinkActive="active" routerLink="medicine">Other Bills</a>
-  <a routerLinkActive="active" routerLink="add-edit-electricity"> Bill Manager</a>
+  <a routerLinkActive="active" routerLink="add-edit-electricity/"> Bill Manager</a>
 
   <label for="user">USER ID</label>
 </div>
