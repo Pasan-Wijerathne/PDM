@@ -122,25 +122,6 @@
 
 </style>
 
-<<<<<<< HEAD
-<body>
-
-<div class="header"> </div>
-      
-      
-<ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#comparisons">Comparisons</a></li>
-    <li><a href="#view">View Bills</a></li>
-    <li><a  href="add-edit-water">Water Bill</a></li>
-
-    <li><a  href="add-edit-televition">Television Bill</a></li>
-
-    <li><a  href="add-edit-telephone">Telephone Bill</a></li>
-
-    <li><a class="active" href="add-edit-electricity">Electricity Bills</a></li>
-</ul>
-=======
     <ul>    
             <li><a routerLinkActive="active" routerLink="../electricitycomparison">Bill Comparison</a></li>
             <li><a routerLinkActive="active" routerLink="../viewbills">View Bills</a></li>
@@ -149,7 +130,6 @@
             <li><a routerLinkActive="active" routerLink="../add-edit-water">Water</a></li>
             <li><a routerLinkActive="active" routerLink="../add-edit-electricity">Electricity</a></li>
     </ul>
->>>>>>> 82c0919d301c5582cd1eb97838d06e536fbc69c3
 
     <div class="title">
         <h2 align="center"> Enter Water Bill Details </h2>
@@ -190,33 +170,20 @@
       <th>No.UnitConsumed</th>
       <th>Charge(Rs)</th>
       <th>Image</th>
+      <th>Operations</th>
     </tr>
 
-    <tr>
-      <td>Peter</td>
-      <td>Griffin</td>
-      <td>$100</td>
-    </tr>
-    <tr>
-      <td>Lois</td>
-      <td>Griffin</td>
-      <td>$150</td>
-    </tr>
-    <tr>
-      <td>Joe</td>
-      <td>Swanson</td>
-      <td>$300</td>
-    </tr>
-    <tr>
-      <td>Cleveland</td>
-      <td>Brown</td>
-      <td>$250</td>
-    </tr>
-    <tr>
-      <td>Cleveland</td>
-      <td>Brown</td>
-      <td>$250</td>
-    </tr>
+    <tr (click)="selectRow(i)" *ngFor="let item of values; index as i">
+        <td>{{item.accno}}</td>
+        <td>{{item.date}}</td>
+        <td>{{item.usedunits}}</td>
+        <td>{{item.totalamount}}</td>
+        <td>{{item.image}}</td>
+        <td>
+            <button class="btn btn-primary" (click)="deletebill()"> Edit </button>      
+            <button class="btn btn-danger"> Delete </button>
+        </td>
+
   </table>
 
 

@@ -13,7 +13,7 @@
         /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
         }
 
-        input[type=submit] {
+        input[type=submit],[type=reset] {
             background-color: #4CAF50;
             color: white;
             padding: 12px 20px;
@@ -108,14 +108,22 @@
     </ul>
 
     <div class="title">
-            <h2 align="center"> <u>Compare Electricity Bills</u>  </h2>
+            <h2 align="center"> <u>Compare Bills</u>  </h2>
           </div>
                
         <div class="container"> 
                 
             <form action="/action_page.php">
         
-            <label for="billID">ELECTRICITY</label>
+            <label for="billID">Bill Comparison</label>
+
+            <label for="billtype">Choose Bill Type</label>
+            <select name="Choose" id="Choose">
+                <option value="Electricity">Electricity</option>
+                <option value="Water">Water</option>
+                <option value="Telephone">Telephone</option>
+                <option value="Telivision">Telivision</option>
+            </select>
         
             <label for="acountnum">Account Number</label>
             <input type="text" id="acountnum" name="acountnum" placeholder="Account Number" required>
@@ -127,7 +135,7 @@
             <input type="month" id="month" name="month" required>
                 <br>
             <input type="submit" value="Compare Bills">
-            <input type="submit" value="Clear">
+            <input type="reset" value="Clear">
             </form>
         
         
