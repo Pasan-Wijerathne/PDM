@@ -19,6 +19,12 @@ public getAll<T>(): Observable<T> {
 
 }
 
+public readAll<T>(): Observable<T>
+{
+    return this.http.get<T>(this.Server +"telephone/simread")
+}
+
+
 //   public addAll<T>(): Observable<T> {
 //         return this.http.post(this.database + "/electricity")
 //     }
