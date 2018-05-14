@@ -145,16 +145,16 @@
         <label for="billID">ELECTRICITY</label>
         
         <label for="acountnum">Account Number</label>
-        <input type="text" id="acountnum" name="acountnum"  placeholder="Account Number" required>
-  
+        <input type="text" id="acountnum" name="acountnum"  [(ngModel)]="valArr[compo].accno" placeholder="Account Number" required>
+      
         <label for="Date">Date</label>
-        <input type="date" id="date" name="date" required>
+        <input type="date" id="date" name="date"  [(ngModel)]="valArr[compo].date"  required>
     
         <label for="unitConsume">Number of Units Consumed</label>
-        <input type="number" id="unitConsume" name="unitConsume" placeholder="Enter the number of units" required>
+        <input type="number" id="unitConsume" name="unitConsume"  [(ngModel)]="valArr[compo].usedunits"  placeholder="Enter the number of units" required>
     
         <label for="unitsCharge">Charge for consumed units(Rs:)</label>
-        <input type="number" id="unitsCharge" name="unitsCharge" placeholder="Enter the charge (Rs:)" required>
+        <input type="number" id="unitsCharge" name="unitsCharge"  [(ngModel)]="valArr[compo].totalamount"  placeholder="Enter the charge (Rs:)" required>
     
         <label for="image">Add Image</label>
         <input type="file" name="pic" accept="image/*">

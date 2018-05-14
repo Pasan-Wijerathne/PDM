@@ -88,7 +88,8 @@ import { ElectService } from './elect-service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
 
   providers: [[ElectService],[ConsumsService]],

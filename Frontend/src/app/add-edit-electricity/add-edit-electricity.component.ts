@@ -16,8 +16,17 @@ export class AddEditElectricityComponent implements OnInit {
   private values:any[];
   private compo:number = 0;
 
+  private testW:string = "test";
+
+
+
+  get valArr(){
+    return this.values;
+  }
+
   ngOnInit() {
     console.log('component loaded');
+    this.values = [];
     this.loadData();
     
   }
