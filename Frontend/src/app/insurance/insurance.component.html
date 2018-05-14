@@ -1,104 +1,63 @@
+
 <style>
 
-
-      /* filling form */
-  input[type=text],input[type="date"],input[type="number"],input[type="image"], select, textarea {
+  input[type=text],input[type="month"],input[type="number"], select, textarea {
       width: 100%; /* Full width */
-      padding: 10px; /* Some padding */  
+      padding: 12px; /* Some padding */  
       border: 1px solid #ccc; /* Gray border */
       border-radius: 1px; /* Rounded borders */
       box-sizing: border-box; /* Make sure that padding and width stays in place */
-      margin-top: 2px; /* Add a top margin */
-      margin-bottom: 16px; /* Bottom margin */
+      margin-top: 4px; /* Add a top margin */
+      margin-bottom: 20px; /* Bottom margin */
       /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  input[type=submit] {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 15px;
-      margin-left: 8px;
-      /* margin: 5px; */
-  }
-  
-  input[type=submit]:hover {
-      background-color: #45a049;
-  }
-  
-  .container {
-    border-radius: 5px;    
-    margin-left: 250px;
-    margin-top: 50px;
-    width: 30%;
-    background-color: #8a8a8a;
-    padding: 20px;
-  }
-  
-  label{
-  display: block;
-  }
-  
-  .space{
-      margin-top: 0px;
-    padding-left: 230px;
-    } 
-  
-  /* Table css */
-  table {
-      border-collapse: collapse;
-      width: 40%;
-      margin-left: 800px;
-      margin-top: -660px;
-      margin-bottom: 80px;
-      /* position: left; */
-  }
-  
-  th, td {
-      padding: 8px;
-      border: 1px solid #ddd;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-  }
-  
-  th{
-      background-color: darkgrey;
-  }
-  
-  tr:hover {background-color:#f5f5f5;}
-  
-    /* form title */
-    title{
-        /* text-align: center; */
-        position: relative;
-  
-    }
-     h2{
-       
-        margin-top:150px;
-        margin-bottom: 10px;
-  
-     }
+      }
 
-     /* this is nav bar  */
-     ul {
+      input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      input[type=submit]:hover {
+          background-color: #45a049;
+      }
+
+      .container {
+          border-radius: 5px;    
+          margin-left: 250px;
+          margin-top: 220px;
+          margin-bottom: 50px;
+          width: 30%;
+          background-color: #8a8a8a;
+          padding: 20px;
+          position:absolute;
+          z-index: -2;
+      }
+
+      label{
+      display: block;
+      }
+
+          /* this is nav bar  */
+  ul {
       list-style-type: none;
-      margin-top:-46px;
+      margin-top:104px;
       margin-left:0px;
       position: fixed;
       width: 100%;
       /* margin-left:180px; */
       overflow: hidden;
       background-color: #333;
+      z-index: -1;
   }
-  
+
   li {
       float: right;
   }
-  
+
   li a {
       display: block;
       color: white;
@@ -108,50 +67,72 @@
       text-decoration: none;
   }
 
-  li a.act
-    {
-    background-color: #000000;
-        
-     color: rgb(253, 253, 253);
-    }
+  li a.active
+  {
+  background-color: #ff0000;
+      
+  color: rgb(255, 255, 255);
+  }
 
-  
+
   li a:hover {
       background-color: rgb(247, 0, 0);
       /* background-color: #111; */
   }
+/* form title */
+title{
+      text-align: center;
+      position: relative;
+
+  }
+   h2{
+     
+      margin-top:150px;
+      margin-bottom: 10px;
+      position: absolute;
+      margin-left: 650px;
+      z-index: -2;
+
+   }
+
+/* Table css */
+table {
+    border-collapse: collapse;
+    width: 40%;
+    margin-left: 800px;
+    margin-top: 250px;
+    margin-bottom: 80px;
+    /* Add these two lines */
+    position:absolute;
+    z-index: -2;
+    /* position: left; */
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th{
+    background-color: darkgrey;
+}
+
+tr:hover {background-color:#f5f5f5;}
+
+</style>
 
 
-  </style>
-  
 
-
-
-<body>
-      
-      <div class="header"> </div>
-            
-            
+<body>           
       <ul>
              <li><a class="active" href="#home">Home</a></li>
              <li><a href="#news">News</a></li>
              <li><a href="#contact">Contact</a></li>
              <li><a href="#about">About</a></li>
-      <!--        <li><a href=""></a></li>-->
       </ul>
-      
-      
-      <!-- <div class="sidenav">
-              <a href="home">Home</a>
-              <a href="predict-each-item">Electricity Bill</a>
-              <a href="water">Water Bill</a>
-              <a href="">Telephone Bill</a>
-              <a href="">Data Bill</a>
-              <a class="active" href="">Insurance Bill </a>
-              <a href="medicine">Other Bills</a>
-              <a href="solar1">Solar Energy</a>
-              <a href="billmanager"> Bill Manager</a>
-      </div> -->
+
       
       <div class="title">
             <h2 align="center"> Enter Insurance Details </h2>
