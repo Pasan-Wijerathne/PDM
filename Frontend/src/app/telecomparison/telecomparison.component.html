@@ -1,224 +1,181 @@
 <style>
 
-
-  body {
-      font-family:  Arial, Helvetica, sans-serif;
-
-  }
-
-input[type=text],input[type="date"],input[type="number"], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */  
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 1px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-.container {
-            border-radius: 5px;    
-            margin-left: 250px;
-            margin-top: 220px;
-            margin-bottom: 50px;
-            width: 30%;
-            background-color: #8a8a8a;
-            padding: 20px;
-            position:absolute;
+        input[type=text],input[type="month"],input[type="number"],input[type="date"], select, textarea {
+            width: 100%; /* Full width */
+            padding: 12px; /* Some padding */  
+            height: 40px;   
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 1px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 4px; /* Add a top margin */
+            margin-bottom: 20px; /* Bottom margin */
+            /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
+            }
+    
+            input[type=submit],[type=reset] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+    
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+    
+            .container {
+                border-radius: 5px;    
+                margin-left: 250px;
+                margin-top: 220px;
+                margin-bottom: 50px;
+                width: 30%;
+                background-color: #8a8a8a;
+                padding: 20px;
+                position:absolute;
+                z-index: -2;
+            }
+    
+            label{
+            display: block;
+            }
+    
+                /* this is nav bar  */
+        ul {
+            list-style-type: none;
+            margin-top:104px;
+            margin-left:0px;
+            position: fixed;
+            width: 100%;
+            /* margin-left:180px; */
+            overflow: hidden;
+            background-color: #333;
+            z-index: -1;
+        }
+    
+        li {
+            float: right;
+        }
+    
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 7px 16px;
+            /* padding: 14px 16px; */
+            text-decoration: none;
+        }
+    
+        li a.active
+        {
+        background-color: #ff0000;
+            
+        color: rgb(255, 255, 255);
+        }
+    
+    
+        li a:hover {
+            background-color: rgb(247, 0, 0);
+            /* background-color: #111; */
+        }
+     /* form title */
+     title{
+            text-align: center;
+            position: relative;
+      
+        }
+         h2{
+           
+            margin-top:150px;
+            margin-bottom: 10px;
+            position: absolute;
+            margin-left: 650px;
             z-index: -2;
-        }
-
-
-label{
-  display: block;
-}
-
-button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-button{
-  background-color:rgb(3, 192, 34);
-  
-}
-
-    input[type=text], select, textarea  
-    {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-    }
-
-    label 
-    {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-    }
+      
+         }
     
-    input[type=submit]
-    {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-    }
-
-    input[type=submit]:hover
-    {
-    background-color:green;
-    }
-
+      /* Table css */
+      table {
+          border-collapse: collapse;
+          width: 50%;
+          margin-left: 750px;
+          margin-top: 250px;
+          margin-bottom: 80px;
+          /* Add these two lines */
+          position:absolute;
+          z-index: -2;
+          /* position: left; */
+      }
+      
+      th, td {
+          padding: 8px;
+          border: 1px solid #ddd;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+      }
+      
+      th{
+          background-color: darkgrey;
+      }
+      
+      tr:hover {background-color:#f5f5f5;}
     
-
-    .skills
-    {
-    text-align: right ;
-    padding-right: 20px;
-    line-height: 40px;
-    color: white;
-    }
-
-    .DateTo {width: 90%; background-color:  #f44336;;}
-    .DateFrom {width: 80%; background-color: #2196F3;}
+      </style>
     
-
-    .col-25 
-    {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-    }
-
-    .col-75 
-    {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-    }
-
-    /* Clear floats after the columns */
-    .row:after
-    {
-    content: "";
-    display: table;
-    clear: both;
-    }
+            
+      <ul>    
+        <li><a routerLinkActive="active" routerLink="../telecomparison">Telephone Comparison</a></li>
+        <li><a routerLinkActive="active" routerLink="../broadband">BroadBand Usage</a></li>
+        <li><a routerLinkActive="active" routerLink="../comparisonboard">Broadband Comparison</a></li>
+        <li><a routerLinkActive="active" routerLink="../mysim">My SIM</a></li>
+        <li><a routerLinkActive="active" routerLink="../searchsim">Search SIM</a></li>
+       
+    </ul>
+      
     
-    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px)
-     {
-    .col-25, .col-75, input[type=submit]
-         {
-        width: 100%;
-        margin-top: 0;
-        }
-    }
-
-
-
-    input[type=submit],input[type=reset]
-    {
-
-    width:100px;
-    height:40px;	
+    
+            <h2 align="center"><u> Compare Your Telephone bill </u> </h2>
         
-    background-color: green;
-    color:white;
-    padding:10px;
-    border-radius:10px;
-
-    }
-    
-</style>
-
-<body>    
-    
-        <ul>    
-          <li><a routerLinkActive="active" routerLink="../electricitycomparison">Bill Comparison</a></li>
-          <li><a routerLinkActive="active" routerLink="../viewbills">View Bills</a></li>
-          <li><a routerLinkActive="active" routerLink="../add-edit-telephone">Telephone</a></li>
-          <li><a routerLinkActive="active" routerLink="../add-edit-televition">Telivision</a></li>
-          <li><a routerLinkActive="active" routerLink="../add-edit-water">Water</a></li>
-          <li><a routerLinkActive="active" routerLink="../add-edit-electricity">Electricity</a></li>
-      </ul>
- 
-        <div class="main">
-
-          <h2 align="center">Compare Your Telephone Usage</h2> 
-  
-          <Form>
-    
-             <table align="center" cellpadding = "10">
-              <tr>
-              <td  align="left"></td>
-              <td>Date To</td>
-              <td><input id="Text1"  placeholder="DD/MM/YYYY-DD/MM/YYYY" type="text" name="fname" /></td>
-             </tr>
+      
+        <div class="container"> 
+          <form action="/action_page.php">
+        
             
-            <tr>
-              <td  align="left"></td>
-              <td>Total Amount</td>
-              <td><input id="Text1" type="text" name="fname" /></td>
-             </tr>
             
-            <tr>
-              <td  align="left"></td>  
-              <td>Charges for the period</td>
-              <td><input id="Text1"  type="text" name="fname" /></td>
-             </tr>
+            <label for="dateto">Date To</label>
+                <input type="text" id="dateto" name="dateto"  [(ngModel)]="valArr[compo].userid" placeholder="Date To" required>
+              
+                <label for="totalamunt">Total Amount</label>
+                <input type="number" id="totalamunt" name="totalamunt"  [(ngModel)]="valArr[compo].totalamunt" placeholder="Total Amount" required>
+            
+                <label for="usrpsswrd">User Password</label>
+                <input type="text" id="usrpsswrd" name="usrpsswrd"  [(ngModel)]="valArr[compo].userpwd"  placeholder="User password" required>
+            
+                <label for="srlnum">Serial Number</label>
+                <input type="number" id="srlnum" name="srlnum"  [(ngModel)]="valArr[compo].simsnum"  placeholder="Serial Number" required>
+            
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country"  [(ngModel)]="valArr[compo].simcountry"  placeholder="country" required>
+            
+                <label for="eminum">IMEI Number</label>
+                <input type="number" id="eminum" name="eminum"  [(ngModel)]="valArr[compo].simimeinum"  placeholder="IMEI Numbre" required>
+            
+                <label for="simcat">SIM Category</label>
+                <input type="text" id="simcat" name="simcat"  [(ngModel)]="valArr[compo].category"  placeholder="SIM Category" required>
+                <br>
+                
+            <input type="submit" value="Save">
+            <!-- <input type="submit" value="Edit Bill">
+                [(ngModel)]="{{values[compo].accno}}"
+            <input type="submit" value="Remove Bill"> -->
+            <input type="reset" value="Clear" >
     
-            <tr>
-              <td  align="left"></td> 
-              <td>Date From</td>
-              <td><input id="Text1" placeholder="DD/MM/YYYY-DD/MM/YYYY" type="text" name="fname" /></td>
-             </tr>
+           
+          </form>
+      
+        
+      </div>
+      
     
-            <tr>
-              <td  align="left"></td>
-              <td>Total Amount</td>
-              <td><input id="Text1" type="text" name="fname" /></td>
-             </tr>
- 
-             <tr>
-              <td  align="left"></td>
-              <td>Charges for the period</td>
-              <td><input id="Text1" type="text" name="fname" /></td>
-              </tr>
-
-
-            <tr>
-               <td  align="left" cellpadding = "20"></td>
-               <td align="center"><input type="submit" value="Compare"/></td>
-               <td><input type="submit" value="Reset"/></td>
-   
-           </tr>
-
-          
-  
-          </table> 
-          </Form> 
-          </div>
-          
-          
-         
-          
-  
-</body>
+      
