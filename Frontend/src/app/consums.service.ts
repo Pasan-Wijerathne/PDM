@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpClient, HttpEvent, HttpHandler, HttpInterceptor } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { HttpModule } from '@angular/http';
+// import { ElectricEqComponent } from './electric-eq/electric-eq.component';
 
 @Injectable()
 export class ConsumsService {
 
 public Server = 'http://localhost:8080/';
-// public database = 'http://localhost:3306/test';
-    
     
 
 constructor(private http : HttpClient ) { }
@@ -18,24 +17,15 @@ public getAll<T>(): Observable<T> {
     return this.http.get<T>(this.Server + "billmanager/elecbillread")
 }
 
-public getAll1<T>(): Observable<T> {
-    return this.http.get<T>(this.Server + "billmanager/waterbill")
+public saveAllEB<T>(data: any[]): Observable<T>{
+    return this.http.post<T>(this.Server + "elecbillsa", data);
 }
 
-public getAllw<T>(): Observable<T> {
-    return this.http.get<T>(this.Server + "watercompare/wcRead")
+/*
+public deletebill<T>(id): Observable<T> {
+    return this.http.delete(this.database + "/elecbilldel")
 }
-
-
-//   public addAll<T>(): Observable<T> {
-//         return this.http.post(this.database + "/electricity")
-//     }
-
-// public add<T>(): Observable<T> {
-//     const toAdd = JSON.stringify({ ItemName: items });
-
-//     return this.http.post<T>(this.Server, toAdd);
-//     }
+*/
 
 }
 

@@ -12,10 +12,9 @@ export class AddEditElectricityComponent implements OnInit {
   constructor(private consume : ConsumsService) { 
   }
 
-
   public mydata: string;
-
   private values:any[];
+  private compo:number = 0;
 
   ngOnInit() {
     console.log('component loaded');
@@ -27,28 +26,39 @@ export class AddEditElectricityComponent implements OnInit {
     console.log('triggered');
   }
 
+
+  selectRow(index){
+    this.compo = index;
+  }
+
+
   loadData(){
     console.log('loading data');
-   
-    this.consume.getAll<any[]>().subscribe((data : any[])  => this.values = data,
-    error => () => {
+    this.consume.getAll<any[]>().subscribe((data : any[])  => this.values = data, error => () => 
+    {
        console.log(error);
-    },
-    () => {
+    },() =>
+    {
        console.log('completed');
        this.mydata = JSON.stringify(this.values);
     });
 
   }
 
-  // addData()
-  // {
-  //   console.log('adding data');
-
-  //   this.consume.add
-
+  saveAll()
+  {
     
-  // }
+  }
 
+  /*
+  deletebill()
+  {
+    this.consume.deletebill(values.).subscribe((data : any[]) =>{
+ 
+    }
+
+  }
+
+  */
 
 }
