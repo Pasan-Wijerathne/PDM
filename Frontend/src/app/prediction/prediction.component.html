@@ -55,6 +55,7 @@
       /* margin-left:180px; */
       overflow: hidden;
       background-color: #333;
+      z-index: -1;
   }
     
     li {
@@ -129,6 +130,8 @@
   width:30%;  /*40%;*/
   background-color: #949090;
   padding: 20px;
+  position:absolute;
+  z-index: -2;
 }
   
   label{
@@ -150,6 +153,8 @@
       margin-top: -400px;
       margin-bottom: 80px;
       /* position: left; */
+      position:absolute;
+      z-index: -2;
   }
   
   th, td {
@@ -173,10 +178,11 @@
         
   <ul>
      
-      <li><a class="act" href="prediction">Final Prediction</a></li>
-      <li><a href="electric-eq">Electric Equipments</a></li>
-      <li><a href="predict-each-item">Predict Each Item</a></li>
+      <li><a  routerLinkActive="active" routerLink="../prediction">Final Prediction</a></li>
+      <li><a  routerLinkActive="active" routerLink="../electric-eq">Electric Equipments</a></li>
+      <li><a  routerLinkActive="active" routerLink="../prediction">Predict Each Item</a></li>
       
+    
          
  </ul>
   
@@ -235,6 +241,24 @@
           <td>2100</td>
           <td>Empty</td>
         </tr>
+<!-- 
+        <tr>
+            <th>Account No</th>
+            <th>Date</th>
+            <th>No.UnitConsumed</th>
+            <th>Charge(Rs)</th>
+            <th>Image</th>
+          </tr>
+    
+    
+          <tr *ngFor="let item of values">
+            <td>{{item.accno}}</td>
+            <td>{{item.date}}</td>
+            <td>{{item.usedunits}}</td>
+            <td>{{item.totalamount}}</td>
+            <td>{{item.image}}</td>
+     
+        </tr> -->
         
       </table>
   <br>
