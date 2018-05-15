@@ -16,8 +16,8 @@ export class AddEditElectricityComponent implements OnInit {
   private values:any[];
   private compo:number = 0;
 
+  
   private testW:string = "test";
-
 
 
   get valArr(){
@@ -25,10 +25,10 @@ export class AddEditElectricityComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('component loaded');
-    this.values = [];
-    this.loadData();
-    
+
+    //this.values = [{"no":1,"accno":"765","usedunits":545455,"userid":"245","date":"2018-04-04","totalamount":454,"addimage":null}];
+    // this.loadData();
+    console.log('component loaded', this.values);    
   }
 
   test(evetn){
@@ -40,6 +40,11 @@ export class AddEditElectricityComponent implements OnInit {
     this.compo = index;
   }
 
+  addBill(){
+    var newBill = {"no":1,"accno":"0","usedunits":0,"userid":"0","date":"2018-04-04","totalamount":0,"addimage":null};
+    this.values.push(newBill);
+    this.compo = this.values.length - 1;
+  }
 
   loadData(){
     console.log('loading data');
@@ -50,14 +55,40 @@ export class AddEditElectricityComponent implements OnInit {
     {
        console.log('completed');
        this.mydata = JSON.stringify(this.values);
+       console.log(this.mydata);
     });
 
   }
 
   saveAll()
   {
+    this.consume.saveAllEB<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
+    {
+       console.log(error);
+    },() =>
+    {
+       console.log('completed');
+       this.mydata = JSON.stringify(this.values);
+       console.log(this.mydata);
+    });
+
+
+    // this.loadData();
     
   }
+
+  // createbill()
+  // {
+  //   this.consume.saveAllEB(this.values).subscribe(
+  //     data=>{
+  //         console.log(data)
+  //     },
+  //     error=>
+  //     {
+  //       console.log(error);
+  //     }
+  //   )
+  // }
 
   /*
   deletebill()

@@ -155,19 +155,22 @@
     
         <label for="unitsCharge">Charge for consumed units(Rs:)</label>
         <input type="number" id="unitsCharge" name="unitsCharge"  [(ngModel)]="valArr[compo].totalamount"  placeholder="Enter the charge (Rs:)" required>
-    
+<!--     
+        <label for="userid">userid</label>
+        <input type="number" id="userid" name="userid"  [(ngModel)]="valArr[compo].userid"  placeholder="userid" required> -->
+
         <label for="image">Add Image</label>
         <input type="file" name="pic" accept="image/*">
     
         <br>
         
-        <input type="submit" value="Add Bill">
+        <button (click)="addBill()">ADd Bill</button>
         <!-- <input type="submit" value="Edit Bill">
             [(ngModel)]="{{values[compo].accno}}"
         <input type="submit" value="Remove Bill"> -->
+    
         <input type="reset" value="Clear" >
-
-       
+        <button (click)="saveAll()">Save</button>
       </form>
   
     
@@ -180,6 +183,7 @@
         <th>Date</th>
         <th>No.UnitConsumed</th>
         <th>Charge(Rs)</th>
+        <!-- <th>User ID</th> -->
         <th>Image</th>
         <th>Operations</th>
       </tr>
@@ -189,6 +193,7 @@
         <td>{{item.date}}</td>
         <td>{{item.usedunits}}</td>
         <td>{{item.totalamount}}</td>
+        <!-- <td>{{item.userid}}</td> -->
         <td>{{item.image}}</td>
         <td>
             <button class="btn btn-primary" (click)="deletebill()"> Edit </button>      
