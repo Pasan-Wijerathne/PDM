@@ -1,502 +1,181 @@
 <style>
-    body {
-        font-family:  Arial, Helvetica, sans-serif;
-  
-    }
-  
-     .header{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 190%;
-      height: 104px;
-      width: 100%;
-      margin-top: -20px;
-      margin-left: 0px;
-      font-style: oblique;
-      background-image: url("assets/Images/banner.jpg");
-    } 
-  
-     .header h1 
-      {
-      font-size: 40px;
-      }
-    
-    .sidenav {
-        height: 100%;
-        width: 220px;
-        position: absolute;
-        z-index: 1;
-        top: 103px;
-        left: 0;
-        background-color: #d1d1d4;
-        overflow-x: hidden;
-        padding-top: 0px;
-    }
-    
-    .sidenav a {
-       padding: 6px 6px 5px 10px;
-        text-decoration: none;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 16px;
-        color: #000000;
+
+    input[type=text],input[type="month"],input[type="number"],input[type="date"], select, textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */  
+        height: 40px;   
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 1px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 4px; /* Add a top margin */
+        margin-bottom: 20px; /* Bottom margin */
+        /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        input[type=submit],[type=reset] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;    
+            margin-left: 250px;
+            margin-top: 220px;
+            margin-bottom: 50px;
+            width: 30%;
+            background-color: #8a8a8a;
+            padding: 20px;
+            position:absolute;
+            z-index: -2;
+        }
+
+        label{
         display: block;
+        }
+
+            /* this is nav bar  */
+    ul {
+        list-style-type: none;
+        margin-top:104px;
+        margin-left:0px;
+        position: fixed;
+        width: 100%;
+        /* margin-left:180px; */
+        overflow: hidden;
+        background-color: #333;
+        z-index: -1;
     }
-    
-    .sidenav a:hover {
-        background-color:green;
-        color: #ffffff;
+
+    li {
+        float: right;
     }
-  
-    .sidenav a.active {
-      background-color: rgb(3, 192, 34);
-      color: white;
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 7px 16px;
+        /* padding: 14px 16px; */
+        text-decoration: none;
     }
-    
-    .main {
-        margin-left: 230px; /* Same as the width of the sidenav */
-        margin-top: 70px;
+
+    li a.active
+    {
+    background-color: #ff0000;
+        
+    color: rgb(255, 255, 255);
     }
-    
-    @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
+
+
+    li a:hover {
+        background-color: rgb(247, 0, 0);
+        /* background-color: #111; */
     }
+ /* form title */
+ title{
+        text-align: center;
+        position: relative;
   
-  input[type=text],input[type="date"],input[type="number"], select, textarea {
-      width: 100%; /* Full width */
-      padding: 12px; /* Some padding */  
-      border: 1px solid #ccc; /* Gray border */
-      border-radius: 1px; /* Rounded borders */
-      box-sizing: border-box; /* Make sure that padding and width stays in place */
-      margin-top: 6px; /* Add a top margin */
-      margin-bottom: 16px; /* Bottom margin */
-      /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
-  }
+    }
+     h2{
+       
+        margin-top:150px;
+        margin-bottom: 10px;
+        position: absolute;
+        margin-left: 650px;
+        z-index: -2;
   
-  input[type=submit] {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-      background-color: green;
-  }
-  
-  .container {
-      border-radius: 5px;    
-      margin-left: 300px;
-      margin-top: 10px;
-      width: 40%;
-      background-color: #f2f2f2;
-      padding: 20px;
-  }
-  
-  label{
-    display: block;
-  }
-  
-  button:hover {
-      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  }
-  button{
-    background-color:rgb(3, 192, 34);
-    
-  }
-  
-  ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      margin-top: 0px;
-      margin-left:220px;
-      overflow: hidden;
-      background-color: #333;
-  }
-  
-  li {
-      float: right;
-  }
-  
-  li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-  }
-  
-  li a:hover {
-      background-color: #111;
-  }
-  
-  .footer 
-      {
-      position: relative;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color:grey;
-      color: white;
-      text-align: center;
-      margin-top:150px;
-      }
-  
-      input[type=text], select, textarea  
-      {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      resize: vertical;
-      }
-  
-      label 
-      {
-      padding: 12px 12px 12px 0;
-      display: inline-block;
-      }
-      
-      input[type=submit]
-      {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      float: right;
-      }
-  
-      input[type=submit]:hover
-      {
-      background-color:green;
-      }
-  
-      .container 
-      {
+     }
+
+  /* Table css */
+  table {
+      border-collapse: collapse;
       width: 50%;
-      background-color: #ddd;
-      align-self:center;
-      }
-  
-      .skills
-      {
-      text-align: right ;
-      padding-right: 20px;
-      line-height: 40px;
-      color: white;
-      }
-  
-      .DateTo {width: 90%; background-color:  #f44336;;}
-      .DateFrom {width: 80%; background-color: #2196F3;}
-      
-  
-      .col-25 
-      {
-      float: left;
-      width: 25%;
-      margin-top: 6px;
-      }
-  
-      .col-75 
-      {
-      float: left;
-      width: 75%;
-      margin-top: 6px;
-      }
-  
-      /* Clear floats after the columns */
-      .row:after
-      {
-      content: "";
-      display: table;
-      clear: both;
-      }
-      
-      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 600px)
-       {
-      .col-25, .col-75, input[type=submit]
-           {
-          width: 100%;
-          margin-top: 0;
-          }
-      }
-  
-  
-  
-      input[type=submit],input[type=reset]
-      {
-  
-      width:100px;
-      height:40px;	
-          
-      background-color:green;
-      color:white;
-      padding:10px;
-      border-radius:10px;
-  
-      }
-  
-  .btn 
-      {
-      background-color: DodgerBlue; /* Blue background */
-      border: none; /* Remove borders */
-      color: white; /* White text */
-      padding: 12px 16px; /* Some padding */
-      font-size: 16px; /* Set a font size */
-      cursor: pointer; /* Mouse pointer on hover */
-      }
-  
-      /* Darker background on mouse-over */
-      .btn:hover 
-      {
-          background-color: RoyalBlue;
-      }
-  
-  
-      .dropdown {
-      float: right;
-      overflow: hidden;
+      margin-left: 750px;
+      margin-top: 250px;
+      margin-bottom: 80px;
+      /* Add these two lines */
+      position:absolute;
+      z-index: -2;
+      /* position: left; */
   }
   
-  .dropdown .dropbtn {
-      font-size: 16px;    
-      border: none;
-      outline: none;
-      color: white;
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit;
-      margin: 0;
+  th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
   }
   
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    color: rgb(163, 172, 164);;
+  th{
+      background-color: darkgrey;
   }
   
-  .dropdown-content {
-      display: none;
-      position: fixed;
-      background-color: rgb(163, 172, 164);;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-  }
-  
-  .dropdown-content a {
-      float: none;
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: right;
-  }
-  
-  .dropdown-content a:hover {
-      background-color:rgba(15, 15, 15, 0.911);
-  }
-  
-  .dropdown:hover .dropdown-content {
-      display: block;
-  }
-  
-   /* Stop navigation bar */
-   .navbar 
-      {
-          overflow: hidden;
-          background-color: rgb(15, 15, 15);
-      }
-  
-      
-      /*  navigation bar links */
-      .navbar a 
-      {
-          float: right;
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 20px;
-          text-decoration: none;
-      }
-      
-      /* Right-aligned link */
-      .navbar a.right 
-      {
-          float: right;
-      }
-      
-  
-      /* Change color on hover */
-      .navbar a:hover {
-          background-color: red;
-          color: rgb(189, 181, 181);
-      }
-  
-      
+  tr:hover {background-color:#f5f5f5;}
 
- form1{
-                width:100px;
-                height: 20px;;
-                margin:20px auto;
-               
-}
-.search {
-                padding:8px 15px;
-                background:rgba(50, 50, 50, 0.2);
-                border:0px solid #dbdbdb;
-}
-.button {
-                position:relative;
-                padding:6px 15px;
-                left:-8px;
-                border:2px solid rgb(139, 135, 135);
-                background-color:#fafafa;
-                
-}
-.button:hover  {
-                background-color:grey;
-                color:green;
-}     
-
-
-.para
- {
-     font-size: 20px;
-     float:left;
- }    
   </style>
+
+        
+  <ul>    
+    <li><a routerLinkActive="active" routerLink="../telecomparison">Telephone Comparison</a></li>
+    <li><a routerLinkActive="active" routerLink="../broadband">BroadBand Usage</a></li>
+    <li><a routerLinkActive="active" routerLink="../comparisonboard">Broadband Comparison</a></li>
+    <li><a routerLinkActive="active" routerLink="../mysim">My SIM</a></li>
+    <li><a routerLinkActive="active" routerLink="../searchsim">Search SIM</a></li>
+   
+</ul>
   
-  <body>
+
+
+        <h2 align="center"><u> Enter SIM Details </u> </h2>
+    
   
-      <div class="header"> </div>
-  
-  
-      <div class="navbar">   
-          <div class="dropdown">
-          <button class="dropbtn">Broadband Usage 
-          <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-          <a href="http://localhost:4200/broadband">BroadBand Details</a>
-          <a href="http://localhost:4200/comparisonbroad">Comparison</a>
-          </div>
-          </div>
-          <div class="dropdown">
-                <button class="dropbtn">MY SIM 
-                <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                <a href="http://localhost:4200/mysim">SIM Details</a>
-                <a href="http://localhost:4200/searchsim">Search SIM</a>
-                </div>
-                </div>          
-          <a href="http://localhost:4200/telecomparison">Telephone Bill Comparison</a>
+    <div class="container"> 
+      <form action="/action_page.php">
+    
+        
+        
+        <label for="userId">User ID</label>
+            <input type="text" id="userId" name="userId"  [(ngModel)]="valArr[compo].userid" placeholder="User ID" required>
           
-          <a href="#home">Home</a>
-          </div>
-   
-  
-  
-  
-      <div class="sidenav">
-              <a  href="home">Home</a>
-              <a href="">Electricity Bill</a>
-              <a href="">Water Bill</a>
-              <a href="">Telephone Bill</a>
-              <a href="">Data Bill</a>
-              <a href="">Insurance Bill </a>
-              <a href="">Other Bills</a>
-              <a href="">Solar Energy</a>
-              <a href="billmanager"> Bill Manager</a>
-          </div>
-  
-          <div class="main">
-                <div class="button">
-                        <div class="search">
-                            <div class="form1">
-                    
-                            <div class="para">
-                            <p>Enter Your Phone  Number</p>
-                            </div>
-                            <input type="text" placeholder="Search Your SIM .........." required>
-                            <input type="button" value="Search">
-                        </div>
-              </div>
-                    </div>
-
-  
-            <h2 align="center">Enter Your SIM Details Here
-  
-            </h2> 
-    
-            <Form>
-      
-               <table align="center" cellpadding = "10">
-
-                    <tr>
-                            <td  align="left"></td>
-                            <td>User ID</td>
-                            <td><input id="Text1" type="text" name="fname" /></td>
-                         </tr>
-
-                <tr>
-                  <td  align="left"></td>
-                  <td>Phone Number</td>
-                  <td><input id="Text1" type="text" name="fname" /></td>
-               </tr>
-              
-              <tr>
-                  <td  align="left"></td>
-                  <td>User Password</td>
-                  <td><input id="Text1" type="text" name="fname" /></td>
-               </tr>
-              
-              <tr>
-                  <td  align="left"></td>  
-                  <td>Serial Number</td>
-                  <td><input id="Text1" type="text" name="fname" /></td>
-               </tr>
-      
-              <tr>
-                  <td  align="left"></td> 
-                  <td>Country</td>
-                  <td><input id="Text1" type="text" name="fname" /></td>
-               </tr>
-      
-              <tr>
-                  <td  align="left"></td>
-                  <td>IMEI Number</td>
-                  <td><input id="Text1" type="text" name="fname" /></td>
-               </tr>
-   
-               <tr>
-                   <td  align="left"></td>
-                   <td>SIM category</td>
-                   <td><input id="Text1" type="text" name="fname" /></td>
-                </tr>
-                
-  
-              <tr>
-                <td  align="left"></td>
-                <td align="center"><input type="submit" value="Save"/></td>
-                <td><input type="submit" value="Update"/></td>
-    
-              </tr>
-  
-    
-          </table> 
-            </Form> 
-             </div>
+            <label for="phoneNum">Phone Number</label>
+            <input type="number" id="phoneNum" name="phoneNum"  [(ngModel)]="valArr[compo].simnum" placeholder="Phone Number" required>
+        
+            <label for="usrpsswrd">User Password</label>
+            <input type="text" id="usrpsswrd" name="usrpsswrd"  [(ngModel)]="valArr[compo].userpwd"  placeholder="User password" required>
+        
+            <label for="srlnum">Serial Number</label>
+            <input type="number" id="srlnum" name="srlnum"  [(ngModel)]="valArr[compo].simsnum"  placeholder="Serial Number" required>
+        
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country"  [(ngModel)]="valArr[compo].simcountry"  placeholder="country" required>
+        
+            <label for="eminum">IMEI Number</label>
+            <input type="number" id="eminum" name="eminum"  [(ngModel)]="valArr[compo].simimeinum"  placeholder="IMEI Numbre" required>
+        
+            <label for="simcat">SIM Category</label>
+            <input type="text" id="simcat" name="simcat"  [(ngModel)]="valArr[compo].category"  placeholder="SIM Category" required>
+            <br>
             
-             <div class="footer">
-                <p>Copyright ©SLIIT-PDM-2018-WD-19. All Rights Reserved.</p>
-            </div>
-            
-    
-  </body>
+        <input type="submit" value="Save">
+        <!-- <input type="submit" value="Edit Bill">
+            [(ngModel)]="{{values[compo].accno}}"
+        <input type="submit" value="Remove Bill"> -->
+        <input type="reset" value="Clear" >
+
+       
+      </form>
   
+    
+  </div>
+  
+
   
