@@ -18,7 +18,8 @@ public getAll<T>(): Observable<T> {
 }
 
 public saveAllEB<T>(data: any[]): Observable<T>{
-    return this.http.post<T>(this.Server + "elecbillsa", data);
+    console.log('logged');
+    return this.http.post<T>(this.Server + "billmanger/elecbillsa", data);
 }
 
 /*
