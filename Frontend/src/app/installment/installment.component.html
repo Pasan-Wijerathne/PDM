@@ -167,6 +167,36 @@
         
       </div>
       
-      
-      
+      <table>
+        <tr>
+          <th>Object</th>
+          <th>Amount</th>
+          <th>Years</th>
+          <th>Down payment</th>
+          <th>Amount per month</th>
+        </tr>
+  
+        <tr (click)="selectRow(i)" *ngFor="let item of values; index as i">
+          <td>{{item.accno}}</td>
+          <td>{{item.date}}</td>
+          <td>{{item.usedunits}}</td>
+          <td>{{item.totalamount}}</td>
+          <!-- <td>{{item.userid}}</td> -->
+          <td>{{item.image}}</td>
+          <td>
+              <button class="btn btn-primary" (click)="deletebill()"> Edit </button>      
+              <button class="btn btn-danger"> Delete </button>
+          </td>
+   
+      </tr>
+  
+         <!-- <tr>
+            <td>
+                  (click)="loadData($event)"
+              <button >Click to Read</button>
+            </td>
+            <td><p>{{mydata}}</p></td>
+        </tr> -->
+        
+      </table>
       </body>
