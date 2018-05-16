@@ -3,12 +3,8 @@ import { HttpRequest, HttpClient, HttpEvent, HttpHandler, HttpInterceptor } from
 import { Observable } from 'rxjs/Observable';
 import { HttpModule } from '@angular/http';
 
-@Injectable()
 
-
-
-
-export class Telecomparison {
+export class BroadComservice {
 
     public server = 'http://localhost:8080/';
 
@@ -16,13 +12,15 @@ export class Telecomparison {
     constructor(private http : HttpClient){}
 
     
-    public getdata1<T>(): Observable<T>
+    public getdata<T>(): Observable<T>
     {
-        return this.http.get<T>(this.server + "telephone/simread");
+        return this.http.get<T>(this.server + "comparisonbroad/teleread");
 
     }
-}
 
+
+
+}
 
 @Injectable()
 export class CustomInterceptor implements HttpInterceptor {
