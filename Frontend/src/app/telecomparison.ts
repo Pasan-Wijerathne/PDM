@@ -6,22 +6,23 @@ import { HttpModule } from '@angular/http';
 @Injectable()
 
 
-export class Mysimservice {
+
+
+export class Telecomparison {
+
     public server = 'http://localhost:8080/';
 
 
     constructor(private http : HttpClient){}
 
     
-    public getdata<T>(): Observable<T>
+    public getdata1<T>(): Observable<T>
     {
         return this.http.get<T>(this.server + "telephone/simread");
 
     }
-
-
-
 }
+
 
 @Injectable()
 export class CustomInterceptor implements HttpInterceptor {
