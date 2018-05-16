@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchsim.component.scss']
 })
 export class SearchsimComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {

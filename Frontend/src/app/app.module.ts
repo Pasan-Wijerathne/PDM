@@ -43,6 +43,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
 import { ElectService } from './elect-service';
 import {Watercomservice} from './watercomservice';
+import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
 
 
 
@@ -85,6 +86,7 @@ import {Watercomservice} from './watercomservice';
     BannerComponent,
     FooterComponent,
     Test2Component,
+    BroadbandinfoComponent,
   ],
   imports: [
     BrowserModule,
