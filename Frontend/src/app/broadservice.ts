@@ -15,7 +15,7 @@ export class Broadservice {
     
     public getdata<T>(): Observable<T>
     {
-        return this.http.get<T>(this.server + "broadband/simread");
+        return this.http.get<T>(this.server + "broadband/broadbandRead");
 
     }
 
