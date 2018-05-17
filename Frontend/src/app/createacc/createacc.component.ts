@@ -22,15 +22,13 @@ export class CreateaccComponent implements OnInit {
 
   adduser()
   {
-    this.consume.createacc<any[]>(this.values).subscribe((data : any[]) => data, error => () =>{
-      console.log(error);
-    },() => 
+    this.consume.createacc<any[]>(this.values).subscribe((data : any[]) => data, error => () =>{console.log(error);},() => 
     {
       console.log('completed');
       this.mydata = JSON.stringify(this.values);
       console.log(this.mydata);
-    });
-    }
+      });
+  }
  
   }
 
