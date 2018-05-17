@@ -37,6 +37,7 @@ import { BannerComponent } from './layout/banner/banner.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
 import { ViewbillsComponent } from './viewbills/viewbills.component';
+import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
 
 
 const routes: Routes = [
@@ -73,7 +74,8 @@ const routes: Routes = [
   {path : "banner",component : BannerComponent},
   {path : "footer",component : FooterComponent},
   {path : "test2",component : Test2Component},
-  {path : "viewbills",component : ViewbillsComponent}
+  {path : "viewbills",component : ViewbillsComponent},
+  {path :"broadbandinfo",component:BroadbandinfoComponent}
   ];
 
 

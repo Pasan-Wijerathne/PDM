@@ -42,7 +42,12 @@ import { BannerComponent } from './layout/banner/banner.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
 import { ElectService } from './elect-service';
+<<<<<<< HEAD
 import { ElectricEqService } from './electric-eq-service';
+=======
+import {Watercomservice} from './watercomservice';
+import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
+>>>>>>> ae2d01520d3bd0e837856b7827be86bde1fb018b
 
 
 
@@ -85,6 +90,7 @@ import { ElectricEqService } from './electric-eq-service';
     BannerComponent,
     FooterComponent,
     Test2Component,
+    BroadbandinfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -93,8 +99,12 @@ import { ElectricEqService } from './electric-eq-service';
     FormsModule
   ],
 
+<<<<<<< HEAD
   
   providers: [[ElectService],[ConsumsService],[ElectricEqService]],
+=======
+  providers: [[ElectService],[ConsumsService],[Watercomservice]],
+>>>>>>> ae2d01520d3bd0e837856b7827be86bde1fb018b
   bootstrap: [AppComponent]
 })
 export class AppModule { }
