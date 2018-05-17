@@ -43,8 +43,10 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
 import { ElectService } from './elect-service';
 import { Createaccservice} from './createaccservice';
+import { ElectricEqService } from './electric-eq-service';
 import {Watercomservice} from './watercomservice';
 import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
+
 
 
 
@@ -96,7 +98,10 @@ import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component'
     FormsModule
   ],
 
-  providers: [[ElectService],[ConsumsService],[Createaccservice],[Watercomservice]],
+
+  providers: [[ElectService],[ConsumsService],[Createaccservice],[Watercomservice],[ElectricEqService]],
+
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

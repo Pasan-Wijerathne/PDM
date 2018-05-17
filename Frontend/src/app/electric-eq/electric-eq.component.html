@@ -164,10 +164,12 @@
       <label for="noofhours">Number of Hours per day</label>
       <input type="number" id="noofhours" name="noofhours" placeholder="Please enter the Number of Hours per day...." required>
 
-      <input type="submit" value="Add     ">
+      
+      <button (click)="saveAll()">Add</button>
+
       <input type="submit" value="Update  ">
       <input type="submit" value="Remove  ">
-      <input type="submit" value="Clear   ">
+      <input type="reset" value="Clear   ">
 
 
     </form>
