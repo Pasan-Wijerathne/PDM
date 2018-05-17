@@ -43,6 +43,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
 import { ElectService } from './elect-service';
 import { Createaccservice} from './createaccservice';
+import {Watercomservice} from './watercomservice';
+import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
 
 
 
@@ -85,6 +87,7 @@ import { Createaccservice} from './createaccservice';
     BannerComponent,
     FooterComponent,
     Test2Component,
+    BroadbandinfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -93,7 +96,7 @@ import { Createaccservice} from './createaccservice';
     FormsModule
   ],
 
-  providers: [[ElectService],[ConsumsService],[Createaccservice]],
+  providers: [[ElectService],[ConsumsService],[Createaccservice],[Watercomservice]],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
