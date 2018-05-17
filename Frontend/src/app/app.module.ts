@@ -42,6 +42,7 @@ import { BannerComponent } from './layout/banner/banner.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
 import { ElectService } from './elect-service';
+import { ElectricEqService } from './electric-eq-service';
 
 
 
@@ -92,7 +93,8 @@ import { ElectService } from './elect-service';
     FormsModule
   ],
 
-  providers: [[ElectService],[ConsumsService]],
+  
+  providers: [[ElectService],[ConsumsService],[ElectricEqService]],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
