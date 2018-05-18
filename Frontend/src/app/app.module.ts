@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 
+
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 import { GasComponent } from './gas/gas.component';
 import { ItempredictionComponent } from './itemprediction/itemprediction.component';
@@ -27,7 +28,6 @@ import { AddEditWaterComponent } from './add-edit-water/add-edit-water.component
 import { AddEditTelephoneComponent } from './add-edit-telephone/add-edit-telephone.component';
 import { AddEditTelevitionComponent } from './add-edit-televition/add-edit-televition.component';
 import { TestimageComponent } from './testimage/testimage.component';
-import { CreateaccComponent } from './createacc/createacc.component';
 import { HomeGardenComponent } from './home-garden/home-garden.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
@@ -42,21 +42,21 @@ import { BannerComponent } from './layout/banner/banner.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
 import { ElectService } from './elect-service';
-import { Createaccservice} from './createaccservice';
 import { ElectricEqService } from './electric-eq-service';
-import {Watercomservice} from './watercomservice';
+import { Watercomservice} from './watercomservice';
 import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
-
+import { CreateuserComponent } from './createuser/createuser.component';
+import { UsrUtilService } from './usr-util.service';
 
 
 
 @NgModule({
-  declarations: [
+
+  declarations: 
+  [
     AppComponent,
     HomeComponent,
     LoginComponent,
-
-
     GasComponent,
     ItempredictionComponent,
     PredictionComponent,
@@ -77,7 +77,6 @@ import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component'
     AddEditTelephoneComponent,
     AddEditTelevitionComponent,
     TestimageComponent,
-    CreateaccComponent,
     HomeGardenComponent,
     MedicineComponent,
     VehicleComponent,
@@ -90,16 +89,18 @@ import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component'
     FooterComponent,
     Test2Component,
     BroadbandinfoComponent,
+    CreateuserComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
 
 
-  providers: [[ElectService],[ConsumsService],[Createaccservice],[Watercomservice],[ElectricEqService]],
+  providers: [[ElectService],[ConsumsService],[Watercomservice],[ElectricEqService],[UsrUtilService]],
 
 
   bootstrap: [AppComponent]

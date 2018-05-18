@@ -4,22 +4,24 @@ import { Observable } from 'rxjs/Observable';
 import { HttpModule } from '@angular/http';
 
 @Injectable()
-export class Createaccservice 
-{
+export class UsrUtilService {
 
-    public Server = 'http://localhost:8080/';
+  public Server = 'http://localhost:8080/';
         
     constructor(private http : HttpClient ) { }
 
     public createacc<T>(data: any[]) :Observable<T>
     {
-        console.log("into method");
-        return this.http.post<T>(this.Server + "/createuser",data);
+        console.log("into service method");
+        return this.http.post<T>(this.Server + "user/createusers",data);
     }
 
+    public getAll<T>(): Observable<T> {
+      return this.http.get<T>(this.Server + "user/getuser")
+  }
 
 }
- 
+
 
 @Injectable()
 export class CustomInterceptor implements HttpInterceptor {

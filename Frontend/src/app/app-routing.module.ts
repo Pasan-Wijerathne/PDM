@@ -29,7 +29,6 @@ import { HomeGardenComponent } from './home-garden/home-garden.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { ElectricEqComponent } from './electric-eq/electric-eq.component';
-import { CreateaccComponent } from './createacc/createacc.component';
 import { SearchsimComponent } from './searchsim/searchsim.component';
 import { ElectricitycomparisonComponent } from './electricitycomparison/electricitycomparison.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
@@ -38,7 +37,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
 import { ViewbillsComponent } from './viewbills/viewbills.component';
 import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
-
+import { CreateuserComponent } from './createuser/createuser.component';
 
 const routes: Routes = [
   {path : "login", component : LoginComponent},
@@ -63,7 +62,6 @@ const routes: Routes = [
   {path : "add-edit-telephone",component : AddEditTelephoneComponent },
   {path : "add-edit-televition",component : AddEditTelevitionComponent },
   {path : "testimage", component : TestimageComponent},
-  {path : "createacc", component : CreateaccComponent},
   {path : "home-garden", component: HomeGardenComponent},
   {path : "medicine" , component : MedicineComponent},
   {path : "vehicle" ,component : VehicleComponent},
@@ -75,7 +73,8 @@ const routes: Routes = [
   {path : "footer",component : FooterComponent},
   {path : "test2",component : Test2Component},
   {path : "viewbills",component : ViewbillsComponent},
-  {path :"broadbandinfo",component:BroadbandinfoComponent}
+  {path :"broadbandinfo",component:BroadbandinfoComponent},
+  {path :"createuser",component:CreateuserComponent}
   ];
 
 
