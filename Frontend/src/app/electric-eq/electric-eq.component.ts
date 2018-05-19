@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ElectricEqService } from '../electric-eq-service';
+//import { ElectricEqService } from ``'../electric-eq-service';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { ElectricEqService } from '../electric-eq-service';
 })
 export class ElectricEqComponent implements OnInit {
 
-  constructor(private consume : ElectricEqService) { }
+  //constructor(private consume : ElectricEqService) { }
    public mydata: string;
   private values:any[];
 
@@ -17,17 +17,17 @@ export class ElectricEqComponent implements OnInit {
     console.log('component loaded', this.values);   
   }
 
-  saveAll()
-  {
-    this.consume.saveAlleq<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
-    {
-       console.log(error);
-    },() =>
-    {
-       console.log('completed');
-       this.mydata = JSON.stringify(this.values);
-       console.log(this.mydata);
-    });
-  }
+  // saveAll()
+  // {
+  //   this.consume.saveAlleq<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
+  //   {
+  //      console.log(error);
+  //   },() =>
+  //   {
+  //      console.log('completed');
+  //      this.mydata = JSON.stringify(this.values);
+  //      console.log(this.mydata);
+  //   });
+  // }
 
 }
