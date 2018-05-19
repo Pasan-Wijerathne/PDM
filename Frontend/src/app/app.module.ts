@@ -45,6 +45,9 @@ import { ElectService } from './elect-service';
 //import { ElectricEqService } from './electric-eq-service';
 //import {Watercomservice} from './watercomservice';
 import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
+import { CreateuserComponent } from './createuser/createuser.component';
+import { UsrUtilService } from './usr-util.service';
+import { EleCompaService } from './ele-compa.service';
 
 
 
@@ -96,9 +99,10 @@ import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component'
     FormsModule
   ],
 
-  
-  // providers: [[ElectService],[ConsumsService],[ElectricEqService]],
-  // providers: [[ElectService],[ConsumsService],[Watercomservice]],
+
+  providers: [[ElectService],[ConsumsService],[UsrUtilService],[EleCompaService]],
+
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
