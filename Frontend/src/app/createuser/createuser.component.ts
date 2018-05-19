@@ -12,7 +12,7 @@ export class CreateuserComponent implements OnInit {
 
   public mydata: String;
   public values: any[];
-  private compo:number = 1;
+  private selectedUserIdx:number = 0;
 
   get valArr(){
     return this.values;
@@ -26,13 +26,47 @@ export class CreateuserComponent implements OnInit {
 
   adduser()
   {
-    console.log('add user click method');
+  /*  console.log('add user click method');
     this.consume.createacc<any[]>(this.values).subscribe((data : any[]) => data, error => () =>{console.log(error);},() => 
     {
       console.log('completed');
       this.mydata = JSON.stringify(this.values);
       console.log(this.mydata);
       });
+      */
+
+      var usr = {"name":"","password":"","email":"","address":"","nic":""};
+      this.values.push(usr);
+      this.selectUser(this.values.length - 1);
+      console.log('add user method');
+
+  }
+
+
+  saveUser(e){
+   // e.preventDefaults();
+   // this.consume.createacc(this.values);
+
+    this.consume.createacc<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
+    {
+       console.log(error);
+    },() =>
+    {
+       console.log('completed');
+       this.mydata = JSON.stringify(this.values);
+       console.log(this.mydata);
+    });
+
+  }
+
+  selectUser(idx){
+    console.log('selecting user,', idx);
+    this.selectedUserIdx = idx;
+    console.log(this.selectedUser().name);
+  }
+
+  selectedUser(){
+    return this.values[this.selectedUserIdx];
   }
 
   loadData(){

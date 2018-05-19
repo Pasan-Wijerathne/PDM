@@ -47,6 +47,7 @@ import { Watercomservice} from './watercomservice';
 import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { UsrUtilService } from './usr-util.service';
+import { EleCompaService } from './ele-compa.service';
 
 
 
@@ -100,7 +101,7 @@ import { UsrUtilService } from './usr-util.service';
   ],
 
 
-  providers: [[ElectService],[ConsumsService],[Watercomservice],[ElectricEqService],[UsrUtilService]],
+  providers: [[ElectService],[ConsumsService],[Watercomservice],[ElectricEqService],[UsrUtilService],[EleCompaService]],
 
 
   bootstrap: [AppComponent]
