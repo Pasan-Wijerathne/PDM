@@ -27,7 +27,7 @@ export class AddEditElectricityComponent implements OnInit {
   ngOnInit() {
 
     //this.values = [{"no":1,"accno":"765","usedunits":545455,"userid":"245","date":"2018-04-04","totalamount":454,"addimage":null}];
-    // this.loadData();
+     this.loadData();
     console.log('component loaded', this.values);    
   }
 
@@ -40,11 +40,11 @@ export class AddEditElectricityComponent implements OnInit {
     this.compo = index;
   }
 
-  addBill(){
-    var newBill = {"no":1,"accno":"0","usedunits":0,"userid":"0","date":"2018-04-04","totalamount":0,"addimage":null};
-    this.values.push(newBill);
-    this.compo = this.values.length - 1;
-  }
+  // addBill(){
+  //   var newBill = {"no":1,"accno":"0","usedunits":0,"userid":"0","date":"2018-04-04","totalamount":0,"addimage":null};
+  //   this.values.push(newBill);
+  //   this.compo = this.values.length - 1;
+  // }
 
   loadData(){
     console.log('loading data');

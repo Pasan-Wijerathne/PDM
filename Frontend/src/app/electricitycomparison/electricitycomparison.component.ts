@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EleCompaService } from '../ele-compa.service';
 
 @Component({
   selector: 'app-electricitycomparison',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElectricitycomparisonComponent implements OnInit {
 
-  constructor() { }
+  constructor(private consume : EleCompaService) { }
 
+  public mydata: String;
+  public values: any[];
+  
   ngOnInit() {
   }
 
