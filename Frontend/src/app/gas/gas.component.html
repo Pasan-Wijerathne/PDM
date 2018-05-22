@@ -161,15 +161,14 @@
   </div>
 
   <table>
-        <tr>
-          <th>Account No</th>
+        <tr>       
+          <th>No of Cylinders</th>
           <th>Date</th>
-          <th>No.UnitConsumed</th>
-          <th>Charge(Rs)</th>
-          <th>Image</th>
+          <th>Total amount</th>
         </tr>
     
         <tr (click)="selectUser($index)" *ngFor="let item of values; index as $index">
+              
                 <td>{{item.noofcylinders}}</td>
                 <td>{{item.date}}</td>
                 <td>{{item.totalamount}}</td>

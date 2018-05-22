@@ -10,12 +10,12 @@ public Server = 'http://localhost:8080/';
         
 constructor(private http : HttpClient ) { }
 
-public createacc<T>(data: any[]) :Observable<T>
+public createvehicle<T>(data: any[]) :Observable<T>
 {
     console.log("into service method");
     const header = new HttpHeaders();
     header.set('Content-Type', 'application/json');
-    return this.http.post<T>(this.Server + "vehicle/updatevehicle",JSON.stringify(data), {headers : header});
+    return this.http.post<T>(this.Server + "vehicle/readvehicle",JSON.stringify(data), {headers : header});
 }
 
 

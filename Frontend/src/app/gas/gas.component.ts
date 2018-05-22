@@ -6,6 +6,7 @@ import { GasServiceService } from '../gas-service.service';
   templateUrl: './gas.component.html',
   styleUrls: ['./gas.component.scss']
 })
+
 export class GasComponent implements OnInit {
 
   constructor(private consume : GasServiceService) { }
@@ -23,7 +24,6 @@ export class GasComponent implements OnInit {
      this.loadData();
      console.log('component loaded', this.values);    
   }
-
 
   test(evetn){
     console.log('triggered');

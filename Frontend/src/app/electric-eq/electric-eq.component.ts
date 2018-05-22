@@ -71,7 +71,7 @@ export class ElectricEqComponent implements OnInit {
        this.mydata = JSON.stringify(this.values);
        console.log(this.mydata);
     });
-
+    this.add();
   }
 
   selectUser(idx){

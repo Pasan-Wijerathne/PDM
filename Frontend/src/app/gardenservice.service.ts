@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpInterceptor, HttpHandler, HttpRequest, HttpEvent } from '@angular/common/http';
+import { HttpClient, HttpInterceptor, HttpHandler, HttpRequest, HttpEvent, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { HttpModule } from '@angular/http';
 @Injectable()
@@ -13,13 +13,21 @@ constructor(private http : HttpClient ) { }
 
 
 public getAll<T>(): Observable<T> {
-    return this.http.get<T>(this.Server + "garden/updategarden")
+    return this.http.get<T>(this.Server + "garden/readgarden")
 }
 
 public saveAllEB<T>(data: any[]): Observable<T>{
     console.log('logged');
     return this.http.post<T>(this.Server + "garden/readgarden", data);
 }
+public creategarden<T>(data: any[]) :Observable<T>
+{
+    console.log("into service method");
+    const header = new HttpHeaders();
+    header.set('Content-Type', 'application/json');
+    return this.http.post<T>(this.Server + "garden/updategas",JSON.stringify(data), {headers : header});
+}
+
 
 
 }

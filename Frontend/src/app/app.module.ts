@@ -116,4 +116,4 @@ import { VehicleserviceService } from './vehicleservice.service';
 
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 

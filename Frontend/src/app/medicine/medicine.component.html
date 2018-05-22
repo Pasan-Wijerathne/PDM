@@ -136,28 +136,26 @@
 
 
   <div class="container"> 
-    <form action="/action_page.php">
+    <form *ngIf="selectedUser()">
   
      
   
-      <label for="itemname">Doctor's name</label>
-      <input type="text" id="itemname" name="cylinder" placeholder="Please enter the name...." required>
+      <label for="itemname">Illness</label>
+      <input type="text" id="itemname" name="cylinder" [(ngModel)] = "selectedUser().illness" placeholder="Please enter the name...." required>
   
       <label for="subject">Description</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+      <textarea id="subject" name="subject" [(ngModel)] = "selectedUser().description" placeholder="Write something.." style="height:100px"></textarea>
       
       <label for="Date">Date</label>
-      <input type="date" id="date" name="date" required>
+      <input type="date" id="date" name="date" [(ngModel)] = "selectedUser().date" required>
 
       <label for="noofwatts">Average expences</label>
-      <input type="number" id="noofwatts" name="cost" placeholder="Please enter the expences...." required>
+      <input type="number" id="noofwatts" name="cost" [(ngModel)] = "selectedUser().totalamount" placeholder="Please enter the expences...." required>
 
           
-<!-- 4 buttons -->
-      <input type="submit" value="Add     ">
-      <input type="submit" value="Update  ">
-      <input type="submit" value="Remove  ">
-      <input type="submit" value="Clear   ">
+      <button (click)="laodData()" type="reset">Clear</button>]
+      <button (click)="adduser()" type="button">Add New Bill</button>
+      <button (click)="saveUser(event)" type="button">Save Bill</button>
       
 
     </form>
@@ -166,28 +164,27 @@
 </div>
 
 <table>
-        <tr>
-          <th>Account No</th>
+        <tr>       
+          <th>Illness</th>
+          <th>Description</th>
           <th>Date</th>
-          <th>No.UnitConsumed</th>
-          <th>Charge(Rs)</th>
-          <th>Image</th>
+          <th>Total amount</th>
         </tr>
     
-        <tr>
-          <td>5200036</td>
-          <td>02-05-2018</td>
-          <td>50</td>
-          <td>1200</td>
-          <td>Empty</td>
-        </tr>
-        <tr>
-          <td>58569235</td>
-          <td>03-23-2018</td>
-          <td>60</td>
-          <td>2100</td>
-          <td>Empty</td>
-        </tr>
+        <tr (click)="selectUser($index)" *ngFor="let item of values; index as $index">
+              
+                <td>{{item.illness}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.date}}</td>
+                <td>{{item.totalamount}}</td>
+               
+                <td>
+                    <button class="btn btn-primary"> Edit </button>      
+                    <button class="btn btn-danger"> Delete </button>
+                </td>
+         
+            </tr>
+       
         
       </table>
 <br>

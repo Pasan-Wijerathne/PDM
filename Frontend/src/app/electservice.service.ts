@@ -14,6 +14,7 @@ export class ElectserviceService {
   {
       return this.http.get<T>(this.Server + "billmanager/elecbillread");
   }
+
   public getAllW<T>():Observable<T>
   {
     return this.http.get<T>(this.Server + "billmanager/getwaterbill");
@@ -25,6 +26,14 @@ export class ElectserviceService {
       const header = new HttpHeaders();
       header.set('Content-Type', 'application/json');
       return this.http.post<T>(this.Server + "billmanager/elecbillsave",JSON.stringify(data), {headers : header});
+  }
+
+  public creatwbill<T>(data: any[]) :Observable<T>
+  {
+      console.log("into service method");
+      const header = new HttpHeaders();
+      header.set('Content-Type', 'application/json');
+      return this.http.post<T>(this.Server + "billmanager/createwaterbill",JSON.stringify(data), {headers : header});
   }
 
 }
