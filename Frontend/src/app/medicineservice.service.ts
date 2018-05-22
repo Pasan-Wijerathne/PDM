@@ -10,12 +10,12 @@ export class MedicineserviceService {
         
 constructor(private http : HttpClient ) { }
 
-public createacc<T>(data: any[]) :Observable<T>
+public createmedicine<T>(data: any[]) :Observable<T>
 {
     console.log("into service method");
     const header = new HttpHeaders();
     header.set('Content-Type', 'application/json');
-    return this.http.post<T>(this.Server + "medicine/updatemedicine",JSON.stringify(data), {headers : header});
+    return this.http.post<T>(this.Server + "medicine/readmedicine",JSON.stringify(data), {headers : header});
 }
 
 
