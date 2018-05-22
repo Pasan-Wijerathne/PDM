@@ -40,6 +40,7 @@ export class AddEditElectricityComponent implements OnInit {
     this.id = this.selectedUser().accno;
     localStorage.setItem("userid","6");
   }
+  
 
 
   selectedUser(){

@@ -57,6 +57,7 @@ import { GasServiceService } from './gas-service.service';
 import { ElectserviceService } from './electservice.service';
 import { WateserviceService } from './wateservice.service';
 import { ElectricEqServiceService } from './electric-eq-service.service';
+import { VehicleserviceService } from './vehicleservice.service';
 
 
 
@@ -110,11 +111,7 @@ import { ElectricEqServiceService } from './electric-eq-service.service';
   ],
 
 
-<<<<<<< HEAD
-  providers: [[ElectService],[GardenserviceService],[MedicineserviceService],[GasServiceService],[ConsumsService],[Watercomservice],[ElectricEqService],[UsrUtilService],[EleCompaService]],
-=======
-  providers: [[ElectserviceService],[ConsumsService],[ElectricEqServiceService],[Watercomservice],[UsrUtilService],[EleCompaService],[WateserviceService]],
->>>>>>> 13b334187027b734f80b13bb9ffd1d8ccb1de080
+  providers: [[ElectserviceService],[VehicleserviceService],[MedicineserviceService],[GardenserviceService ],[GasServiceService ],[ConsumsService],[ElectricEqServiceService],[Watercomservice],[UsrUtilService],[EleCompaService],[WateserviceService]],
 
 
   bootstrap: [AppComponent]
