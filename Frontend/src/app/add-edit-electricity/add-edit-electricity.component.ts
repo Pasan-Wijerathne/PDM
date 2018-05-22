@@ -38,7 +38,7 @@ export class AddEditElectricityComponent implements OnInit {
     this.selectedUserIdx = idx;
     console.log(this.selectedUser().accno);
     this.id = this.selectedUser().accno;
-    localStorage.setItem("userid","6");
+   // localStorage.setItem("userid","6");
   }
 
 
@@ -65,9 +65,9 @@ export class AddEditElectricityComponent implements OnInit {
   adduser()
   {
       //var uid = localStorage.getItem("userid");
-      var ebill = {"accno":"","date":"","usedunits":"","userid":"uid","totalamount":""};
+      var ebill = {"accno":"","date":"","usedunits":"","userid":"","totalamount":""};
       this.values.push(ebill);
-      this.selectUser(this.values.length - 1);
+      //this.selectUser(this.values.length - 1);
       console.log('add user method');
 
   }
