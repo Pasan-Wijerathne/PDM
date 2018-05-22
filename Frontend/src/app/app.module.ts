@@ -42,12 +42,14 @@ import { BannerComponent } from './layout/banner/banner.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
 import { ElectService } from './elect-service';
-import { ElectricEqService } from './electric-eq-service';
+
 import { Watercomservice} from './watercomservice';
 import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { UsrUtilService } from './usr-util.service';
 import { EleCompaService } from './ele-compa.service';
+import { ElectricEqServiceService } from './electric-eq-service.service';
+
 
 
 
@@ -101,7 +103,7 @@ import { EleCompaService } from './ele-compa.service';
   ],
 
 
-  providers: [[ElectService],[ConsumsService],[Watercomservice],[ElectricEqService],[UsrUtilService],[EleCompaService]],
+  providers: [[ElectService],[ConsumsService],[Watercomservice],[ElectricEqServiceService],[UsrUtilService],[EleCompaService]],
 
 
   bootstrap: [AppComponent]

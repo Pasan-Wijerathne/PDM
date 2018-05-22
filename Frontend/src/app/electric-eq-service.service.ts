@@ -1,30 +1,28 @@
 
 import { Injectable } from '@angular/core';
-import { HttpRequest, HttpClient, HttpEvent, HttpHandler, HttpInterceptor } from '@angular/common/http';
+import { HttpRequest, HttpClient, HttpEvent, HttpHandler, HttpInterceptor, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { HttpModule } from '@angular/http';
 
 @Injectable()
-export class ElectricEqService {
+export class ElectricEqServiceService {
+  public Server = 'http://localhost:8080/';
+  constructor(private http : HttpClient ) { }
 
-public Server = 'http://localhost:8080/';
-    
+  public addeq<T>(data: any[]) :Observable<T>
+  {
+      console.log("into service method");
+      const header = new HttpHeaders();
+      header.set('Content-Type', 'application/json');
+      return this.http.post<T>(this.Server + "user/createusers",JSON.stringify(data), {headers : header});
+  }
 
-constructor(private http : HttpClient ) { }
 
-
-public getAll<T>(): Observable<T> {
-    return this.http.get<T>(this.Server + "electriceq/electriceqread")
+  public getAll<T>(): Observable<T> {
+    return this.http.get<T>(this.Server + "user/getuser")
 }
 
-public saveAlleq<T>(data: any[]): Observable<T>{
-    console.log('logged');
-    return this.http.post<T>(this.Server + "electriceq/electriceqadd", data);
 }
-
-
-}
-
 
 @Injectable()
 export class CustomInterceptor implements HttpInterceptor {
