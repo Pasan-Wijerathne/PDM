@@ -89,8 +89,8 @@
        <label for="NIC"><b> NIC Number</b></label>
        <input type="NIC" placeholder="Enter NIC"  [(ngModel)] = "selectedUser().nic" name="NIC" required>
        
-       <input type="submit" value="Cancel">
-       <input (click)="saveUser(event)" type="button" value="Sign Up">
+       <!-- <input type="submit" value="Cancel"> -->
+       <button (click)="saveUser(event)" type="button" value="Sign Up">
        <button (click) = "adduser()">Add user</button>
  
     

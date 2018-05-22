@@ -115,4 +115,4 @@ import { ElectricEqServiceService } from './electric-eq-service.service';
 
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 
