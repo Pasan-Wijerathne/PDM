@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ElectricEqService } from '../electric-eq-service';
-
+import { Component, OnInit ,Injectable } from '@angular/core';
+import { ElectricEqServiceService } from '../electric-eq-service.service';
 
 @Component({
   selector: 'app-electric-eq',
@@ -9,17 +8,36 @@ import { ElectricEqService } from '../electric-eq-service';
 })
 export class ElectricEqComponent implements OnInit {
 
-  constructor(private consume : ElectricEqService) { }
-   public mydata: string;
-  private values:any[];
+  constructor(private consume : ElectricEqServiceService) { }
 
-  ngOnInit() {
-    console.log('component loaded', this.values);   
+  public mydata: string;
+  private values:any[];
+  private selectedUserIdx:number = 0;
+
+  get valArr(){
+    return this.values;
   }
 
-  saveAll()
+  ngOnInit() 
   {
-    this.consume.saveAlleq<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
+    this.loadData();
+    console.log('component loaded', this.values); 
+  }
+
+  add()
+  {
+
+      var usr = {"eq_name":"","manufacturer":"","noofwatts":""," 	noofitems":"","expiredate":"","noofhours":""};
+      this.values.push(usr);
+      this.selectUser(this.values.length - 1);
+      console.log('add user method');
+
+  }
+
+
+  save(e){
+
+    this.consume.addeq<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
     {
        console.log(error);
     },() =>
@@ -28,6 +46,32 @@ export class ElectricEqComponent implements OnInit {
        this.mydata = JSON.stringify(this.values);
        console.log(this.mydata);
     });
+
   }
+
+  selectUser(idx){
+    console.log('selecting user,', idx);
+    this.selectedUserIdx = idx;
+    console.log(this.selectedUser().name);
+  }
+
+  selectedUser(){
+    return this.values[this.selectedUserIdx];
+  }
+
+  loadData(){
+    console.log('loading data');
+    this.consume.getAll<any[]>().subscribe((data : any[])  => this.values = data, error => () => 
+    {
+       console.log(error);
+    },() =>
+    {
+       console.log('completed');
+       this.mydata = JSON.stringify(this.values);
+       console.log(this.mydata);
+    });
+
+  }
+
 
 }

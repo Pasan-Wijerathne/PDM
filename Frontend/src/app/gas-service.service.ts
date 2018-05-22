@@ -1,27 +1,33 @@
-
 import { Injectable } from '@angular/core';
-import { HttpRequest, HttpClient, HttpEvent, HttpHandler, HttpInterceptor } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpClient, HttpEvent, HttpHeaders } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
 @Injectable()
-export class ElectricEqService {
+export class GasServiceService {
 
 public Server = 'http://localhost:8080/';
     
+
 
 constructor(private http : HttpClient ) { }
 
 
 public getAll<T>(): Observable<T> {
-    return this.http.get<T>(this.Server + "electriceq/electriceqread")
+    return this.http.get<T>(this.Server + "gas/readgas")
 }
 
-public saveAlleq<T>(data: any[]): Observable<T>{
+public saveAllEB<T>(data: any[]): Observable<T>{
     console.log('logged');
-    return this.http.post<T>(this.Server + "electriceq/electriceqadd", data);
+    return this.http.post<T>(this.Server + "gas/readgas", data);
 }
-
+public creategas<T>(data: any[]) :Observable<T>
+{
+    console.log("into service method");
+    const header = new HttpHeaders();
+    header.set('Content-Type', 'application/json');
+    return this.http.post<T>(this.Server + "gas/updategas",JSON.stringify(data), {headers : header});
+}
 
 }
 
