@@ -44,6 +44,41 @@
       .sidenav {padding-top: 15px;}
       .sidenav a {font-size: 18px;}
     }
+
+     button4{
+        margin-top: 250px;
+        width: 180px;
+        height: 30px;
+        /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+        background-color: rgb(241, 43, 43);
+        font-size: 15px;
+        color: rgb(71, 71, 71);
+
+        
+    }
+    .button {
+    background-color: #33ff00;
+    border: none;
+    color: white;
+    /* padding: 16px 32px; */
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 260px;
+    width: 180px;
+    height: 30px;
+}
+    
+    .button:hover {
+    opacity: 8;
+    background-color: #ff0000;
+
+    }
   
 </style>
 
@@ -51,7 +86,7 @@
    
 
 <div *ngIf="true" class="sidenav">
-    
+
   <a routerLinkActive="active" routerLink="home">Home</a>
   <a routerLinkActive="active" routerLink="predict-each-item">Electricity Bill</a>
   <a routerLinkActive="active" routerLink="water">Water Bill</a>
@@ -63,5 +98,6 @@
   <a routerLinkActive="active" routerLink="medicine">Other Bills</a>
   <a routerLinkActive="active" routerLink="add-edit-electricity/"> Bill Manager</a>
 
-  <label for="user">USER ID</label>
+  <button class="button" routerLink="login">Log Out</button>
 </div>
+

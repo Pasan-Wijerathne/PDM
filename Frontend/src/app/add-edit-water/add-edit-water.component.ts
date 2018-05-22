@@ -13,7 +13,8 @@ export class AddEditWaterComponent implements OnInit {
 
   public mydata: string;
   private values: any[];
-  private compo: number = 0;
+  private selectedUserIdx:number = 0;
+  public id:string;
 
   ngOnInit() {
     console.log('component loaded');
@@ -25,20 +26,64 @@ export class AddEditWaterComponent implements OnInit {
     console.log.apply('triggered');
   }
 
-  selectRow(index){
-    this.compo = index;
+  selectUser(idx){
+    console.log('selecting user', idx);
+    this.selectedUserIdx = idx;
+    console.log(this.selectedUser().accno);
+    this.id = this.selectedUser().accno;
+    //localStorage.setItem("userid","6");
+  }
+
+
+  selectedUser(){
+    return this.values[this.selectedUserIdx];
   }
 
 
   loadData(){
     console.log('loading data');
-    this.consume.getAll<any[]>().subscribe((data : any[])  => this.values = data, error => () => 
+    this.consume.getAllW<any[]>().subscribe((data : any[])  => this.values = data, error => () => 
     {
        console.log(error);
     },() =>
     {
        console.log('completed');
        this.mydata = JSON.stringify(this.values);
+       console.log(this.mydata);
+    });
+
+  }
+
+
+  adduser()
+  {
+      //var uid = localStorage.getItem("userid");
+      var ebill = {"accno":"","date":"","usedunits":"","userid":"","totalamount":""};
+      this.values.push(ebill);
+      this.selectUser(this.values.length - 1);
+      console.log('add user method');
+
+  }
+
+
+  
+  getLoggedInUser(){
+    return window.localStorage.getItem('uid');
+  }
+
+
+  saveUser(e){
+   // e.preventDefaults();
+   // this.consume.createacc(this.values);
+
+    this.consume.creatwbill<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
+    {
+       console.log(error);
+    },() =>
+    {
+       console.log('completed');
+       this.mydata = JSON.stringify(this.values);
+       console.log(this.mydata);
     });
 
   }

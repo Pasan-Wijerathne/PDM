@@ -129,7 +129,7 @@
     <li><a routerLinkActive="active" routerLink="../electricitycomparison">Bill Comparison</a></li>
     <li><a routerLinkActive="active" routerLink="../viewbills">View Bills</a></li>
     <li><a routerLinkActive="active" routerLink="../add-edit-telephone">Telephone</a></li>
-    <li><a routerLinkActive="active" routerLink="../add-edit-televition">Telivision</a></li>
+    <li><a routerLinkActive="active" routerLink="../add-edit-televition">Television</a></li>
     <li><a routerLinkActive="active" routerLink="../add-edit-water">Water</a></li>
     <li><a routerLinkActive="active" routerLink="../add-edit-electricity">Electricity</a></li>
 </ul>
@@ -169,15 +169,16 @@
             [(ngModel)]="{{values[compo].accno}}"
         <input type="submit" value="Remove Bill"> -->
     
-        <button (click)="laodData()" type="reset">Clear</button>]
+        <button (click)="laodData()" type="reset">Clear</button>
         <button (click)="adduser()" type="button">Add New Bill</button>
-        <button (click)="saveUser(event)" type="button">Save Bill</button>
+        <button (click)="saveUser(event)" type="button" >Save Bill</button>
 
       </form>
   
     
   </div>
-  
+
+
 
   <table>
       <tr>
@@ -203,11 +204,8 @@
         </td>
  
     </tr>
-
-
       
     </table>
-
 
 
 
