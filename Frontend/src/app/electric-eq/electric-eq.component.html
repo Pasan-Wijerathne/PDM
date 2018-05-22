@@ -12,17 +12,21 @@
             /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
             }
     
-            input[type=submit],[type=reset] {
-                background-color: #4CAF50;
-                color: white;
-                padding: 12px 20px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
+
+            /* for the scrud opreations */
+            /* ------------------------- */
+
+             button[type=submit],[type=reset],[type=button] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
             }
-    
-            input[type=submit]:hover {
-                background-color: #45a049;
+
+            button[type=submit],[type=reset],[type=button]:hover {
+            background-color: #45a049;
             }
     
             .container {
@@ -151,7 +155,7 @@
       <input type="text" id="eqname" name="eqname"  [(ngModel)] = "selectedUser().eq_name" placeholder="Please enter the Equipment Name...."  required>
   
       <label for="Manufacturer">Manufacturer</label>
-      <input type="text" id="Manufacturer" name="Manufacturer" [(ngModel)] = "selectedUser().eq_name" placeholder="Please enter the Manufacturer...." required>
+      <input type="text" id="Manufacturer" name="Manufacturer" [(ngModel)] = "selectedUser().manufacturer" placeholder="Please enter the Manufacturer...." required>
 
       <label for="noofwatts">Number Of watts</label>
       <input type="number" id="noofwatts" name="noofwatts" [(ngModel)] = "selectedUser().noofwatts" placeholder="Please enter the Number Of watts...." required>
@@ -166,10 +170,10 @@
       <input type="number" id="noofhours" name="noofhours" [(ngModel)] = "selectedUser().noofhours" placeholder="Please enter the Number of Hours per day...." required>
 
       
-      <button (click)="saveAll()">Add</button>
+      <button (click)="add()" type="button">Create  </button>
+      <button (click)="save(event)" type="button">Add   </button>
 
-      <input type="submit" value="Update  ">
-      <input type="submit" value="Remove  ">
+
       <input type="reset" value="Clear   ">
 
 

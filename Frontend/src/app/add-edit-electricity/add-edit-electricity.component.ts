@@ -93,7 +93,7 @@ export class AddEditElectricityComponent implements OnInit {
        this.mydata = JSON.stringify(this.values);
        console.log(this.mydata);
     });
-
+    this.adduser();
   }
 
 
