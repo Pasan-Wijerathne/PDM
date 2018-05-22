@@ -148,22 +148,22 @@
      
   
       <label for="eqname">Equipment Name </label>
-      <input type="text" id="eqname" name="eqname"  [(ngModel)] = "selectedUser().name" placeholder="Please enter the Equipment Name...."  required>
+      <input type="text" id="eqname" name="eqname"  [(ngModel)] = "selectedUser().eq_name" placeholder="Please enter the Equipment Name...."  required>
   
       <label for="Manufacturer">Manufacturer</label>
-      <input type="text" id="Manufacturer" name="Manufacturer" [(ngModel)] = "selectedUser().name" placeholder="Please enter the Manufacturer...." required>
+      <input type="text" id="Manufacturer" name="Manufacturer" [(ngModel)] = "selectedUser().eq_name" placeholder="Please enter the Manufacturer...." required>
 
       <label for="noofwatts">Number Of watts</label>
-      <input type="number" id="noofwatts" name="noofwatts" [(ngModel)] = "selectedUser().name" placeholder="Please enter the Number Of watts...." required>
+      <input type="number" id="noofwatts" name="noofwatts" [(ngModel)] = "selectedUser().noofwatts" placeholder="Please enter the Number Of watts...." required>
 
       <label for="noofitems">Number Of Items</label>
-      <input type="number" id="noofitems" name="noofitems" [(ngModel)] = "selectedUser().name" placeholder="Please enter the Number Of Items...." required>
+      <input type="number" id="noofitems" name="noofitems" [(ngModel)] = "selectedUser().noofitems" placeholder="Please enter the Number Of Items...." required>
 
       <label for="edate">Expire date</label>
-      <input type="date" id="edate" name="edate" [(ngModel)] = "selectedUser().name" placeholder="Please enter the Expire date...." required>
+      <input type="date" id="edate" name="edate" [(ngModel)] = "selectedUser().expiredate" placeholder="Please enter the Expire date...." required>
 
       <label for="noofhours">Number of Hours per day</label>
-      <input type="number" id="noofhours" name="noofhours" [(ngModel)] = "selectedUser().name" placeholder="Please enter the Number of Hours per day...." required>
+      <input type="number" id="noofhours" name="noofhours" [(ngModel)] = "selectedUser().noofhours" placeholder="Please enter the Number of Hours per day...." required>
 
       
       <button (click)="saveAll()">Add</button>
@@ -186,29 +186,22 @@
     <th>Manufacturer</th>
     <th>Number Of watts</th>
     <th>Number Of Items</th>
-    <th>Expire date</th>
+    <th>Expire_date   </th>
     <th>Number of Hours per day</th>
   </tr>
 
-  <tr>
-    <td>1</td>
-    <td>test 1</td>
-    <td>test 1</td>
-    <td>test 1</td>
-    <td>test 1</td>
-    <td>test 1</td>
-    <td>test 1</td>
-  </tr>
+  <tr (click)="selectUser($index)" *ngFor="let item of values; index as $index">
+    <td>{{item.no}}</td>
+    <td>{{item.eq_name}}</td>
+    <td>{{item.manufacturer}}</td>
+    <td>{{item.noofwatts}}</td>
+    <td>{{item.noofitems}}</td>
+    <td>{{item.expiredate}}</td>
+    <td>{{item.noofhours}}</td>
+    
+    
 
-  <tr>
-    <td>2</td>
-    <td>test 2</td>
-    <td>test 2</td>
-    <td>test 2</td>
-    <td>test 2</td>
-    <td>test 2</td>
-    <td>test 2</td>
-  </tr>
+</tr>
  
 </table>
 
