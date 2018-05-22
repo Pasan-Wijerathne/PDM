@@ -1,6 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import {ConsumsService} from '../consums.service';
 import { error } from 'util';
+import { ElectserviceService } from '../electservice.service';
 
 @Component({
   selector: 'app-add-edit-electricity',
@@ -9,15 +9,13 @@ import { error } from 'util';
 })
 export class AddEditElectricityComponent implements OnInit {
 
-  constructor(private consume : ConsumsService) { 
-  }
+  constructor(private consume : ElectserviceService) { }
 
-  public mydata: string;
-  private values:any[];
-  private compo:number = 0;
-
-  
-  private testW:string = "test";
+  public mydata: String;
+  public values: any[];
+  private selectedUserIdx:number = 0;
+  public id:string;
+  //public sideID: number = 0;
 
 
   get valArr(){
@@ -25,26 +23,30 @@ export class AddEditElectricityComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    //this.values = [{"no":1,"accno":"765","usedunits":545455,"userid":"245","date":"2018-04-04","totalamount":454,"addimage":null}];
      this.loadData();
-    console.log('component loaded', this.values);    
+     console.log('component loaded', this.values);    
   }
+
 
   test(evetn){
     console.log('triggered');
   }
 
 
-  selectRow(index){
-    this.compo = index;
+  selectUser(idx){
+    console.log('selecting user', idx);
+    this.selectedUserIdx = idx;
+    console.log(this.selectedUser().accno);
+    this.id = this.selectedUser().accno;
+    localStorage.setItem("userid","6");
+  }
+  
+
+
+  selectedUser(){
+    return this.values[this.selectedUserIdx];
   }
 
-  // addBill(){
-  //   var newBill = {"no":1,"accno":"0","usedunits":0,"userid":"0","date":"2018-04-04","totalamount":0,"addimage":null};
-  //   this.values.push(newBill);
-  //   this.compo = this.values.length - 1;
-  // }
 
   loadData(){
     console.log('loading data');
@@ -60,9 +62,29 @@ export class AddEditElectricityComponent implements OnInit {
 
   }
 
-  saveAll()
+
+  adduser()
   {
-    this.consume.saveAllEB<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
+      //var uid = localStorage.getItem("userid");
+      var ebill = {"accno":"","date":"","usedunits":"","userid":"uid","totalamount":""};
+      this.values.push(ebill);
+      this.selectUser(this.values.length - 1);
+      console.log('add user method');
+
+  }
+
+
+  
+  getLoggedInUser(){
+    return window.localStorage.getItem('uid');
+  }
+
+
+  saveUser(e){
+   // e.preventDefaults();
+   // this.consume.createacc(this.values);
+
+    this.consume.createbill<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
     {
        console.log(error);
     },() =>
@@ -72,33 +94,7 @@ export class AddEditElectricityComponent implements OnInit {
        console.log(this.mydata);
     });
 
-
-    // this.loadData();
-    
   }
 
-  // createbill()
-  // {
-  //   this.consume.saveAllEB(this.values).subscribe(
-  //     data=>{
-  //         console.log(data)
-  //     },
-  //     error=>
-  //     {
-  //       console.log(error);
-  //     }
-  //   )
-  // }
-
-  /*
-  deletebill()
-  {
-    this.consume.deletebill(values.).subscribe((data : any[]) =>{
- 
-    }
-
-  }
-
-  */
 
 }

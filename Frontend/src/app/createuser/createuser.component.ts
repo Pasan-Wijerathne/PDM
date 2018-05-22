@@ -13,6 +13,7 @@ export class CreateuserComponent implements OnInit {
   public mydata: String;
   public values: any[];
   private selectedUserIdx:number = 0;
+  public sideID: number;
 
   get valArr(){
     return this.values;
@@ -59,9 +60,16 @@ export class CreateuserComponent implements OnInit {
 
   }
 
+
+  isLoggedIn(){
+    return window.localStorage.getItem('uid');
+  }
+
+
   selectUser(idx){
     console.log('selecting user,', idx);
     this.selectedUserIdx = idx;
+    this.sideID = this.selectedUser().id;
     console.log(this.selectedUser().name);
   }
 

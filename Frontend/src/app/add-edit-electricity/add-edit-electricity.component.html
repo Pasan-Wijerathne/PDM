@@ -1,7 +1,7 @@
 
 <style>
 
-    input[type=text],input[type="month"],input[type="number"],input[type="date"], select, textarea {
+    input[type=text],input[type="month"],input[type="number"],input[type="date"], select, textarea,text:required {
         width: 100%; /* Full width */
         padding: 12px; /* Some padding */  
         height: 40px;   
@@ -13,7 +13,7 @@
         /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
         }
 
-        input[type=submit],[type=reset] {
+        button[type=submit],[type=reset],[type=button] {
             background-color: #4CAF50;
             color: white;
             padding: 12px 20px;
@@ -22,7 +22,7 @@
             cursor: pointer;
         }
 
-        input[type=submit]:hover {
+        button[type=submit],[type=reset],[type=button]:hover {
             background-color: #45a049;
         }
 
@@ -140,22 +140,22 @@
     </div>
   
     <div class="container"> 
-      <form action="/action_page.php">
+      <form *ngIf="selectedUser()">
     
         <label for="billID">ELECTRICITY</label>
         
         <label for="acountnum">Account Number</label>
-        <input type="text" id="acountnum" name="acountnum"  [(ngModel)]="valArr[compo].accno" placeholder="Account Number" required>
+        <input type="text" id="acountnum" name="acountnum"  [(ngModel)] = "selectedUser().accno" placeholder="Account Number" required >
       
         <label for="Date">Date</label>
-        <input type="date" id="date" name="date"  [(ngModel)]="valArr[compo].date"  required>
+        <input type="date" id="date" name="date" [(ngModel)] = "selectedUser().date"  required>
     
         <label for="unitConsume">Number of Units Consumed</label>
-        <input type="number" id="unitConsume" name="unitConsume"  [(ngModel)]="valArr[compo].usedunits"  placeholder="Enter the number of units" required>
+        <input type="number" id="unitConsume" name="unitConsume"  [(ngModel)] = "selectedUser().usedunits"  placeholder="Enter the number of units" required>
     
         <label for="unitsCharge">Charge for consumed units(Rs:)</label>
-        <input type="number" id="unitsCharge" name="unitsCharge"  [(ngModel)]="valArr[compo].totalamount"  placeholder="Enter the charge (Rs:)" required>
-<!--     
+        <input type="number" id="unitsCharge" name="unitsCharge" [(ngModel)] = "selectedUser().totalamount"  placeholder="Enter the charge (Rs:)" required>
+    <!--     
         <label for="userid">userid</label>
         <input type="number" id="userid" name="userid"  [(ngModel)]="valArr[compo].userid"  placeholder="userid" required> -->
 
@@ -169,9 +169,10 @@
             [(ngModel)]="{{values[compo].accno}}"
         <input type="submit" value="Remove Bill"> -->
     
-        <input type="reset" value="Clear" >
-        
-        <button (click)="saveAll()">Save</button>
+        <button (click)="laodData()" type="reset">Clear</button>]
+        <button (click)="adduser()" type="button">Add New Bill</button>
+        <button (click)="saveUser(event)" type="button">Save Bill</button>
+
       </form>
   
     
@@ -189,7 +190,7 @@
         <th>Operations</th>
       </tr>
 
-      <tr (click)="selectRow(i)" *ngFor="let item of values; index as i">
+      <tr (click)="selectUser($index)" *ngFor="let item of values; index as $index">
         <td>{{item.accno}}</td>
         <td>{{item.date}}</td>
         <td>{{item.usedunits}}</td>
@@ -197,19 +198,13 @@
         <!-- <td>{{item.userid}}</td> -->
         <td>{{item.image}}</td>
         <td>
-            <button class="btn btn-primary" (click)="deletebill()"> Edit </button>      
+            <button class="btn btn-primary"> Edit </button>      
             <button class="btn btn-danger"> Delete </button>
         </td>
  
     </tr>
 
-       <!-- <tr>
-          <td>
-                (click)="loadData($event)"
-            <button >Click to Read</button>
-          </td>
-          <td><p>{{mydata}}</p></td>
-      </tr> -->
+
       
     </table>
 

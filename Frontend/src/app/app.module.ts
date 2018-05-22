@@ -40,18 +40,30 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { BannerComponent } from './layout/banner/banner.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
-import { ElectService } from './elect-service';
-//import { ElectricEqService } from './electric-eq-service';
-//import {Watercomservice} from './watercomservice';
+
+
+import { Watercomservice} from './WatercompareService';
 import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { UsrUtilService } from './usr-util.service';
 import { EleCompaService } from './ele-compa.service';
+import { GardenserviceService } from './gardenservice.service';
+import { MedicineserviceService } from './medicineservice.service';
+// import { PredictionserviceService } from './predictionservice.service';
+import { GasServiceService } from './gas-service.service';
+
+
+import { ElectserviceService } from './electservice.service';
+import { WateserviceService } from './wateservice.service';
+import { ElectricEqServiceService } from './electric-eq-service.service';
+import { VehicleserviceService } from './vehicleservice.service';
 
 
 
 @NgModule({
-  declarations: [
+
+  declarations: 
+  [ 
     AppComponent,
     HomeComponent,
     LoginComponent,
@@ -99,7 +111,7 @@ import { EleCompaService } from './ele-compa.service';
   ],
 
 
-  providers: [[ElectService],[ConsumsService],[UsrUtilService],[EleCompaService]],
+  providers: [[ElectserviceService],[VehicleserviceService],[MedicineserviceService],[GardenserviceService ],[GasServiceService ],[ConsumsService],[ElectricEqServiceService],[WatercompareService],[UsrUtilService],[EleCompaService],[WateserviceService]],
 
 
   bootstrap: [AppComponent]

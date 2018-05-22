@@ -1,31 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpRequest, HttpClient, HttpEvent, HttpHandler, HttpInterceptor } from '@angular/common/http';
+import { HttpClient, HttpInterceptor, HttpHandler, HttpRequest, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { HttpModule } from '@angular/http';
-// import { ElectricEqComponent } from './electric-eq/electric-eq.component';
-
 @Injectable()
-export class ConsumsService {
+export class GardenserviceService {
 
-public Server = 'http://localhost:8080/';
+ public Server = 'http://localhost:8080/';
+    
+
 
 constructor(private http : HttpClient ) { }
 
 
 public getAll<T>(): Observable<T> {
-    return this.http.get<T>(this.Server + "billmanager/elecbillread")
+    return this.http.get<T>(this.Server + "garden/updategarden")
 }
 
 public saveAllEB<T>(data: any[]): Observable<T>{
     console.log('logged');
-    return this.http.post<T>(this.Server + "billmanger/elecbillsa", data);
+    return this.http.post<T>(this.Server + "garden/readgarden", data);
 }
 
-/*
-public deletebill<T>(id): Observable<T> {
-    return this.http.delete(this.database + "/elecbilldel")
-}
-*/
 
 }
 
