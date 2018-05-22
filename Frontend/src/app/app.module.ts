@@ -48,6 +48,10 @@ import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component'
 import { CreateuserComponent } from './createuser/createuser.component';
 import { UsrUtilService } from './usr-util.service';
 import { EleCompaService } from './ele-compa.service';
+import { GardenserviceService } from './gardenservice.service';
+import { MedicineserviceService } from './medicineservice.service';
+// import { PredictionserviceService } from './predictionservice.service';
+import { GasServiceService } from './gas-service.service';
 
 
 
@@ -101,7 +105,7 @@ import { EleCompaService } from './ele-compa.service';
   ],
 
 
-  providers: [[ElectService],[ConsumsService],[Watercomservice],[ElectricEqService],[UsrUtilService],[EleCompaService]],
+  providers: [[ElectService],[GardenserviceService],[MedicineserviceService],[GasServiceService],[ConsumsService],[Watercomservice],[ElectricEqService],[UsrUtilService],[EleCompaService]],
 
 
   bootstrap: [AppComponent]
