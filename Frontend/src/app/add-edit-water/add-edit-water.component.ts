@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ElectService } from '../elect-service';
 import { error } from 'util';
+import { ElectserviceService } from '../electservice.service';
 
 @Component({
   selector: 'app-add-edit-water',
@@ -9,7 +9,7 @@ import { error } from 'util';
 })
 export class AddEditWaterComponent implements OnInit {
 
-  constructor(private consume : ElectService) { }
+  constructor(private consume : ElectserviceService) { }
 
   public mydata: string;
   private values: any[];

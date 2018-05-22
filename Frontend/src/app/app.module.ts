@@ -41,22 +41,25 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { BannerComponent } from './layout/banner/banner.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
-import { ElectService } from './elect-service';
+
 
 import { Watercomservice} from './watercomservice';
 import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { UsrUtilService } from './usr-util.service';
 import { EleCompaService } from './ele-compa.service';
-import { ElectricEqServiceService } from './electric-eq-service.service';
 
+
+import { ElectserviceService } from './electservice.service';
+import { WateserviceService } from './wateservice.service';
+import { ElectricEqServiceService } from './electric-eq-service.service';
 
 
 
 @NgModule({
 
   declarations: 
-  [
+  [ 
     AppComponent,
     HomeComponent,
     LoginComponent,
@@ -103,7 +106,7 @@ import { ElectricEqServiceService } from './electric-eq-service.service';
   ],
 
 
-  providers: [[ElectService],[ConsumsService],[Watercomservice],[ElectricEqServiceService],[UsrUtilService],[EleCompaService]],
+  providers: [[ElectserviceService],[ConsumsService],[ElectricEqServiceService],[Watercomservice],[UsrUtilService],[EleCompaService],[WateserviceService]],
 
 
   bootstrap: [AppComponent]
