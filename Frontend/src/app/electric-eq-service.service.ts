@@ -14,12 +14,12 @@ export class ElectricEqServiceService {
       console.log("into service method");
       const header = new HttpHeaders();
       header.set('Content-Type', 'application/json');
-      return this.http.post<T>(this.Server + "user/createusers",JSON.stringify(data), {headers : header});
+      return this.http.post<T>(this.Server + "electriceq/electriceqesave",JSON.stringify(data), {headers : header});
   }
 
 
   public getAll<T>(): Observable<T> {
-    return this.http.get<T>(this.Server + "user/getuser")
+    return this.http.get<T>(this.Server + "electriceq/electriceqread")
 }
 
 }

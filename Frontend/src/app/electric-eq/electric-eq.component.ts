@@ -20,6 +20,7 @@ export class ElectricEqComponent implements OnInit {
 
   ngOnInit() 
   {
+    this.loadData();
     console.log('component loaded', this.values); 
   }
 
