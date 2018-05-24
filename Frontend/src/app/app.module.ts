@@ -57,14 +57,8 @@ import { ElectserviceService } from './electservice.service';
 import { WateserviceService } from './wateservice.service';
 import { ElectricEqServiceService } from './electric-eq-service.service';
 import { VehicleserviceService } from './vehicleservice.service';
-<<<<<<< HEAD
-import { LoginusrserviceService } from './loginusrservice.service';
-
-
-=======
 import { InstallmentServiceService } from './installment-service.service';
 import { InsurancebillService } from './insurancebill.service';
->>>>>>> 71a9ebd16b5e90fe754501e7616c94a917377968
 
 @NgModule({
 
@@ -117,11 +111,7 @@ import { InsurancebillService } from './insurancebill.service';
   ],
 
 
-<<<<<<< HEAD
-  providers: [[ElectserviceService],[VehicleserviceService],[MedicineserviceService],[GardenserviceService ],[GasServiceService ],[ConsumsService],[ElectricEqServiceService],[Watercomservice],[UsrUtilService],[EleCompaService],[WateserviceService],[LoginusrserviceService]],
-=======
   providers: [[ElectserviceService],[VehicleserviceService],[MedicineserviceService],[GardenserviceService ],[GasServiceService ],[ConsumsService],[ElectricEqServiceService],[UsrUtilService],[EleCompaService],[WateserviceService],[InstallmentServiceService],[InsurancebillService]],
->>>>>>> 71a9ebd16b5e90fe754501e7616c94a917377968
 
 
   bootstrap: [AppComponent]
