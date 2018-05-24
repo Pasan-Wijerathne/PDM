@@ -1,6 +1,7 @@
 import { Component, OnInit ,Injectable } from '@angular/core';
 import { ElectricEqServiceService } from '../electric-eq-service.service';
 
+
 @Component({
   selector: 'app-electric-eq',
   templateUrl: './electric-eq.component.html',

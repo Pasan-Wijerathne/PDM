@@ -135,9 +135,10 @@
         
     </ul>
     
-    <div class="title">
-            <h2 align="center"><u> Enter ...........</u> </h2>
-       </div>
+    
+   <div class="title">
+        <h2 align="center"><u> Electricity bill prediction Details</u> </h2>
+    </div>
   
     <div class="container"> 
       <form action="/action_page.php">
@@ -173,46 +174,24 @@
 
   <table>
         <tr>
-          <th>Account No</th>
-          <th>Date</th>
-          <th>No.UnitConsumed</th>
-          <th>Charge(Rs)</th>
-          <th>Image</th>
+          
+          <th>Equipment name</th>
+          <th>Number Of watts</th>
+          <th>Number of Hours per day</th>
         </tr>
-    
-        <tr>
-          <td>5200036</td>
-          <td>02-05-2018</td>
-          <td>50</td>
-          <td>1200</td>
-          <td>Empty</td>
-        </tr>
-        <tr>
-          <td>58569235</td>
-          <td>03-23-2018</td>
-          <td>60</td>
-          <td>2100</td>
-          <td>Empty</td>
-        </tr>
-<!-- 
-        <tr>
-            <th>Account No</th>
-            <th>Date</th>
-            <th>No.UnitConsumed</th>
-            <th>Charge(Rs)</th>
-            <th>Image</th>
-          </tr>
-    
-    
-          <tr *ngFor="let item of values">
-            <td>{{item.accno}}</td>
-            <td>{{item.date}}</td>
-            <td>{{item.usedunits}}</td>
-            <td>{{item.totalamount}}</td>
-            <td>{{item.image}}</td>
-     
-        </tr> -->
-        
+      
+        <tr (click)="selectUser($index)" *ngFor="let item of values; index as $index">
+          
+          <td>{{item.eq_name}}</td>
+         
+          <td>{{item.noofwatts}}</td>
+          
+          <td>{{item.noofhours}}</td>
+          
+          
+      
+      </tr>
+       
       </table>
   <br>
   

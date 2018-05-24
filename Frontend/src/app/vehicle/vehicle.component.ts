@@ -9,6 +9,9 @@ import { VehicleserviceService } from '../vehicleservice.service';
 
 export class VehicleComponent implements OnInit {
 
+  static module(arg0: any, arg1: any): any {
+    throw new Error("Method not implemented.");
+  }
   constructor(private consume : VehicleserviceService ) { }
 
   public mydata: String;
@@ -88,5 +91,6 @@ export class VehicleComponent implements OnInit {
      });
  
    }
+
 
 }

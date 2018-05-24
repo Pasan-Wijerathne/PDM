@@ -12,7 +12,7 @@
         /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
         }
 
-        input[type=submit],[type=reset] {
+        input[type=submit],[type=reset],[type=button] {
             background-color: #4CAF50;
             color: white;
             padding: 12px 20px;
@@ -21,7 +21,7 @@
             cursor: pointer;
         }
 
-        input[type=submit]:hover {
+        input[type=submit],[type=reset],[type=button] :hover {
             background-color: #45a049;
         }
 
@@ -100,7 +100,7 @@
       border-collapse: collapse;
       width: 50%;
       margin-left: 750px;
-      margin-top: 200px;
+      margin-top: 250px;
       margin-bottom: 80px;
       /* Add these two lines */
       position:absolute;
@@ -134,6 +134,9 @@
       
 </ul>
 
+<div class="title">
+        <h2 align="center"><u> Enter Medicine Details</u> </h2>
+    </div>
 
   <div class="container"> 
     <form *ngIf="selectedUser()">
@@ -153,9 +156,9 @@
       <input type="number" id="noofwatts" name="cost" [(ngModel)] = "selectedUser().totalamount" placeholder="Please enter the expences...." required>
 
           
-      <button (click)="laodData()" type="reset">Clear</button>]
-      <button (click)="adduser()" type="button">Add New Bill</button>
-      <button (click)="saveUser(event)" type="button">Save Bill</button>
+      <button (click)="laodData()" type="reset">Clear</button>
+        <button (click)="adduser()" type="button">Add New Expenses</button>
+        <button (click)="saveUser(event)" type="button">Save details</button>
       
 
     </form>
@@ -178,10 +181,7 @@
                 <td>{{item.date}}</td>
                 <td>{{item.totalamount}}</td>
                
-                <td>
-                    <button class="btn btn-primary"> Edit </button>      
-                    <button class="btn btn-danger"> Delete </button>
-                </td>
+                
          
             </tr>
        
