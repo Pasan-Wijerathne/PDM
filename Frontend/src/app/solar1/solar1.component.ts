@@ -9,7 +9,8 @@ export class Solar1Component implements OnInit {
 
   constructor() { }
 
+
+
   ngOnInit() {
   }
-
 }

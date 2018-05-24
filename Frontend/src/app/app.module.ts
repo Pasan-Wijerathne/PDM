@@ -6,7 +6,6 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 
-
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 import { GasComponent } from './gas/gas.component';
 import { ItempredictionComponent } from './itemprediction/itemprediction.component';
@@ -43,7 +42,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
 
 
-import { Watercomservice} from './watercomservice';
+// import { WatercompareService} from './WatercompareService';
 import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { UsrUtilService } from './usr-util.service';
@@ -58,8 +57,8 @@ import { ElectserviceService } from './electservice.service';
 import { WateserviceService } from './wateservice.service';
 import { ElectricEqServiceService } from './electric-eq-service.service';
 import { VehicleserviceService } from './vehicleservice.service';
-
-
+import { InstallmentServiceService } from './installment-service.service';
+import { InsurancebillService } from './insurancebill.service';
 
 @NgModule({
 
@@ -68,6 +67,8 @@ import { VehicleserviceService } from './vehicleservice.service';
     AppComponent,
     HomeComponent,
     LoginComponent,
+
+
     GasComponent,
     ItempredictionComponent,
     PredictionComponent,
@@ -88,6 +89,7 @@ import { VehicleserviceService } from './vehicleservice.service';
     AddEditTelephoneComponent,
     AddEditTelevitionComponent,
     TestimageComponent,
+    CreateuserComponent,
     HomeGardenComponent,
     MedicineComponent,
     VehicleComponent,
@@ -100,18 +102,16 @@ import { VehicleserviceService } from './vehicleservice.service';
     FooterComponent,
     Test2Component,
     BroadbandinfoComponent,
-    CreateuserComponent,
   ],
-
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule
   ],
 
 
-  providers: [[ElectserviceService],[VehicleserviceService],[MedicineserviceService],[GardenserviceService ],[GasServiceService ],[ConsumsService],[ElectricEqServiceService],[Watercomservice],[UsrUtilService],[EleCompaService],[WateserviceService]],
+  providers: [[ElectserviceService],[VehicleserviceService],[MedicineserviceService],[GardenserviceService ],[GasServiceService ],[ConsumsService],[ElectricEqServiceService],[UsrUtilService],[EleCompaService],[WateserviceService],[InstallmentServiceService],[InsurancebillService]],
 
 
   bootstrap: [AppComponent]

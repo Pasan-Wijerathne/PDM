@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+import { Component, OnInit } from '@angular/core';
+//import { ElectricEqService } from ``'../electric-eq-service';
+
+=======
 import { Component, OnInit ,Injectable } from '@angular/core';
 import { ElectricEqServiceService } from '../electric-eq-service.service';
+>>>>>>> 6c9cb9ffbcd747f5d71fdf94a70d0912cbb94af2
 
 
 @Component({
@@ -9,9 +15,14 @@ import { ElectricEqServiceService } from '../electric-eq-service.service';
 })
 export class ElectricEqComponent implements OnInit {
 
+<<<<<<< HEAD
+  //constructor(private consume : ElectricEqService) { }
+   public mydata: string;
+=======
   constructor(private consume : ElectricEqServiceService) { }
 
   public mydata: string;
+>>>>>>> 6c9cb9ffbcd747f5d71fdf94a70d0912cbb94af2
   private values:any[];
   private selectedUserIdx:number = 0;
 
@@ -19,6 +30,20 @@ export class ElectricEqComponent implements OnInit {
     return this.values;
   }
 
+<<<<<<< HEAD
+  // saveAll()
+  // {
+  //   this.consume.saveAlleq<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
+  //   {
+  //      console.log(error);
+  //   },() =>
+  //   {
+  //      console.log('completed');
+  //      this.mydata = JSON.stringify(this.values);
+  //      console.log(this.mydata);
+  //   });
+  // }
+=======
   ngOnInit() 
   {
     this.loadData();
@@ -73,6 +98,7 @@ export class ElectricEqComponent implements OnInit {
     });
 
   }
+>>>>>>> 6c9cb9ffbcd747f5d71fdf94a70d0912cbb94af2
 
 
 }
