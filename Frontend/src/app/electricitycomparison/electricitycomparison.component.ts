@@ -12,8 +12,16 @@ export class ElectricitycomparisonComponent implements OnInit {
 
   public mydata: String;
   public values: any[];
+  public selectbill: String = "";
   
   ngOnInit() {
   }
+
+  selectbillf(e)
+  {
+    this.selectbill = e;
+    console.log(this.selectbill); 
+  }
+  
 
 }

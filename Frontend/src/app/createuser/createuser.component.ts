@@ -38,6 +38,7 @@ export class CreateuserComponent implements OnInit {
 
       var usr = {"name":"","password":"","email":"","address":"","nic":""};
       this.values.push(usr);
+     // this.values.length -1;
       this.selectUser(this.values.length - 1);
       console.log('add user method');
 
@@ -69,7 +70,7 @@ export class CreateuserComponent implements OnInit {
   selectUser(idx){
     console.log('selecting user,', idx);
     this.selectedUserIdx = idx;
-    this.sideID = this.selectedUser().id;
+    //this.sideID = this.selectedUser().id;
     console.log(this.selectedUser().name);
   }
 

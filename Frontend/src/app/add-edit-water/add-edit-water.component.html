@@ -153,8 +153,8 @@ input[type=text],input[type="month"],input[type="number"],input[type="date"], se
       <label for="unitsCharge">Charge for consumed units(Rs:)</label>
       <input type="number" id="unitsCharge" name="unitsCharge" [(ngModel)] = "selectedUser().totalamount" placeholder="Enter the charge (Rs:)" required>
   
-      <label for="image">Add Image</label>
-      <input type="file" name="pic" accept="image/*">
+      <!-- <label for="image">Add Image</label>
+      <input type="file" name="pic" accept="image/*"> -->
   
       <input type="submit" value="Add Bill">
       <input type="submit" value="Edit Bill">
@@ -170,7 +170,7 @@ input[type=text],input[type="month"],input[type="number"],input[type="date"], se
       <th>Date</th>
       <th>No.UnitConsumed</th>
       <th>Charge(Rs)</th>
-      <th>Image</th>
+      <!-- <th>Image</th> -->
       <!-- <th>Operations</th> -->
     </tr>
 
@@ -179,7 +179,7 @@ input[type=text],input[type="month"],input[type="number"],input[type="date"], se
         <td>{{item.date}}</td>
         <td>{{item.usedunits}}</td>
         <td>{{item.totalamount}}</td>
-        <td>{{item.image}}</td>
+        <!-- <td>{{item.image}}</td> -->
         <!-- <td>
             <button class="btn btn-primary" (click)="deletebill()"> Edit </button>      
             <button class="btn btn-danger"> Delete </button>

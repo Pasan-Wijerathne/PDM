@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginusrserviceService } from '../loginusrservice.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() {  }
+  constructor(private consume : LoginusrserviceService) {  }
+
+  public mydata: String;
+  public values: any[];
 
   ngOnInit() {
   }
 
+  // getuser()
+  // {
+  //   var usr = {"username":"","password":""};
+  // }
+
+
+  // login(){
+  //   //loginSerivce code
+  //   this.consume.logUserIn<any[]>(this.values).subsribe(function(data){
+  //     windows.locaStorage.setItem('uid',data.uuid);
+  //   });
+  // }
 }

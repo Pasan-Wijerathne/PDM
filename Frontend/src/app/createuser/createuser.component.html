@@ -68,30 +68,30 @@
  
    </style>
    
-   <form *ngIf="selectedUser()" >
+   <form *ngIf="selectedUser()">
      <div class="container">
        <h1>Sign Up</h1>
        <p>Please fill in this form to create an account.</p>
    
        
        <label for="username"><b>User Name</b></label>
-       <input type="text" placeholder="Enter User Name" [(ngModel)] = "selectedUser().name" name="username" required>
+       <input type="text" placeholder="Enter User Name" [(ngModel)]="selectedUser().name"  name="username" required>
        
        <label for="email"><b>Email</b></label>
-       <input type="text" placeholder="Enter Email"  [(ngModel)] = "selectedUser().email" name="email" required>
+       <input type="text" placeholder="Enter Email" [(ngModel)]="selectedUser().email"  name="email" required>
  
        <label for="password"><b> Password</b></label>
-       <input type="password" placeholder="Password"  [(ngModel)] = "selectedUser().password" name="password" required>
- 
+       <input type="password" placeholder="Password"  [(ngModel)]="selectedUser().password" name="password" required>
+        
        <label for="address"><b> Address</b></label>
-       <input type="address" placeholder="Enter Address"  [(ngModel)] = "selectedUser().address" name="address" required>
+       <input type="address" placeholder="Enter Address" [(ngModel)]="selectedUser().address"   name="address" required>
  
        <label for="NIC"><b> NIC Number</b></label>
-       <input type="NIC" placeholder="Enter NIC"  [(ngModel)] = "selectedUser().nic" name="NIC" required>
+       <input type="NIC" placeholder="Enter NIC" [(ngModel)]="selectedUser().nic"   name="NIC" required>
        
        <button (click)="adduser()" type="reset">Clear</button>
        <button (click)="adduser()" type="button">Add New User</button>
-       <button (click)="saveUser(event)" type="button">Save User</button>
+       <button (click)="saveUser(event)" type="button" routerLink="../login">Save User</button>
  
     
      </div>

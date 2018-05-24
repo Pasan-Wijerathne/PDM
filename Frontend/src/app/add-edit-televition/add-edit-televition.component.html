@@ -159,8 +159,8 @@
       <label for="unitsCharge">Charge for consumed units(Rs:)</label>
       <input type="number" id="unitsCharge" name="unitsCharge" placeholder="Enter the charge (Rs:)" required>
   
-      <label for="image">Add Image</label>
-      <input type="file" name="pic" accept="image/*">
+      <!-- <label for="image">Add Image</label>
+      <input type="file" name="pic" accept="image/*"> -->
   
       <input type="submit" value="Add Bill">
       <input type="submit" value="Edit Bill">
@@ -174,39 +174,26 @@
 <table>
     <tr>
       <th>Account No</th>
-      <th>Provider</th>
       <th>Date</th>
-      <th>MonthlyCharge(Rs)</th>
-      <th>Image</th>
+      <th>Provider</th>
+      <th>Total Amount</th>
+      <!-- <th>Image</th> -->
+      <!-- <th>Operations</th> -->
     </tr>
 
-    <tr>
-      <td>Peter</td>
-      <td>Griffin</td>
-      <td>$100</td>
-    </tr>
-    <tr>
-      <td>Lois</td>
-      <td>Griffin</td>
-      <td>$150</td>
-    </tr>
-    <tr>
-      <td>Joe</td>
-      <td>Swanson</td>
-      <td>$300</td>
-    </tr>
-    <tr>
-      <td>Cleveland</td>
-      <td>Brown</td>
-      <td>$250</td>
-    </tr>
-    <tr>
-      <td>Cleveland</td>
-      <td>Brown</td>
-      <td>$250</td>
-    </tr>
+    <tr (click)="selectUser($index)" *ngFor="let item of values; index as $index">
+        <td>{{item.accno}}</td>
+        <td>{{item.date}}</td>
+        <!-- need to add here -->
+        <td>{{item.totalamount}}</td>
+
+        <!-- <td>{{item.image}}</td> -->
+        <!-- <td>
+            <button class="btn btn-primary" (click)="deletebill()"> Edit </button>      
+            <button class="btn btn-danger"> Delete </button>
+        </td> -->
+
   </table>
-
 
 
 

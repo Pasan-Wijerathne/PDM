@@ -162,8 +162,8 @@
         <label for="unitsCharge">Total Amount(Rs:)</label>
         <input type="number" id="amount" name="amount" placeholder="Enter the Total Amount(Rs:)" required>
     
-        <label for="image">Add Image</label>
-        <input type="file" name="pic" accept="image/*">
+        <!-- <label for="image">Add Image</label>
+        <input type="file" name="pic" accept="image/*"> -->
     
         <input type="submit" value="Add Bill">
         <input type="submit" value="Edit Bill">
@@ -174,34 +174,28 @@
 </div>
 
 <table>
-
     <tr>
       <th>Line Type</th>
-      <th>Phone No</th>
+      <th>Number</th>
       <th>Date</th>
-      <th>Period Charge(Rs.)</th>
-      <th>Total Amount(Rs.)</th>
-      <th>Image</th>
+      <th>periodcharge</th>
+      <th>Total Amount</th>
+      <!-- <th>Image</th> -->
+      <!-- <th>Operations</th> -->
     </tr>
 
-    <tr>
-      <td>Peter</td>
-      <td>Griffin</td>
-      <td>$100</td>
-    </tr>
-    <tr>
-      <td>Lois</td>
-      <td>Griffin</td>
-      <td>$150</td>
-    </tr>
-    <tr>
-      <td>Joe</td>
-      <td>Swanson</td>
-      <td>$300</td>
-    </tr>
-
+    <tr (click)="selectUser($index)" *ngFor="let item of values; index as $index">
+        <!-- need to add type -->
+        <td>{{item.number}}</td>
+        <td>{{item.date}}</td>
+        <td>{{item.periodcharge}}</td>
+        <td>{{item.totalamount}}</td>
+        <!-- <td>{{item.image}}</td> -->
+        <!-- <td>
+            <button class="btn btn-primary" (click)="deletebill()"> Edit </button>      
+            <button class="btn btn-danger"> Delete </button>
+        </td> -->
 
   </table>
-
 
 

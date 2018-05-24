@@ -13,7 +13,7 @@ export class AddEditElectricityComponent implements OnInit {
 
   public mydata: String;
   public values: any[];
-  private selectedUserIdx:number = -1;
+  private selectedUserIdx:number = 0;
   public id:string;
   //public sideID: number = 0;
 
@@ -66,7 +66,7 @@ export class AddEditElectricityComponent implements OnInit {
   adduser()
   {
       //var uid = localStorage.getItem("userid");
-      var ebill = {"accno":"","date":"","usedunits":"","userid":"","totalamount":""};
+      var ebill = {"accno":"","date":"","usedunits":"","userid":"6","totalamount":""};
       this.values.push(ebill);
       this.selectUser(this.values.length - 1);
       console.log('add user method');
@@ -93,7 +93,7 @@ export class AddEditElectricityComponent implements OnInit {
        this.mydata = JSON.stringify(this.values);
        console.log(this.mydata);
     });
-    this.adduser();
+    // this.adduser();
   }
 
 

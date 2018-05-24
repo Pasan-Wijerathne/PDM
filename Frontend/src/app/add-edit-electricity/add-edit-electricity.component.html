@@ -159,8 +159,8 @@
         <label for="userid">userid</label>
         <input type="number" id="userid" name="userid"  [(ngModel)]="valArr[compo].userid"  placeholder="userid" required> -->
 
-        <label for="image">Add Image</label>
-        <input type="file" name="pic" accept="image/*">
+        <!-- <label for="image">Add Image</label>
+        <input type="file" name="pic" accept="image/*"> -->
     
         <br>
         
@@ -187,8 +187,8 @@
         <th>No.UnitConsumed</th>
         <th>Charge(Rs)</th>
         <!-- <th>User ID</th> -->
-        <th>Image</th>
-        <th>Operations</th>
+        <!-- <th>Image</th> -->
+        <!-- <th>Operations</th> -->
       </tr>
 
       <tr (click)="selectUser($index)" *ngFor="let item of values; index as $index">
@@ -197,11 +197,11 @@
         <td>{{item.usedunits}}</td>
         <td>{{item.totalamount}}</td>
         <!-- <td>{{item.userid}}</td> -->
-        <td>{{item.image}}</td>
-        <td>
+        <!-- <td>{{item.image}}</td> -->
+        <!-- <td>
             <button class="btn btn-primary"> Edit </button>      
             <button class="btn btn-danger"> Delete </button>
-        </td>
+        </td> -->
  
     </tr>
       
