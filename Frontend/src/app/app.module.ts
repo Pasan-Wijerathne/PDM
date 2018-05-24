@@ -6,7 +6,6 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 
-
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 import { GasComponent } from './gas/gas.component';
 import { ItempredictionComponent } from './itemprediction/itemprediction.component';
@@ -43,7 +42,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { Test2Component } from './test2/test2.component';
 
 
-import { Watercomservice} from './watercomservice';
+// import { WatercompareService} from './WatercompareService';
 import { BroadbandinfoComponent } from './broadbandinfo/broadbandinfo.component';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { UsrUtilService } from './usr-util.service';
@@ -58,9 +57,14 @@ import { ElectserviceService } from './electservice.service';
 import { WateserviceService } from './wateservice.service';
 import { ElectricEqServiceService } from './electric-eq-service.service';
 import { VehicleserviceService } from './vehicleservice.service';
+<<<<<<< HEAD
 import { LoginusrserviceService } from './loginusrservice.service';
 
 
+=======
+import { InstallmentServiceService } from './installment-service.service';
+import { InsurancebillService } from './insurancebill.service';
+>>>>>>> 71a9ebd16b5e90fe754501e7616c94a917377968
 
 @NgModule({
 
@@ -69,6 +73,8 @@ import { LoginusrserviceService } from './loginusrservice.service';
     AppComponent,
     HomeComponent,
     LoginComponent,
+
+
     GasComponent,
     ItempredictionComponent,
     PredictionComponent,
@@ -89,6 +95,7 @@ import { LoginusrserviceService } from './loginusrservice.service';
     AddEditTelephoneComponent,
     AddEditTelevitionComponent,
     TestimageComponent,
+    CreateuserComponent,
     HomeGardenComponent,
     MedicineComponent,
     VehicleComponent,
@@ -101,18 +108,20 @@ import { LoginusrserviceService } from './loginusrservice.service';
     FooterComponent,
     Test2Component,
     BroadbandinfoComponent,
-    CreateuserComponent,
   ],
-
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule
   ],
 
 
+<<<<<<< HEAD
   providers: [[ElectserviceService],[VehicleserviceService],[MedicineserviceService],[GardenserviceService ],[GasServiceService ],[ConsumsService],[ElectricEqServiceService],[Watercomservice],[UsrUtilService],[EleCompaService],[WateserviceService],[LoginusrserviceService]],
+=======
+  providers: [[ElectserviceService],[VehicleserviceService],[MedicineserviceService],[GardenserviceService ],[GasServiceService ],[ConsumsService],[ElectricEqServiceService],[UsrUtilService],[EleCompaService],[WateserviceService],[InstallmentServiceService],[InsurancebillService]],
+>>>>>>> 71a9ebd16b5e90fe754501e7616c94a917377968
 
 
   bootstrap: [AppComponent]

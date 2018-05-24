@@ -134,59 +134,64 @@
     <div class="title">
         <h2 align="center"> Enter Details to View Monthly Installment </h2>
     </div>
-        <div class="container"> 
-          <form action="/action_page.php">
-        
+    <form *ngIf="selectedUser()">
+        <div class="container">
         
             <label for="object">Object Name</label>
-            <input type="text" id="object" name="object" placeholder="Object Name" required>
-              
+            <input type="text" placeholder="Object Name" [(ngModel)] = "selectedUser().object" name = "object" required>
+
           <label for="serialNum">Serial Number</label>
-            <input type="text" id="serialNum" name="serialNum" placeholder="Serial Number (Optional)">
+            <input type="text" placeholder="Serial Number (Optional)" [(ngModel)] = "selectedUser().serialno" name = "serialno">
               
           <label for="amount">Total Amount</label>
-            <input type="number" id="amount" name="amount" placeholder="Enter the total amount of the product" required>
+            <input type="number" placeholder="Enter the total amount of the product" [(ngModel)] = "selectedUser().amount" name = "amount" required>
         
               <label for="years">Years</label>
-            <input type="number" id="year" name="year" placeholder="Enter the amount of years to divide the payment" required>
+            <input type="number" placeholder="Enter the amount of years to divide the payment" [(ngModel)] = "selectedUser().years" name = "years"required>
+
+            <label for="years">Down Payment</label>
+            <input type="number" placeholder="Enter the initial amount paid" [(ngModel)] = "selectedUser().downpayment" name = "downpayment"required>
               
               <label for="intRate">Interest Rate</label>
-            <input type="number" id="intRate" name="intRate" placeholder="Enter the interest rate for the product" required>
+            <input type="number" placeholder="Enter the interest rate for the product" [(ngModel)] = "selectedUser().intrate" name = "intrate"required>
             
               <label for="amtPerMonth">Amount per Month</label>
-            <input type="number" id="amtPerMonth" name="amtPerMonth" disabled>
+            <input type="number" [(ngModel)] = "selectedUser().amtpermonth" name = "amtpermonth" disabled>
               
               <label for="amtRemaining">Amount Remaining</label>
-            <input type="number" id="amtRemaining" name="amtRemaining" placeholder="" disabled>
+            <input type="number" [(ngModel)] = "selectedUser().amtremaining" name = "amtremaining" disabled>
               
     
         
-            <input type="submit" value="Calculate">
+            <!-- <input type="submit" value="Calculate" onclick = "calculate()"> -->
+            <button (click)="calculate()" type="button" class="btn btn-success">Calculate</button>
+            <button (click)="adduser()" type="button" class="btn btn-success">Add New</button>
+            <button (click)="saveUser(event)" type="button" class="btn btn-success">Save</button>
+ 
+            </div>
           </form>
-      
-        
-      </div>
-      
+
       <table>
         <tr>
           <th>Object</th>
           <th>Amount</th>
           <th>Years</th>
           <th>Down payment</th>
+          <th>Interest Rate</th>
           <th>Amount per month</th>
         </tr>
   
-        <tr (click)="selectRow(i)" *ngFor="let item of values; index as i">
-          <td>{{item.accno}}</td>
-          <td>{{item.date}}</td>
-          <td>{{item.usedunits}}</td>
-          <td>{{item.totalamount}}</td>
-          <!-- <td>{{item.userid}}</td> -->
-          <td>{{item.image}}</td>
-          <td>
+        <tr (click)="selectUser($index)" *ngFor="let item of values; index as $index">
+          <td>{{item.object}}</td>
+          <td>{{item.amount}}</td>
+          <td>{{item.years}}</td>
+          <td>{{item.downpayment}}</td>
+          <td>{{item.intrate}}</td>
+          <td>{{item.downpayment}}</td>
+          <!-- <td>
               <button class="btn btn-primary" (click)="deletebill()"> Edit </button>      
               <button class="btn btn-danger"> Delete </button>
-          </td>
+          </td> -->
    
       </tr>
   
@@ -199,4 +204,19 @@
         </tr> -->
         
       </table>
+
+      <!-- <script language="text/javascript">
+          function calculate(form){
+
+            var no = document.getElementById('amount').value;
+            
+          var no1 = this.form.amount;
+          var no2= this.form.downpayment;
+
+          var sum = no1 + no2;
+            return sum;
+
+          }
+
+      </script> -->
       </body>

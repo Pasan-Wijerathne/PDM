@@ -68,7 +68,11 @@
  
    </style>
    
+<<<<<<< HEAD
    <form *ngIf="selectedUser()">
+=======
+   <form #f="ngForm" (ngSubmit)="saveuser(f.value)" >
+>>>>>>> 71a9ebd16b5e90fe754501e7616c94a917377968
      <div class="container">
        <h1>Sign Up</h1>
        <p>Please fill in this form to create an account.</p>

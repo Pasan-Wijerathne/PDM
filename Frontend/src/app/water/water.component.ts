@@ -21,8 +21,7 @@ export class WaterComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('component loaded');
-    this.values = [];
+    console.log('component loaded', this.values);
     
   }
 
@@ -40,24 +39,6 @@ export class WaterComponent implements OnInit {
   //   {
   //      console.log('completed');
   //      this.mydata = JSON.stringify(this.values);
-  //   });
 
-  // }
-
-  // saveAll()
-  // {
-  //   this.consume.save
-  // }
-
-  /*
-  deletebill()
-  {
-    this.consume.deletebill(values.).subscribe((data : any[]) =>{
- 
-    }
-
-  }
-
-  */
 
 }
