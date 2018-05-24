@@ -12,54 +12,36 @@ export class InstallmentComponent implements OnInit {
 
   public mydata: String;
   public values: any[];
-  private selectedInstaIdx:number = 0;
+  private selectedUserIdx:number = 0;
+  public id:string;
 
   get valArr(){
     return this.values;
   }
 
   ngOnInit() {
-    console.log('component loaded', this.values);
-    this.loadData();
-
+     this.loadData();
+     console.log('component loaded', this.values);    
   }
 
-  addinsta()
-  {
+  test(evetn){
+    console.log('triggered');
+  }
+ 
+  selectUser(idx){
+    console.log('selecting user', idx);
+    this.selectedUserIdx = idx;
+    console.log(this.selectedUser().accno);
+    this.id = this.selectedUser().accno;
+    // localStorage.setItem("userid","6");
+  }
+  
 
-      var inst = {"object":"","serialno":"","amount":"", "years":"", "downpayment":"", "amountpermonth":"","amountpayable":""};
-      this.values.push(inst);
-      this.selectInsta(this.values.length - 1);
-      console.log('add user method');
 
+  selectedUser(){
+    return this.values[this.selectedUserIdx];
   }
 
-
-  saveinsta(e){
-   // e.preventDefaults();
-   // this.consume.createacc(this.values);
-
-    this.consume.installment<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
-    {
-       console.log(error);
-    },() =>
-    {
-       console.log('completed');
-       this.mydata = JSON.stringify(this.values);
-       console.log(this.mydata);
-    });
-
-  }
-
-  selectInsta(idx){
-    console.log('selecting installment,', idx);
-    this.selectedInstaIdx = idx;
-    console.log(this.selectedInsta().name);
-  }
-
-  selectedInsta(){
-    return this.values[this.selectedInstaIdx];
-  }
 
   loadData(){
     console.log('loading data');
@@ -75,4 +57,44 @@ export class InstallmentComponent implements OnInit {
 
   }
 
-}
+  adduser()
+  {
+      //var uid = localStorage.getItem("userid");
+      var instal = {"userid":"uid","object":"", "serialno":"","amount":"","years":"","downpayment":"","intrate":"","amountpermonth":"","amountpayble":""};
+      this.values.push(instal);
+      this.selectUser(this.values.length - 1);
+      console.log('add user method');
+
+  }
+
+
+  
+  getLoggedInUser(){
+    return window.localStorage.getItem('uid');
+  }
+  saveUser(e){
+    // e.preventDefaults();
+    // this.consume.createacc(this.values);
+ 
+     this.consume.createinstallment<any[]>(this.values).subscribe((data : any[])  => this.values = data, error => () => 
+     {
+        console.log(error);
+     },() =>
+     {
+        console.log('completed');
+        this.mydata = JSON.stringify(this.values);
+        console.log(this.mydata);
+     });
+ 
+   }
+
+  //  function calculate(amount:number, downpayment:number) {
+     
+  //  } 
+//    calculate()
+// {
+//   var no1 = 10;
+//   var no2 = 20;
+//   var sum = no1 + no2;
+//   return sum;
+}          

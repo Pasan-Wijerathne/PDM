@@ -9,18 +9,23 @@ export class InstallmentServiceService {
 
   constructor(private http : HttpClient) { }
 
-  public installment<T>(data: any[]) : Observable<T>
+  public createinstallment<T>(data: any[]) : Observable<T>
   {
     console.log("into service method");
     const header = new HttpHeaders();
     header.set('Content-Type', 'applicatio/json');
-    return this.http.post<T>(this.Server + "insta/installment",JSON.stringify(data), {headers : header});
+    return this.http.post<T>(this.Server + "installments/instaedit",JSON.stringify(data), {headers : header});
   }
 
   public getAll<T>(): Observable<T>
   {
-    return this.http.get<T>(this.Server + "insta/instalment")
+    return this.http.get<T>(this.Server + "installments/instaRead")
   }
+
+  public saveAllEB<T>(data: any[]): Observable<T>{
+    console.log('logged');
+    return this.http.post<T>(this.Server + "installments/instaRead", data);
+}
 }
 
 @Injectable()
