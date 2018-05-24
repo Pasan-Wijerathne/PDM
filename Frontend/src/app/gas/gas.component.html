@@ -100,7 +100,7 @@
       border-collapse: collapse;
       width: 50%;
       margin-left: 750px;
-      margin-top: 200px;
+      margin-top: 250px;
       margin-bottom: 80px;
       /* Add these two lines */
       position:absolute;
@@ -132,6 +132,11 @@
            
   </ul>
   
+
+  <div class="title">
+        <h2 align="center"><u> Enter Gas expenses details </u> </h2>
+    </div>
+
     <div class="container"> 
       <form *ngIf="selectedUser()">
 
@@ -151,9 +156,9 @@
         <input type="date" id="date" name="date" [(ngModel)] = "selectedUser().date" required>
   
         <!-- <input type="submit" value="Submit"> -->
-        <button (click)="laodData()" type="reset">Clear</button>]
-        <button (click)="adduser()" type="button">Add New Bill</button>
-        <button (click)="saveUser(event)" type="button">Save Bill</button>
+        <button (click)="laodData()" type="reset">Clear</button>
+        <button (click)="adduser()" type="button">Add New Expenses</button>
+        <button (click)="saveUser(event)" type="button">Save details</button>
   
       </form>
   
@@ -173,10 +178,7 @@
                 <td>{{item.date}}</td>
                 <td>{{item.totalamount}}</td>
                
-                <td>
-                    <button class="btn btn-primary"> Edit </button>      
-                    <button class="btn btn-danger"> Delete </button>
-                </td>
+               
          
             </tr>
        

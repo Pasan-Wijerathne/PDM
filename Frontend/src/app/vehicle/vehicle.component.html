@@ -12,7 +12,7 @@
         /*resize: vertical  Allow the user to vertically resize the textarea (not horizontally) */
         }
 
-        input[type=submit],[type=reset] {
+        input[type=submit],[type=reset],[type=button]  {
             background-color: #4CAF50;
             color: white;
             padding: 12px 20px;
@@ -21,7 +21,7 @@
             cursor: pointer;
         }
 
-        input[type=submit]:hover {
+        input[type=submit],[type=reset],[type=button] :hover {
             background-color: #45a049;
         }
 
@@ -100,7 +100,7 @@
       border-collapse: collapse;
       width: 50%;
       margin-left: 750px;
-      margin-top: 200px;
+      margin-top: 250px;
       margin-bottom: 80px;
       /* Add these two lines */
       position:absolute;
@@ -122,9 +122,9 @@
   tr:hover {background-color:#f5f5f5;}
 
   </style>
-
+ 
 <body>
-     
+ 
 <ul>
         <li><a routerLinkActive="active" routerLink="../vehicle">Vehicle</a></li>
         <li><a routerLinkActive="active" routerLink="../installment">Installment</a></li>
@@ -134,6 +134,9 @@
 </ul>
 
 
+<div class="title">
+        <h2 align="center"><u> Enter Vehicle expenses Details</u> </h2>
+    </div>
   <div class="container"> 
     <form *ngIf="selectedUser()">
   
@@ -159,15 +162,17 @@
       <label for="subject">Description</label>
       <textarea id="subject" name="subject" [(ngModel)] = "selectedUser().description" placeholder="Write something.." style="height:100px"></textarea>
       
-      <button (click)="laodData()" type="reset">Clear</button>]
-      <button (click)="adduser()" type="button">Add New Bill</button>
-      <button (click)="saveUser(event)" type="button">Save Bill</button>
-      
+      <button (click)="laodData()" type="reset">Clear</button>
+      <button (click)="adduser()" type="button">Add New Expenses</button>
+      <button (click)="saveUser(event)" type="button">Save details</button>
+      <br><br>
 
-    </form>
 
   
+      
+    </form>
 </div>
+
 <table>
         <tr>       
           
@@ -183,10 +188,7 @@
                 <td>{{item.date}}</td>
                 <td>{{item.totalamount}}</td>
                
-                <td>
-                    <button class="btn btn-primary"> Edit </button>      
-                    <button class="btn btn-danger"> Delete </button>
-                </td>
+               
          
             </tr>
        
@@ -195,6 +197,7 @@
 <br>
 
 </body>
+ 
 
 
 
