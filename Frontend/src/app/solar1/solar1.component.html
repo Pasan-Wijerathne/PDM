@@ -136,11 +136,23 @@
         </ul>
 
         <div class="title">
-                <h2 align="center"><u> Enter ...........</u> </h2>
+                <h2 align="center"><u> Calculate the Number of solar panel</u> </h2>
            </div>
       
       
-      
+        <script> 
+            function calc()
+            {
+                var avgp = document.getElementById('avgpowerusage').value;
+                var solarp = document.getElementById('powersolar').value;
+                var ans = avg/solarp;
+                document.getElementById('nosolarpanel').value=ans;
+                //document.getElementById('nosolarpanel').value=avgp;
+
+
+            }
+        </script>
+
       
         <div class="container"> 
           <form action="/action_page.php">
@@ -153,7 +165,7 @@
             <label for="powersolar">Power from a solar panel</label>
             <input type="number" id="powersolar" name="powersolar" placeholder="Average generating power of a solar panel will be X kwh" required>
       
-            <input type="submit" value="Calculate">
+            <input type="submit" value="Calculate" onclick="calc()">
             
         
             <label for="nosolarpanel">Number of solar panels for monthly power need</label>
