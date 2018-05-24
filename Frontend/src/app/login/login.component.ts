@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginusrserviceService } from '../loginusrservice.service';
+import { UsrUtilService } from '../usr-util.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +8,7 @@ import { LoginusrserviceService } from '../loginusrservice.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private consume : LoginusrserviceService) {  }
+  constructor(private consume : UsrUtilService) {  }
 
   public mydata: String;
   public values: any[];

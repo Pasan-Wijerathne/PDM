@@ -185,7 +185,7 @@
 
 <table>
   <tr>
-    <th>No</th>
+
     <th>Equipment name</th>
     <th>Manufacturer</th>
     <th>Number Of watts</th>
@@ -195,7 +195,6 @@
   </tr>
 
   <tr (click)="selectUser($index)" *ngFor="let item of values; index as $index">
-    <td>{{item.no}}</td>
     <td>{{item.eq_name}}</td>
     <td>{{item.manufacturer}}</td>
     <td>{{item.noofwatts}}</td>

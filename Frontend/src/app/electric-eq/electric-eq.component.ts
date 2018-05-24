@@ -28,7 +28,7 @@ export class ElectricEqComponent implements OnInit {
   add()
   {
 
-      var usr = {"eq_name":"","manufacturer":"","noofwatts":""," 	noofitems":"","expiredate":"","noofhours":""};
+      var usr = {"eq_name":"","manufacturer":"","noofwatts":""," 	noofitems":"","expiredate":"","noofhours":"","userid":"1"};
       this.values.push(usr);
       this.selectUser(this.values.length - 1);
       console.log('add user method');

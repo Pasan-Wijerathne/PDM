@@ -60,7 +60,7 @@ export class InsuranceComponent implements OnInit {
   adduser()
   {
       //var uid = localStorage.getItem("userid");
-      var insu = {"userid":"uid","accno":"","noofyears":"","dateofnextpremium":"","premium":"","time_interval":""};
+      var insu = {"userid":"1","accno":"","noofyears":"","dateofnextpremium":"","premium":"","time_interval":""};
       this.values.push(insu);
       this.selectUser(this.values.length - 1);
       console.log('add user method');
